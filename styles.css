@@ -128,7 +128,7 @@ u {
 	margin-right: auto;
 	opacity: 0;
 	overflow: auto;
-    max-height: 65vh !important;
+    max-height: 55vh !important;
 	scroll-behavior: smooth;
 	text-align: center;
 	transition: all 1s ease-in-out;

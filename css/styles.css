@@ -14,13 +14,13 @@ html, body {
 .background-container {
 	background-attachment: fixed;
 	background-color: black;
-	background-image: url('assets/cod_background.jpeg');
+	background-image: url('../assets/cod_background.jpeg');
 	background-position: center center;
 	background-repeat: no-repeat;
 	background-size: cover;
 	height: 100%;
 	max-height: 100%;
-	position: fixed;
+	position: absolute;
 	text-align: center;
 	width: 100%;
 	-moz-background-size: cover;
@@ -45,9 +45,14 @@ u {
 	text-decoration: none;
 }
 
-@media only screen and (min-width: 1281px) {
+.middle {
+	width: 90%;
+	margin: 0 auto;
+}
+@media only screen and (min-width: 786px) {
 	.middle {
 		width: 40%;
+		max-width: 40%;
 		margin: 0 auto;
 	}
 }
@@ -127,16 +132,17 @@ u {
 	margin-left: auto;
 	margin-right: auto;
 	opacity: 0;
-	overflow: auto;
+	overflow: auto !important;
     max-height: 55vh !important;
 	scroll-behavior: smooth;
 	text-align: center;
 	transition: all 1s ease-in-out;
-	width: 90%;
+	/*width: 90%;*/
 	-moz-transition: all 1s ease-in-out;
 	-ms-transition: all 1s ease-in-out;
 	-o-transition: all 1s ease-in-out;
 	-webkit-transition: all 1s ease-in-out;
+	-webkit-overflow-scrolling: touch !important;
 }
 
 @media only screen and (min-width: 1281px) {
@@ -148,16 +154,17 @@ u {
 		margin-left: auto;
 		margin-right: auto;
 		opacity: 0;
-		overflow: auto;
+		overflow: auto !important;
     	max-height: 60vh !important;
 		scroll-behavior: smooth;
 		text-align: center;
 		transition: all 1s ease-in-out;
-		width: 90%;
+		/*width: 90%;*/
 		-moz-transition: all 1s ease-in-out;
 		-ms-transition: all 1s ease-in-out;
 		-o-transition: all 1s ease-in-out;
 		-webkit-transition: all 1s ease-in-out;
+		-webkit-overflow-scrolling: touch !important;
 	}
 }
 
@@ -165,6 +172,34 @@ u {
 	margin-bottom: 3em;
 }
 
+.sticky {
+	position: -webkit-sticky;
+	position: sticky;
+	top: 5%;
+	right: 3%;
+	float: right;
+	border-radius: 25px;
+	width: 25px;
+	height: 25px;
+	background-color: steelblue;
+	padding: 5px;
+	font-size: 20px;
+}
+
+.copytoclipboard {
+	background-color: inherit;
+	border: none;
+	text-align: center;
+	vertical-align: super;
+	text-transform: uppercase;
+	font-size: 1em;
+	font-weight: 600;
+	letter-spacing: 1px;
+}
+
+.copyIcon {
+	vertical-align: bottom;
+}
 .gradientback {
 	bottom: 35px;
 	height: 60px;

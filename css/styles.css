@@ -11,6 +11,13 @@ html, body {
 	-webkit-text-stroke: 0.5px black;
 }
 
+.progressier-widget-links {
+	display: none !important;
+}
+.progressier-widget-icon {
+	bottom: 20px !important;
+}
+
 .background-container {
 	background-attachment: fixed;
 	background-color: black;

@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en-US">
 	<head>
 		<meta charset="UTF-8" />
@@ -13,7 +12,8 @@
 		<link rel="stylesheet" href="css/styles.css" />
 		<link rel="preload" href="css/font-awesome.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
 		<noscript><link rel="stylesheet" href="css/font-awesome.min.css"></noscript>
-		<script src="https://progressier.com/client/script.js?id=DWpuflK3c0bzHo79bi8Z" defer></script>
+		<script src="https://progressier.com/client/script.js?id=DWpuflK3c0bzHo79bi8Z" defer></script> 
+		<!-- <script src="js/progressierscript.js" defer></script> -->
 		<script src="js/smoothscroll.js" defer></script>
 		<script src="js/sweetalert.js" defer></script>
 		<script src="js/bodylock.js"></script>
@@ -25,6 +25,7 @@
 			<span class="top" id="top">
 				Call of Duty: Mobile Random Loadout Generator
 			</span> 
+			<button class="progressier-install-button" data-behavior="disable" data-icons="false" data-install="Install" data-installed="Installed" ></button>
 			<br /><br />
 			<span class="header" id="header">
 				<b>Press "Generate Class" button below to generate a random class loadout.</b>
@@ -34,7 +35,7 @@
 			<br />
 			<div class="middle">
 				<div class="outputs" id="outputs">
-					<div class="sticky"><button class="copytoclipboard copy-button copyText" aria-label="fas fa-copy" data-clipboard-action="copy" data-clipboard-target="#copyText" onclick="copyToClipboard()"><i class="fas fa-copy"></i></button></div>
+					<div class="sticky" onclick="copyToClipboard()"><button class="copytoclipboard copy-button copyText" aria-label="fas fa-copy" data-clipboard-action="copy" data-clipboard-target="#copyText"><i class="fas fa-copy"></i></button></div>
 					<h2><u>Primary Weapon:</u></h2>
 					<h3>
 						<span id="primary"></span>

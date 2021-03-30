@@ -1,13 +1,20 @@
 function copyToClipboard() {
     
     // get text from outputs elem and clean it up
-    let myout = document.getElementById("outputs").innerText;
+    let myout = document.getElementById("outputs").textContent;
     let minusCopyBtn = myout.replace(/Copy\s/g, "");
-    let cleaned = minusCopyBtn.replace(/:\n/g,": ");
+    cleaned = minusCopyBtn.replace(/:\n/g,": ");
+
+
+    ty = cleaned.replace(/\n\s*\n/g, '\n');
+    tr = ty.trim()
+    tw = tr.replace(/\t/g,"")
 
     // create pseudo element to paste sanitized text and copy to device clipboard, then delete pseudo elem
-    const el = document.createElement('textarea');
-    el.value = cleaned;
+    el = document.createElement('textarea');
+    el.setAttribute("id", "copyText");
+    el.value = tw;
+    el.innerText = tw;
     document.body.appendChild(el);
     el.select();
     document.execCommand('copy');
@@ -47,7 +54,7 @@ function copyToClipboard() {
 }
 
 function timeout() {
-    document.getElementById("button1").disabled = !0, setTimeout(generate(), 500);
+	document.getElementById("button1").disabled = !0, setTimeout(generate(), 500);
 }
 
 function generate() {
@@ -2571,8 +2578,8 @@ function generate() {
 
     if (!document.querySelector('#secondary').innerText.includes("PISTOL")) {
         document.querySelector("#secondary1").parentElement.style.display = "none";
-    } 
+	} 
     else {
         document.querySelector("#secondary1").parentElement.style.display = "block";
-    }
+	}
 }

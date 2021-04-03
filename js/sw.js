@@ -14,9 +14,10 @@
         return caches.open(version + staticCacheName)
             .then(function (cache) {
                 return cache.addAll([
-                    '/cod_loadout.js',
-                    '/bodylock.js',
-                    '/smoothscroll.js',
+                    '/js/cod_loadout.js',
+                    '/js/bodylock.js',
+                    '/js/jquery.min.js',
+                    '/js/smoothscroll.js',
                     '/css/styles.css',
                     '/css/font-awesome.min.css',
                     '/assets/favicon.ico',

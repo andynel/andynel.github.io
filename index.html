@@ -9,9 +9,13 @@
 	    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
 	    <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
 	    <link rel="shortcut icon" type="image/ico" href="assets/favicon.ico" />
-		<link rel="stylesheet" href="css/styles.css" />
-		<link rel="preload" href="css/font-awesome.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-		<noscript><link rel="stylesheet" href="css/font-awesome.min.css"></noscript>
+		<link rel="stylesheet" href="css/styles.min.css" />
+		<!-- <link rel="preload" href="css/myfontawesome.css" as="style" onload="this.onload=null;this.rel='stylesheet'"> -->
+		<link rel="preload" href="css/myfontawesome.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+		<noscript><link rel="stylesheet" href="css/myfontawesome.css"></noscript>
+
+		<!-- <link rel="preload" href="css/font-awesome.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'"> -->
+		<!-- <noscript><link rel="stylesheet" href="css/font-awesome.min.css"></noscript> -->
 		<script src="js/jquery.min.js"></script>
 		<script src="https://progressier.com/client/script.js?id=DWpuflK3c0bzHo79bi8Z" defer></script> 
 		<!-- <script src="js/progressierscript.js" defer></script> -->
@@ -25,7 +29,7 @@
 	    			url: "https://api.countapi.xyz/update/andynel.github.io/72b1a2d5-a613-47f0-bd47-1f01c4453740?amount=1",
 	    			method: 'GET',
 	    			success: function(data) {
-				        console.log('success from countapi');
+				        // console.log('success from countapi');
 				        console.log(`Current Page View Count: ${data.value}`);
 				    },
 				    error: function(err) {

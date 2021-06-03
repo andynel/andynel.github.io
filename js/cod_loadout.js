@@ -7,8 +7,8 @@ function copyToClipboard() {
 
 
     ty = cleaned.replace(/\n\s*\n/g, '\n');
-    tr = ty.trim()
-    tw = tr.replace(/\t/g,"")
+    tr = ty.trim();
+    tw = tr.replace(/\t/g,"");
 
     // create pseudo element to paste sanitized text and copy to device clipboard, then delete pseudo elem
     el = document.createElement('textarea');
@@ -21,7 +21,7 @@ function copyToClipboard() {
     document.body.removeChild(el);
     
     // create popup to confirm copy to clipboard success
-    let timerInterval
+    let timerInterval;
     Swal.fire({
       title: 'Loadout copied to clipboard!',
       icon: 'success',
@@ -33,24 +33,24 @@ function copyToClipboard() {
       didOpen: () => {
         // Swal.showLoading()
         timerInterval = setInterval(() => {
-          const content = Swal.getContent()
+          const content = Swal.getContent();
           if (content) {
-            const b = content.querySelector('b')
+            const b = content.querySelector('b');
             if (b) {
-              b.textContent = Swal.getTimerLeft()
+              b.textContent = Swal.getTimerLeft();
             }
           }
-        }, 100)
+        }, 100);
       },
       willClose: () => {
-        clearInterval(timerInterval)
+        clearInterval(timerInterval);
       }
     }).then((result) => {
       /* Read more about handling dismissals below */
       if (result.dismiss === Swal.DismissReason.timer) {
         // console.log('I was closed by the timer')
       }
-    })
+    });
 }
 
 function timeout() {
@@ -541,6 +541,7 @@ function generate() {
         Al = Pl[Math.floor(Math.random() * Pl.length)];
     document.querySelector("#brclass").innerHTML = Al;
 
+    var Gl, Kl, Hl, zl, Zl, Nl, bl, ql, Dl;
     var Ol = ["Muzzle", "Barrel", "Optic", "Stock", "Perk", "Laser", "Underbarrel", "Ammunition", "Rear Grip"],
         sl = ["Muzzle", "Barrel", "Optic", "Perk", "Laser", "Underbarrel", "Ammunition", "Rear Grip"],
         fl = ["Muzzle", "Barrel", "Optic", "Stock", "Perk", "Laser", "Underbarrel", "Ammunition"],
@@ -558,600 +559,599 @@ function generate() {
 
     if ("ASSAULT - M4" == nl) {
         if ("Muzzle" == e || "Muzzle" == t || "Muzzle" == a || "Muzzle" == o || "Muzzle" == i) {
-            var Gl = h[Math.floor(Math.random() * h.length)];
-            document.querySelector("#primary1").innerHTML = Gl
+            Gl = h[Math.floor(Math.random() * h.length)];
+            document.querySelector("#primary1").innerHTML = Gl;
         }
         if ("Barrel" == e || "Barrel" == t || "Barrel" == a || "Barrel" == o || "Barrel" == i) {
-            var Kl = m[Math.floor(Math.random() * m.length)];
-            document.querySelector("#primary2").innerHTML = Kl
+            Kl = m[Math.floor(Math.random() * m.length)];
+            document.querySelector("#primary2").innerHTML = Kl;
         }
         if ("Optic" == e || "Optic" == t || "Optic" == a || "Optic" == o || "Optic" == i) {
-            var Hl = c[Math.floor(Math.random() * c.length)];
-            document.querySelector("#primary3").innerHTML = Hl
+            Hl = c[Math.floor(Math.random() * c.length)];
+            document.querySelector("#primary3").innerHTML = Hl;
         }
         if ("Stock" == e || "Stock" == t || "Stock" == a || "Stock" == o || "Stock" == i) {
-            var zl = p[Math.floor(Math.random() * p.length)];
-            document.querySelector("#primary4").innerHTML = zl
+            zl = p[Math.floor(Math.random() * p.length)];
+            document.querySelector("#primary4").innerHTML = zl;
         }
         if ("Perk" == e || "Perk" == t || "Perk" == a || "Perk" == o || "Perk" == i) {
-            var Zl = S[Math.floor(Math.random() * S.length)];
-            document.querySelector("#primary5").innerHTML = Zl
+            Zl = S[Math.floor(Math.random() * S.length)];
+            document.querySelector("#primary5").innerHTML = Zl;
         }
         if ("Laser" == e || "Laser" == t || "Laser" == a || "Laser" == o || "Laser" == i) {
-            var Nl = d[Math.floor(Math.random() * d.length)];
-            document.querySelector("#primary6").innerHTML = Nl
+            Nl = d[Math.floor(Math.random() * d.length)];
+            document.querySelector("#primary6").innerHTML = Nl;
         }
         if ("Underbarrel" == e || "Underbarrel" == t || "Underbarrel" == a || "Underbarrel" == o || "Underbarrel" == i) {
-            var bl = L[Math.floor(Math.random() * L.length)];
-            document.querySelector("#primary7").innerHTML = bl
+            bl = L[Math.floor(Math.random() * L.length)];
+            document.querySelector("#primary7").innerHTML = bl;
         }
         if ("Ammunition" == e || "Ammunition" == t || "Ammunition" == a || "Ammunition" == o || "Ammunition" == i) {
-            var ql = u[Math.floor(Math.random() * u.length)];
-            document.querySelector("#primary8").innerHTML = ql
+            ql = u[Math.floor(Math.random() * u.length)];
+            document.querySelector("#primary8").innerHTML = ql;
         }
         if ("Rear Grip" == e || "Rear Grip" == t || "Rear Grip" == a || "Rear Grip" == o || "Rear Grip" == i) {
-            var Dl = T[Math.floor(Math.random() * T.length)];
-            document.querySelector("#primary9").innerHTML = Dl
+            Dl = T[Math.floor(Math.random() * T.length)];
+            document.querySelector("#primary9").innerHTML = Dl;
         }
     } else if ("ASSAULT - Type 25" == nl) {
         if ("Muzzle" == e || "Muzzle" == t || "Muzzle" == a || "Muzzle" == o || "Muzzle" == i) {
             Gl = E[Math.floor(Math.random() * E.length)];
-            document.querySelector("#primary1").innerHTML = Gl
+            document.querySelector("#primary1").innerHTML = Gl;
         }
         if ("Barrel" == e || "Barrel" == t || "Barrel" == a || "Barrel" == o || "Barrel" == i) {
             Kl = g[Math.floor(Math.random() * g.length)];
-            document.querySelector("#primary2").innerHTML = Kl
+            document.querySelector("#primary2").innerHTML = Kl;
         }
         if ("Optic" == e || "Optic" == t || "Optic" == a || "Optic" == o || "Optic" == i) {
             Hl = c[Math.floor(Math.random() * c.length)];
-            document.querySelector("#primary3").innerHTML = Hl
+            document.querySelector("#primary3").innerHTML = Hl;
         }
         if ("Stock" == e || "Stock" == t || "Stock" == a || "Stock" == o || "Stock" == i) {
             zl = P[Math.floor(Math.random() * P.length)];
-            document.querySelector("#primary4").innerHTML = zl
+            document.querySelector("#primary4").innerHTML = zl;
         }
         if ("Perk" == e || "Perk" == t || "Perk" == a || "Perk" == o || "Perk" == i) {
             Zl = A[Math.floor(Math.random() * A.length)];
-            document.querySelector("#primary5").innerHTML = Zl
+            document.querySelector("#primary5").innerHTML = Zl;
         }
         if ("Laser" == e || "Laser" == t || "Laser" == a || "Laser" == o || "Laser" == i) {
             Nl = O[Math.floor(Math.random() * O.length)];
-            document.querySelector("#primary6").innerHTML = Nl
+            document.querySelector("#primary6").innerHTML = Nl;
         }
         if ("Underbarrel" == e || "Underbarrel" == t || "Underbarrel" == a || "Underbarrel" == o || "Underbarrel" == i) {
             bl = s[Math.floor(Math.random() * s.length)];
-            document.querySelector("#primary7").innerHTML = bl
+            document.querySelector("#primary7").innerHTML = bl;
         }
         if ("Ammunition" == e || "Ammunition" == t || "Ammunition" == a || "Ammunition" == o || "Ammunition" == i) {
             ql = f[Math.floor(Math.random() * f.length)];
-            document.querySelector("#primary8").innerHTML = ql
+            document.querySelector("#primary8").innerHTML = ql;
         }
         if ("Rear Grip" == e || "Rear Grip" == t || "Rear Grip" == a || "Rear Grip" == o || "Rear Grip" == i) {
             Dl = C[Math.floor(Math.random() * C.length)];
-            document.querySelector("#primary9").innerHTML = Dl
+            document.querySelector("#primary9").innerHTML = Dl;
         }
     } else if ("ASSAULT - M16" == nl) {
         if ("Muzzle" == e || "Muzzle" == t || "Muzzle" == a || "Muzzle" == o || "Muzzle" == i) {
             Gl = I[Math.floor(Math.random() * I.length)];
-            document.querySelector("#primary1").innerHTML = Gl
+            document.querySelector("#primary1").innerHTML = Gl;
         }
         if ("Barrel" == e || "Barrel" == t || "Barrel" == a || "Barrel" == o || "Barrel" == i) {
             Kl = y[Math.floor(Math.random() * y.length)];
-            document.querySelector("#primary2").innerHTML = Kl
+            document.querySelector("#primary2").innerHTML = Kl;
         }
         if ("Optic" == e || "Optic" == t || "Optic" == a || "Optic" == o || "Optic" == i) {
             Hl = c[Math.floor(Math.random() * c.length)];
-            document.querySelector("#primary3").innerHTML = Hl
+            document.querySelector("#primary3").innerHTML = Hl;
         }
         if ("Stock" == e || "Stock" == t || "Stock" == a || "Stock" == o || "Stock" == i) {
             zl = U[Math.floor(Math.random() * U.length)];
-            document.querySelector("#primary4").innerHTML = zl
+            document.querySelector("#primary4").innerHTML = zl;
         }
         if ("Perk" == e || "Perk" == t || "Perk" == a || "Perk" == o || "Perk" == i) {
             Zl = k[Math.floor(Math.random() * k.length)];
-            document.querySelector("#primary5").innerHTML = Zl
+            document.querySelector("#primary5").innerHTML = Zl;
         }
         if ("Laser" == e || "Laser" == t || "Laser" == a || "Laser" == o || "Laser" == i) {
             Nl = B[Math.floor(Math.random() * B.length)];
-            document.querySelector("#primary6").innerHTML = Nl
+            document.querySelector("#primary6").innerHTML = Nl;
         }
         if ("Underbarrel" == e || "Underbarrel" == t || "Underbarrel" == a || "Underbarrel" == o || "Underbarrel" == i) {
             bl = G[Math.floor(Math.random() * G.length)];
-            document.querySelector("#primary7").innerHTML = bl
+            document.querySelector("#primary7").innerHTML = bl;
         }
         if ("Ammunition" == e || "Ammunition" == t || "Ammunition" == a || "Ammunition" == o || "Ammunition" == i) {
             ql = K[Math.floor(Math.random() * K.length)];
-            document.querySelector("#primary8").innerHTML = ql
+            document.querySelector("#primary8").innerHTML = ql;
         }
         if ("Rear Grip" == e || "Rear Grip" == t || "Rear Grip" == a || "Rear Grip" == o || "Rear Grip" == i) {
             Dl = H[Math.floor(Math.random() * H.length)];
-            document.querySelector("#primary9").innerHTML = Dl
+            document.querySelector("#primary9").innerHTML = Dl;
         }
     } else if ("ASSAULT - AK117" == nl) {
         if ("Muzzle" == e || "Muzzle" == t || "Muzzle" == a || "Muzzle" == o || "Muzzle" == i) {
             Gl = z[Math.floor(Math.random() * z.length)];
-            document.querySelector("#primary1").innerHTML = Gl
+            document.querySelector("#primary1").innerHTML = Gl;
         }
         if ("Barrel" == e || "Barrel" == t || "Barrel" == a || "Barrel" == o || "Barrel" == i) {
             Kl = Z[Math.floor(Math.random() * Z.length)];
-            document.querySelector("#primary2").innerHTML = Kl
-
+            document.querySelector("#primary2").innerHTML = K;
         }
         if ("Optic" == e || "Optic" == t || "Optic" == a || "Optic" == o || "Optic" == i) {
             Hl = c[Math.floor(Math.random() * c.length)];
-            document.querySelector("#primary3").innerHTML = Hl
+            document.querySelector("#primary3").innerHTML = Hl;
         }
         if ("Stock" == e || "Stock" == t || "Stock" == a || "Stock" == o || "Stock" == i) {
             zl = N[Math.floor(Math.random() * N.length)];
-            document.querySelector("#primary4").innerHTML = zl
+            document.querySelector("#primary4").innerHTML = zl;
         }
         if ("Perk" == e || "Perk" == t || "Perk" == a || "Perk" == o || "Perk" == i) {
             Zl = b[Math.floor(Math.random() * b.length)];
-            document.querySelector("#primary5").innerHTML = Zl
+            document.querySelector("#primary5").innerHTML = Zl;
         }
         if ("Laser" == e || "Laser" == t || "Laser" == a || "Laser" == o || "Laser" == i) {
             Nl = q[Math.floor(Math.random() * q.length)];
-            document.querySelector("#primary6").innerHTML = Nl
+            document.querySelector("#primary6").innerHTML = Nl;
         }
         if ("Underbarrel" == e || "Underbarrel" == t || "Underbarrel" == a || "Underbarrel" == o || "Underbarrel" == i) {
             bl = D[Math.floor(Math.random() * D.length)];
-            document.querySelector("#primary7").innerHTML = bl
+            document.querySelector("#primary7").innerHTML = bl;
         }
         if ("Ammunition" == e || "Ammunition" == t || "Ammunition" == a || "Ammunition" == o || "Ammunition" == i) {
             ql = F[Math.floor(Math.random() * F.length)];
-            document.querySelector("#primary8").innerHTML = ql
+            document.querySelector("#primary8").innerHTML = ql;
         }
         if ("Rear Grip" == e || "Rear Grip" == t || "Rear Grip" == a || "Rear Grip" == o || "Rear Grip" == i) {
             Dl = W[Math.floor(Math.random() * W.length)];
-            document.querySelector("#primary9").innerHTML = Dl
+            document.querySelector("#primary9").innerHTML = Dl;
         }
     } else if ("ASSAULT - AK-47" == nl) {
         if ("Muzzle" == e || "Muzzle" == t || "Muzzle" == a || "Muzzle" == o || "Muzzle" == i) {
             Gl = X[Math.floor(Math.random() * X.length)];
-            document.querySelector("#primary1").innerHTML = Gl
+            document.querySelector("#primary1").innerHTML = Gl;
         }
         if ("Barrel" == e || "Barrel" == t || "Barrel" == a || "Barrel" == o || "Barrel" == i) {
             Kl = Y[Math.floor(Math.random() * Y.length)];
-            document.querySelector("#primary2").innerHTML = Kl
+            document.querySelector("#primary2").innerHTML = Kl;
         }
         if ("Optic" == e || "Optic" == t || "Optic" == a || "Optic" == o || "Optic" == i) {
             Hl = c[Math.floor(Math.random() * c.length)];
-            document.querySelector("#primary3").innerHTML = Hl
+            document.querySelector("#primary3").innerHTML = Hl;
         }
         if ("Stock" == e || "Stock" == t || "Stock" == a || "Stock" == o || "Stock" == i) {
             zl = x[Math.floor(Math.random() * x.length)];
-            document.querySelector("#primary4").innerHTML = zl
+            document.querySelector("#primary4").innerHTML = zl;
         }
         if ("Perk" == e || "Perk" == t || "Perk" == a || "Perk" == o || "Perk" == i) {
             Zl = J[Math.floor(Math.random() * J.length)];
-            document.querySelector("#primary5").innerHTML = Zl
+            document.querySelector("#primary5").innerHTML = Zl;
         }
         if ("Laser" == e || "Laser" == t || "Laser" == a || "Laser" == o || "Laser" == i) {
             Nl = v[Math.floor(Math.random() * v.length)];
-            document.querySelector("#primary6").innerHTML = Nl
+            document.querySelector("#primary6").innerHTML = Nl;
         }
         if ("Underbarrel" == e || "Underbarrel" == t || "Underbarrel" == a || "Underbarrel" == o || "Underbarrel" == i) {
             bl = w[Math.floor(Math.random() * w.length)];
-            document.querySelector("#primary7").innerHTML = bl
+            document.querySelector("#primary7").innerHTML = bl;
         }
         if ("Ammunition" == e || "Ammunition" == t || "Ammunition" == a || "Ammunition" == o || "Ammunition" == i) {
             ql = Q[Math.floor(Math.random() * Q.length)];
-            document.querySelector("#primary8").innerHTML = ql
+            document.querySelector("#primary8").innerHTML = ql;
         }
         if ("Rear Grip" == e || "Rear Grip" == t || "Rear Grip" == a || "Rear Grip" == o || "Rear Grip" == i) {
             Dl = V[Math.floor(Math.random() * V.length)];
-            document.querySelector("#primary9").innerHTML = Dl
+            document.querySelector("#primary9").innerHTML = Dl;
         }
     } else if ("ASSAULT - ASM10" == nl) {
         if ("Muzzle" == e || "Muzzle" == t || "Muzzle" == a || "Muzzle" == o || "Muzzle" == i) {
             Gl = j[Math.floor(Math.random() * j.length)];
-            document.querySelector("#primary1").innerHTML = Gl
+            document.querySelector("#primary1").innerHTML = Gl;
         }
         if ("Barrel" == e || "Barrel" == t || "Barrel" == a || "Barrel" == o || "Barrel" == i) {
             Kl = $[Math.floor(Math.random() * $.length)];
-            document.querySelector("#primary2").innerHTML = Kl
+            document.querySelector("#primary2").innerHTML = Kl;
         }
         if ("Optic" == e || "Optic" == t || "Optic" == a || "Optic" == o || "Optic" == i) {
             Hl = c[Math.floor(Math.random() * c.length)];
-            document.querySelector("#primary3").innerHTML = Hl
+            document.querySelector("#primary3").innerHTML = Hl;
         }
         if ("Stock" == e || "Stock" == t || "Stock" == a || "Stock" == o || "Stock" == i) {
             zl = _[Math.floor(Math.random() * _.length)];
-            document.querySelector("#primary4").innerHTML = zl
+            document.querySelector("#primary4").innerHTML = zl;
         }
         if ("Perk" == e || "Perk" == t || "Perk" == a || "Perk" == o || "Perk" == i) {
             Zl = rr[Math.floor(Math.random() * rr.length)];
-            document.querySelector("#primary5").innerHTML = Zl
+            document.querySelector("#primary5").innerHTML = Zl;
         }
         if ("Laser" == e || "Laser" == t || "Laser" == a || "Laser" == o || "Laser" == i) {
             Nl = er[Math.floor(Math.random() * er.length)];
-            document.querySelector("#primary6").innerHTML = Nl
+            document.querySelector("#primary6").innerHTML = Nl;
         }
         if ("Underbarrel" == e || "Underbarrel" == t || "Underbarrel" == a || "Underbarrel" == o || "Underbarrel" == i) {
 
             bl = tr[Math.floor(Math.random() * tr.length)];
-            document.querySelector("#primary7").innerHTML = bl
+            document.querySelector("#primary7").innerHTML = bl;
         }
         if ("Ammunition" == e || "Ammunition" == t || "Ammunition" == a || "Ammunition" == o || "Ammunition" == i) {
             ql = ar[Math.floor(Math.random() * ar.length)];
-            document.querySelector("#primary8").innerHTML = ql
+            document.querySelector("#primary8").innerHTML = ql;
         }
         if ("Rear Grip" == e || "Rear Grip" == t || "Rear Grip" == a || "Rear Grip" == o || "Rear Grip" == i) {
             Dl = or[Math.floor(Math.random() * or.length)];
-            document.querySelector("#primary9").innerHTML = Dl
+            document.querySelector("#primary9").innerHTML = Dl;
         }
     } else if ("ASSAULT - BK57" == nl) {
         if ("Muzzle" == e || "Muzzle" == t || "Muzzle" == a || "Muzzle" == o || "Muzzle" == i) {
             Gl = ir[Math.floor(Math.random() * ir.length)];
-            document.querySelector("#primary1").innerHTML = Gl
+            document.querySelector("#primary1").innerHTML = Gl;
         }
         if ("Barrel" == e || "Barrel" == t || "Barrel" == a || "Barrel" == o || "Barrel" == i) {
             Kl = nr[Math.floor(Math.random() * nr.length)];
-            document.querySelector("#primary2").innerHTML = Kl
+            document.querySelector("#primary2").innerHTML = Kl;
         }
         if ("Optic" == e || "Optic" == t || "Optic" == a || "Optic" == o || "Optic" == i) {
             Hl = c[Math.floor(Math.random() * c.length)];
-            document.querySelector("#primary3").innerHTML = Hl
+            document.querySelector("#primary3").innerHTML = Hl;
         }
         if ("Stock" == e || "Stock" == t || "Stock" == a || "Stock" == o || "Stock" == i) {
             zl = lr[Math.floor(Math.random() * lr.length)];
-            document.querySelector("#primary4").innerHTML = zl
+            document.querySelector("#primary4").innerHTML = zl;
         }
         if ("Perk" == e || "Perk" == t || "Perk" == a || "Perk" == o || "Perk" == i) {
             Zl = Mr[Math.floor(Math.random() * Mr.length)];
-            document.querySelector("#primary5").innerHTML = Zl
+            document.querySelector("#primary5").innerHTML = Zl;
         }
         if ("Laser" == e || "Laser" == t || "Laser" == a || "Laser" == o || "Laser" == i) {
             Nl = Rr[Math.floor(Math.random() * Rr.length)];
-            document.querySelector("#primary6").innerHTML = Nl
+            document.querySelector("#primary6").innerHTML = Nl;
         }
         if ("Underbarrel" == e || "Underbarrel" == t || "Underbarrel" == a || "Underbarrel" == o || "Underbarrel" == i) {
             bl = cr[Math.floor(Math.random() * cr.length)];
-            document.querySelector("#primary7").innerHTML = bl
+            document.querySelector("#primary7").innerHTML = bl;
         }
         if ("Ammunition" == e || "Ammunition" == t || "Ammunition" == a || "Ammunition" == o || "Ammunition" == i) {
             ql = hr[Math.floor(Math.random() * hr.length)];
-            document.querySelector("#primary8").innerHTML = ql
+            document.querySelector("#primary8").innerHTML = ql;
         }
         if ("Rear Grip" == e || "Rear Grip" == t || "Rear Grip" == a || "Rear Grip" == o || "Rear Grip" == i) {
             Dl = mr[Math.floor(Math.random() * mr.length)];
-            document.querySelector("#primary9").innerHTML = Dl
+            document.querySelector("#primary9").innerHTML = Dl;
         }
     } else if ("ASSAULT - LK24" == nl) {
         if ("Muzzle" == e || "Muzzle" == t || "Muzzle" == a || "Muzzle" == o || "Muzzle" == i) {
             Gl = pr[Math.floor(Math.random() * pr.length)];
-            document.querySelector("#primary1").innerHTML = Gl
+            document.querySelector("#primary1").innerHTML = Gl;
         }
         if ("Barrel" == e || "Barrel" == t || "Barrel" == a || "Barrel" == o || "Barrel" == i) {
             Kl = Sr[Math.floor(Math.random() * Sr.length)];
-            document.querySelector("#primary2").innerHTML = Kl
+            document.querySelector("#primary2").innerHTML = Kl;
         }
         if ("Optic" == e || "Optic" == t || "Optic" == a || "Optic" == o || "Optic" == i) {
             Hl = c[Math.floor(Math.random() * c.length)];
-            document.querySelector("#primary3").innerHTML = Hl
+            document.querySelector("#primary3").innerHTML = Hl;
         }
         if ("Stock" == e || "Stock" == t || "Stock" == a || "Stock" == o || "Stock" == i) {
             zl = dr[Math.floor(Math.random() * dr.length)];
-            document.querySelector("#primary4").innerHTML = zl
+            document.querySelector("#primary4").innerHTML = zl;
         }
         if ("Perk" == e || "Perk" == t || "Perk" == a || "Perk" == o || "Perk" == i) {
             Zl = Lr[Math.floor(Math.random() * Lr.length)];
-            document.querySelector("#primary5").innerHTML = Zl
+            document.querySelector("#primary5").innerHTML = Zl;
         }
         if ("Laser" == e || "Laser" == t || "Laser" == a || "Laser" == o || "Laser" == i) {
             Nl = ur[Math.floor(Math.random() * ur.length)];
-            document.querySelector("#primary6").innerHTML = Nl
+            document.querySelector("#primary6").innerHTML = Nl;
         }
         if ("Underbarrel" == e || "Underbarrel" == t || "Underbarrel" == a || "Underbarrel" == o || "Underbarrel" == i) {
             bl = Tr[Math.floor(Math.random() * Tr.length)];
-            document.querySelector("#primary7").innerHTML = bl
+            document.querySelector("#primary7").innerHTML = bl;
         }
         if ("Ammunition" == e || "Ammunition" == t || "Ammunition" == a || "Ammunition" == o || "Ammunition" == i) {
             ql = Er[Math.floor(Math.random() * Er.length)];
-            document.querySelector("#primary8").innerHTML = ql
+            document.querySelector("#primary8").innerHTML = ql;
         }
         if ("Rear Grip" == e || "Rear Grip" == t || "Rear Grip" == a || "Rear Grip" == o || "Rear Grip" == i) {
             Dl = gr[Math.floor(Math.random() * gr.length)];
-            document.querySelector("#primary9").innerHTML = Dl
+            document.querySelector("#primary9").innerHTML = Dl;
         }
     } else if ("ASSAULT - ICR-1" == nl) {
         if ("Muzzle" == e || "Muzzle" == t || "Muzzle" == a || "Muzzle" == o || "Muzzle" == i) {
             Gl = Pr[Math.floor(Math.random() * Pr.length)];
-            document.querySelector("#primary1").innerHTML = Gl
+            document.querySelector("#primary1").innerHTML = Gl;
         }
         if ("Barrel" == e || "Barrel" == t || "Barrel" == a || "Barrel" == o || "Barrel" == i) {
             Kl = Ar[Math.floor(Math.random() * Ar.length)];
-            document.querySelector("#primary2").innerHTML = Kl
+            document.querySelector("#primary2").innerHTML = Kl;
         }
         if ("Optic" == e || "Optic" == t || "Optic" == a || "Optic" == o || "Optic" == i) {
             Hl = c[Math.floor(Math.random() * c.length)];
-            document.querySelector("#primary3").innerHTML = Hl
+            document.querySelector("#primary3").innerHTML = Hl;
         }
         if ("Stock" == e || "Stock" == t || "Stock" == a || "Stock" == o || "Stock" == i) {
             zl = Or[Math.floor(Math.random() * Or.length)];
-            document.querySelector("#primary4").innerHTML = zl
+            document.querySelector("#primary4").innerHTML = zl;
         }
         if ("Perk" == e || "Perk" == t || "Perk" == a || "Perk" == o || "Perk" == i) {
             Zl = sr[Math.floor(Math.random() * sr.length)];
-            document.querySelector("#primary5").innerHTML = Zl
+            document.querySelector("#primary5").innerHTML = Zl;
         }
         if ("Laser" == e || "Laser" == t || "Laser" == a || "Laser" == o || "Laser" == i) {
             Nl = fr[Math.floor(Math.random() * fr.length)];
-            document.querySelector("#primary6").innerHTML = Nl
+            document.querySelector("#primary6").innerHTML = Nl;
         }
         if ("Underbarrel" == e || "Underbarrel" == t || "Underbarrel" == a || "Underbarrel" == o || "Underbarrel" == i) {
             bl = Cr[Math.floor(Math.random() * Cr.length)];
-            document.querySelector("#primary7").innerHTML = bl
+            document.querySelector("#primary7").innerHTML = bl;
         }
         if ("Ammunition" == e || "Ammunition" == t || "Ammunition" == a || "Ammunition" == o || "Ammunition" == i) {
             ql = Ir[Math.floor(Math.random() * Ir.length)];
-            document.querySelector("#primary8").innerHTML = ql
+            document.querySelector("#primary8").innerHTML = ql;
         }
         if ("Rear Grip" == e || "Rear Grip" == t || "Rear Grip" == a || "Rear Grip" == o || "Rear Grip" == i) {
             Dl = yr[Math.floor(Math.random() * yr.length)];
-            document.querySelector("#primary9").innerHTML = Dl
+            document.querySelector("#primary9").innerHTML = Dl;
         }
     } else if ("ASSAULT - Man-O-War" == nl) {
         if ("Muzzle" == e || "Muzzle" == t || "Muzzle" == a || "Muzzle" == o || "Muzzle" == i) {
             Gl = Ur[Math.floor(Math.random() * Ur.length)];
-            document.querySelector("#primary1").innerHTML = Gl
+            document.querySelector("#primary1").innerHTML = Gl;
         }
         if ("Barrel" == e || "Barrel" == t || "Barrel" == a || "Barrel" == o || "Barrel" == i) {
             Kl = kr[Math.floor(Math.random() * kr.length)];
-            document.querySelector("#primary2").innerHTML = Kl
+            document.querySelector("#primary2").innerHTML = Kl;
         }
         if ("Optic" == e || "Optic" == t || "Optic" == a || "Optic" == o || "Optic" == i) {
             Hl = c[Math.floor(Math.random() * c.length)];
-            document.querySelector("#primary3").innerHTML = Hl
+            document.querySelector("#primary3").innerHTML = Hl;
         }
         if ("Stock" == e || "Stock" == t || "Stock" == a || "Stock" == o || "Stock" == i) {
             zl = Br[Math.floor(Math.random() * Br.length)];
-            document.querySelector("#primary4").innerHTML = zl
+            document.querySelector("#primary4").innerHTML = zl;
         }
         if ("Perk" == e || "Perk" == t || "Perk" == a || "Perk" == o || "Perk" == i) {
             Zl = Gr[Math.floor(Math.random() * Gr.length)];
-            document.querySelector("#primary5").innerHTML = Zl
+            document.querySelector("#primary5").innerHTML = Zl;
         }
 
 
 
         if ("Laser" == e || "Laser" == t || "Laser" == a || "Laser" == o || "Laser" == i) {
             Nl = Kr[Math.floor(Math.random() * Kr.length)];
-            document.querySelector("#primary6").innerHTML = Nl
+            document.querySelector("#primary6").innerHTML = Nl;
         }
         if ("Underbarrel" == e || "Underbarrel" == t || "Underbarrel" == a || "Underbarrel" == o || "Underbarrel" == i) {
             bl = Hr[Math.floor(Math.random() * Hr.length)];
-            document.querySelector("#primary7").innerHTML = bl
+            document.querySelector("#primary7").innerHTML = bl;
         }
         if ("Ammunition" == e || "Ammunition" == t || "Ammunition" == a || "Ammunition" == o || "Ammunition" == i) {
             ql = zr[Math.floor(Math.random() * zr.length)];
-            document.querySelector("#primary8").innerHTML = ql
+            document.querySelector("#primary8").innerHTML = ql;
         }
         if ("Rear Grip" == e || "Rear Grip" == t || "Rear Grip" == a || "Rear Grip" == o || "Rear Grip" == i) {
             Dl = Zr[Math.floor(Math.random() * Zr.length)];
-            document.querySelector("#primary9").innerHTML = Dl
+            document.querySelector("#primary9").innerHTML = Dl;
         }
     } else if ("ASSAULT - KN-44" == nl) {
         if ("Muzzle" == e || "Muzzle" == t || "Muzzle" == a || "Muzzle" == o || "Muzzle" == i) {
             Gl = Nr[Math.floor(Math.random() * Nr.length)];
-            document.querySelector("#primary1").innerHTML = Gl
+            document.querySelector("#primary1").innerHTML = Gl;
         }
         if ("Barrel" == e || "Barrel" == t || "Barrel" == a || "Barrel" == o || "Barrel" == i) {
             Kl = br[Math.floor(Math.random() * br.length)];
-            document.querySelector("#primary2").innerHTML = Kl
+            document.querySelector("#primary2").innerHTML = Kl;
         }
         if ("Optic" == e || "Optic" == t || "Optic" == a || "Optic" == o || "Optic" == i) {
             Hl = c[Math.floor(Math.random() * c.length)];
-            document.querySelector("#primary3").innerHTML = Hl
+            document.querySelector("#primary3").innerHTML = Hl;
         }
         if ("Stock" == e || "Stock" == t || "Stock" == a || "Stock" == o || "Stock" == i) {
             zl = qr[Math.floor(Math.random() * qr.length)];
-            document.querySelector("#primary4").innerHTML = zl
+            document.querySelector("#primary4").innerHTML = zl;
         }
         if ("Perk" == e || "Perk" == t || "Perk" == a || "Perk" == o || "Perk" == i) {
             Zl = Dr[Math.floor(Math.random() * Dr.length)];
-            document.querySelector("#primary5").innerHTML = Zl
+            document.querySelector("#primary5").innerHTML = Zl;
         }
         if ("Laser" == e || "Laser" == t || "Laser" == a || "Laser" == o || "Laser" == i) {
             Nl = Fr[Math.floor(Math.random() * Fr.length)];
-            document.querySelector("#primary6").innerHTML = Nl
+            document.querySelector("#primary6").innerHTML = Nl;
         }
         if ("Underbarrel" == e || "Underbarrel" == t || "Underbarrel" == a || "Underbarrel" == o || "Underbarrel" == i) {
             bl = Wr[Math.floor(Math.random() * Wr.length)];
-            document.querySelector("#primary7").innerHTML = bl
+            document.querySelector("#primary7").innerHTML = bl;
         }
         if ("Ammunition" == e || "Ammunition" == t || "Ammunition" == a || "Ammunition" == o || "Ammunition" == i) {
             ql = Xr[Math.floor(Math.random() * Xr.length)];
-            document.querySelector("#primary8").innerHTML = ql
+            document.querySelector("#primary8").innerHTML = ql;
         }
         if ("Rear Grip" == e || "Rear Grip" == t || "Rear Grip" == a || "Rear Grip" == o || "Rear Grip" == i) {
             Dl = Yr[Math.floor(Math.random() * Yr.length)];
-            document.querySelector("#primary9").innerHTML = Dl
+            document.querySelector("#primary9").innerHTML = Dl;
         }
     } else if ("ASSAULT - HBRa3" == nl) {
         if ("Muzzle" == e || "Muzzle" == t || "Muzzle" == a || "Muzzle" == o || "Muzzle" == i) {
             Gl = xr[Math.floor(Math.random() * xr.length)];
-            document.querySelector("#primary1").innerHTML = Gl
+            document.querySelector("#primary1").innerHTML = Gl;
         }
         if ("Barrel" == e || "Barrel" == t || "Barrel" == a || "Barrel" == o || "Barrel" == i) {
             Kl = Jr[Math.floor(Math.random() * Jr.length)];
-            document.querySelector("#primary2").innerHTML = Kl
+            document.querySelector("#primary2").innerHTML = Kl;
         }
         if ("Optic" == e || "Optic" == t || "Optic" == a || "Optic" == o || "Optic" == i) {
             Hl = c[Math.floor(Math.random() * c.length)];
-            document.querySelector("#primary3").innerHTML = Hl
+            document.querySelector("#primary3").innerHTML = Hl;
         }
         if ("Stock" == e || "Stock" == t || "Stock" == a || "Stock" == o || "Stock" == i) {
             zl = vr[Math.floor(Math.random() * vr.length)];
-            document.querySelector("#primary4").innerHTML = zl
+            document.querySelector("#primary4").innerHTML = zl;
         }
         if ("Perk" == e || "Perk" == t || "Perk" == a || "Perk" == o || "Perk" == i) {
             Zl = wr[Math.floor(Math.random() * wr.length)];
-            document.querySelector("#primary5").innerHTML = Zl
+            document.querySelector("#primary5").innerHTML = Zl;
         }
         if ("Laser" == e || "Laser" == t || "Laser" == a || "Laser" == o || "Laser" == i) {
             Nl = Qr[Math.floor(Math.random() * Qr.length)];
-            document.querySelector("#primary6").innerHTML = Nl
+            document.querySelector("#primary6").innerHTML = Nl;
         }
         if ("Underbarrel" == e || "Underbarrel" == t || "Underbarrel" == a || "Underbarrel" == o || "Underbarrel" == i) {
             bl = Vr[Math.floor(Math.random() * Vr.length)];
-            document.querySelector("#primary7").innerHTML = bl
+            document.querySelector("#primary7").innerHTML = bl;
         }
         if ("Ammunition" == e || "Ammunition" == t || "Ammunition" == a || "Ammunition" == o || "Ammunition" == i) {
             ql = jr[Math.floor(Math.random() * jr.length)];
-            document.querySelector("#primary8").innerHTML = ql
+            document.querySelector("#primary8").innerHTML = ql;
         }
         if ("Rear Grip" == e || "Rear Grip" == t || "Rear Grip" == a || "Rear Grip" == o || "Rear Grip" == i) {
             Dl = $r[Math.floor(Math.random() * $r.length)];
-            document.querySelector("#primary9").innerHTML = Dl
+            document.querySelector("#primary9").innerHTML = Dl;
         }
     } else if ("ASSAULT - HVK-30" == nl) {
         if ("Muzzle" == e || "Muzzle" == t || "Muzzle" == a || "Muzzle" == o || "Muzzle" == i) {
             Gl = _r[Math.floor(Math.random() * _r.length)];
-            document.querySelector("#primary1").innerHTML = Gl
+            document.querySelector("#primary1").innerHTML = Gl;
         }
         if ("Barrel" == e || "Barrel" == t || "Barrel" == a || "Barrel" == o || "Barrel" == i) {
             Kl = re[Math.floor(Math.random() * re.length)];
-            document.querySelector("#primary2").innerHTML = Kl
+            document.querySelector("#primary2").innerHTML = Kl;
         }
         if ("Optic" == e || "Optic" == t || "Optic" == a || "Optic" == o || "Optic" == i) {
             Hl = c[Math.floor(Math.random() * c.length)];
-            document.querySelector("#primary3").innerHTML = Hl
+            document.querySelector("#primary3").innerHTML = Hl;
         }
         if ("Stock" == e || "Stock" == t || "Stock" == a || "Stock" == o || "Stock" == i) {
             zl = ee[Math.floor(Math.random() * ee.length)];
-            document.querySelector("#primary4").innerHTML = zl
+            document.querySelector("#primary4").innerHTML = zl;
         }
         if ("Perk" == e || "Perk" == t || "Perk" == a || "Perk" == o || "Perk" == i) {
             Zl = te[Math.floor(Math.random() * te.length)];
-            document.querySelector("#primary5").innerHTML = Zl
+            document.querySelector("#primary5").innerHTML = Zl;
         }
         if ("Laser" == e || "Laser" == t || "Laser" == a || "Laser" == o || "Laser" == i) {
             Nl = ae[Math.floor(Math.random() * ae.length)];
-            document.querySelector("#primary6").innerHTML = Nl
+            document.querySelector("#primary6").innerHTML = Nl;
         }
         if ("Underbarrel" == e || "Underbarrel" == t || "Underbarrel" == a || "Underbarrel" == o || "Underbarrel" == i) {
             bl = oe[Math.floor(Math.random() * oe.length)];
-            document.querySelector("#primary7").innerHTML = bl
+            document.querySelector("#primary7").innerHTML = bl;
         }
         if ("Ammunition" == e || "Ammunition" == t || "Ammunition" == a || "Ammunition" == o || "Ammunition" == i) {
             ql = ie[Math.floor(Math.random() * ie.length)];
-            document.querySelector("#primary8").innerHTML = ql
+            document.querySelector("#primary8").innerHTML = ql;
         }
         if ("Rear Grip" == e || "Rear Grip" == t || "Rear Grip" == a || "Rear Grip" == o || "Rear Grip" == i) {
             Dl = ne[Math.floor(Math.random() * ne.length)];
-            document.querySelector("#primary9").innerHTML = Dl
+            document.querySelector("#primary9").innerHTML = Dl;
         }
     } else if ("ASSAULT - DR-H" == nl) {
         if ("Muzzle" == e || "Muzzle" == t || "Muzzle" == a || "Muzzle" == o || "Muzzle" == i) {
             Gl = le[Math.floor(Math.random() * le.length)];
-            document.querySelector("#primary1").innerHTML = Gl
+            document.querySelector("#primary1").innerHTML = Gl;
         }
         if ("Barrel" == e || "Barrel" == t || "Barrel" == a || "Barrel" == o || "Barrel" == i) {
             Kl = Me[Math.floor(Math.random() * Me.length)];
-            document.querySelector("#primary2").innerHTML = Kl
+            document.querySelector("#primary2").innerHTML = Kl;
         }
         if ("Optic" == e || "Optic" == t || "Optic" == a || "Optic" == o || "Optic" == i) {
             Hl = c[Math.floor(Math.random() * c.length)];
-            document.querySelector("#primary3").innerHTML = Hl
+            document.querySelector("#primary3").innerHTML = Hl;
         }
         if ("Stock" == e || "Stock" == t || "Stock" == a || "Stock" == o || "Stock" == i) {
             zl = Re[Math.floor(Math.random() * Re.length)];
-            document.querySelector("#primary4").innerHTML = zl
+            document.querySelector("#primary4").innerHTML = zl;
         }
         if ("Perk" == e || "Perk" == t || "Perk" == a || "Perk" == o || "Perk" == i) {
             Zl = ce[Math.floor(Math.random() * ce.length)];
-            document.querySelector("#primary5").innerHTML = Zl
+            document.querySelector("#primary5").innerHTML = Zl;
         }
         if ("Laser" == e || "Laser" == t || "Laser" == a || "Laser" == o || "Laser" == i) {
             Nl = he[Math.floor(Math.random() * he.length)];
-            document.querySelector("#primary6").innerHTML = Nl
+            document.querySelector("#primary6").innerHTML = Nl;
         }
         if ("Underbarrel" == e || "Underbarrel" == t || "Underbarrel" == a || "Underbarrel" == o || "Underbarrel" == i) {
             bl = me[Math.floor(Math.random() * me.length)];
-            document.querySelector("#primary7").innerHTML = bl
+            document.querySelector("#primary7").innerHTML = bl;
         }
         if ("Ammunition" == e || "Ammunition" == t || "Ammunition" == a || "Ammunition" == o || "Ammunition" == i) {
             ql = pe[Math.floor(Math.random() * pe.length)];
-            document.querySelector("#primary8").innerHTML = ql
+            document.querySelector("#primary8").innerHTML = ql;
         }
         if ("Rear Grip" == e || "Rear Grip" == t || "Rear Grip" == a || "Rear Grip" == o || "Rear Grip" == i) {
             Dl = Se[Math.floor(Math.random() * Se.length)];
-            document.querySelector("#primary9").innerHTML = Dl
+            document.querySelector("#primary9").innerHTML = Dl;
         }
     } else if ("ASSAULT - Peacekeeper MK2" == nl) {
         if ("Muzzle" == e || "Muzzle" == t || "Muzzle" == a || "Muzzle" == o || "Muzzle" == i) {
             Gl = de[Math.floor(Math.random() * de.length)];
-            document.querySelector("#primary1").innerHTML = Gl
+            document.querySelector("#primary1").innerHTML = Gl;
         }
         if ("Barrel" == e || "Barrel" == t || "Barrel" == a || "Barrel" == o || "Barrel" == i) {
             Kl = Le[Math.floor(Math.random() * Le.length)];
-            document.querySelector("#primary2").innerHTML = Kl
+            document.querySelector("#primary2").innerHTML = Kl;
         }
         if ("Optic" == e || "Optic" == t || "Optic" == a || "Optic" == o || "Optic" == i) {
             Hl = c[Math.floor(Math.random() * c.length)];
-            document.querySelector("#primary3").innerHTML = Hl
+            document.querySelector("#primary3").innerHTML = Hl;
         }
         if ("Stock" == e || "Stock" == t || "Stock" == a || "Stock" == o || "Stock" == i) {
             zl = ue[Math.floor(Math.random() * ue.length)];
-            document.querySelector("#primary4").innerHTML = zl
+            document.querySelector("#primary4").innerHTML = zl;
         }
         if ("Perk" == e || "Perk" == t || "Perk" == a || "Perk" == o || "Perk" == i) {
             Zl = Te[Math.floor(Math.random() * Te.length)];
-            document.querySelector("#primary5").innerHTML = Zl
+            document.querySelector("#primary5").innerHTML = Zl;
         }
         if ("Laser" == e || "Laser" == t || "Laser" == a || "Laser" == o || "Laser" == i) {
             Nl = Ee[Math.floor(Math.random() * Ee.length)];
-            document.querySelector("#primary6").innerHTML = Nl
+            document.querySelector("#primary6").innerHTML = Nl;
         }
         if ("Underbarrel" == e || "Underbarrel" == t || "Underbarrel" == a || "Underbarrel" == o || "Underbarrel" == i) {
             bl = ge[Math.floor(Math.random() * ge.length)];
-            document.querySelector("#primary7").innerHTML = bl
+            document.querySelector("#primary7").innerHTML = bl;
         }
         if ("Ammunition" == e || "Ammunition" == t || "Ammunition" == a || "Ammunition" == o || "Ammunition" == i) {
             ql = Pe[Math.floor(Math.random() * Pe.length)];
-            document.querySelector("#primary8").innerHTML = ql
+            document.querySelector("#primary8").innerHTML = ql;
         }
         if ("Rear Grip" == e || "Rear Grip" == t || "Rear Grip" == a || "Rear Grip" == o || "Rear Grip" == i) {
             Dl = Ae[Math.floor(Math.random() * Ae.length)];
-            document.querySelector("#primary9").innerHTML = Dl
+            document.querySelector("#primary9").innerHTML = Dl;
         }
     } else if ("ASSAULT - FR .556" == nl) {
         if ("Muzzle" == e || "Muzzle" == t || "Muzzle" == a || "Muzzle" == o || "Muzzle" == i) {
             Gl = Oe[Math.floor(Math.random() * Oe.length)];
-            document.querySelector("#primary1").innerHTML = Gl
+            document.querySelector("#primary1").innerHTML = Gl;
         }
         if ("Barrel" == e || "Barrel" == t || "Barrel" == a || "Barrel" == o || "Barrel" == i) {
             Kl = se[Math.floor(Math.random() * se.length)];
-            document.querySelector("#primary2").innerHTML = Kl
+            document.querySelector("#primary2").innerHTML = Kl;
         }
         if ("Optic" == e || "Optic" == t || "Optic" == a || "Optic" == o || "Optic" == i) {
             Hl = c[Math.floor(Math.random() * c.length)];
-            document.querySelector("#primary3").innerHTML = Hl
+            document.querySelector("#primary3").innerHTML = Hl;
         }
         if ("Stock" == e || "Stock" == t || "Stock" == a || "Stock" == o || "Stock" == i) {
             zl = fe[Math.floor(Math.random() * fe.length)];
-            document.querySelector("#primary4").innerHTML = zl
+            document.querySelector("#primary4").innerHTML = zl;
         }
         if ("Perk" == e || "Perk" == t || "Perk" == a || "Perk" == o || "Perk" == i) {
             Zl = Ce[Math.floor(Math.random() * Ce.length)];
-            document.querySelector("#primary5").innerHTML = Zl
+            document.querySelector("#primary5").innerHTML = Zl;
         }
         if ("Laser" == e || "Laser" == t || "Laser" == a || "Laser" == o || "Laser" == i) {
             Nl = Ie[Math.floor(Math.random() * Ie.length)];
-            document.querySelector("#primary6").innerHTML = Nl
+            document.querySelector("#primary6").innerHTML = Nl;
         }
         if ("Underbarrel" == e || "Underbarrel" == t || "Underbarrel" == a || "Underbarrel" == o || "Underbarrel" == i) {
             bl = ye[Math.floor(Math.random() * ye.length)];
-            document.querySelector("#primary7").innerHTML = bl
+            document.querySelector("#primary7").innerHTML = bl;
         }
         if ("Ammunition" == e || "Ammunition" == t || "Ammunition" == a || "Ammunition" == o || "Ammunition" == i) {
             ql = Ue[Math.floor(Math.random() * Ue.length)];
-            document.querySelector("#primary8").innerHTML = ql
+            document.querySelector("#primary8").innerHTML = ql;
         }
         if ("Rear Grip" == e || "Rear Grip" == t || "Rear Grip" == a || "Rear Grip" == o || "Rear Grip" == i) {
             Dl = ke[Math.floor(Math.random() * ke.length)];
-            document.querySelector("#primary9").innerHTML = Dl
+            document.querySelector("#primary9").innerHTML = Dl;
         }
     } else if ("SNIPER - XPR-50" == nl) {
         for (e = fl[Math.floor(Math.random() * fl.length)], t = fl[Math.floor(Math.random() * fl.length)]; e == t;) t = fl[Math.floor(Math.random() * fl.length)];
@@ -1161,39 +1161,39 @@ function generate() {
 
         if ("Muzzle" == e || "Muzzle" == t || "Muzzle" == a || "Muzzle" == o || "Muzzle" == i) {
             Gl = Be[Math.floor(Math.random() * Be.length)];
-            document.querySelector("#primary1").innerHTML = Gl
+            document.querySelector("#primary1").innerHTML = Gl;
         }
         if ("Barrel" == e || "Barrel" == t || "Barrel" == a || "Barrel" == o || "Barrel" == i) {
             Kl = Ge[Math.floor(Math.random() * Ge.length)];
-            document.querySelector("#primary2").innerHTML = Kl
+            document.querySelector("#primary2").innerHTML = Kl;
         }
         if ("Optic" == e || "Optic" == t || "Optic" == a || "Optic" == o || "Optic" == i) {
             Hl = Ke[Math.floor(Math.random() * Ke.length)];
-            document.querySelector("#primary3").innerHTML = Hl
+            document.querySelector("#primary3").innerHTML = Hl;
         }
         if ("Stock" == e || "Stock" == t || "Stock" == a || "Stock" == o || "Stock" == i) {
             zl = He[Math.floor(Math.random() * He.length)];
-            document.querySelector("#primary4").innerHTML = zl
+            document.querySelector("#primary4").innerHTML = zl;
         }
         if ("Perk" == e || "Perk" == t || "Perk" == a || "Perk" == o || "Perk" == i) {
             Zl = ze[Math.floor(Math.random() * ze.length)];
-            document.querySelector("#primary5").innerHTML = Zl
+            document.querySelector("#primary5").innerHTML = Zl;
         }
         if ("Laser" == e || "Laser" == t || "Laser" == a || "Laser" == o || "Laser" == i) {
             Nl = "LASER - OWC Laser - Tactical";
-            document.querySelector("#primary6").innerHTML = Nl
+            document.querySelector("#primary6").innerHTML = Nl;
         }
         if ("Underbarrel" == e || "Underbarrel" == t || "Underbarrel" == a || "Underbarrel" == o || "Underbarrel" == i) {
             bl = Ze[Math.floor(Math.random() * Ze.length)];
-            document.querySelector("#primary7").innerHTML = bl
+            document.querySelector("#primary7").innerHTML = bl;
         }
         if ("Ammunition" == e || "Ammunition" == t || "Ammunition" == a || "Ammunition" == o || "Ammunition" == i) {
             ql = Ne[Math.floor(Math.random() * Ne.length)];
-            document.querySelector("#primary8").innerHTML = ql
+            document.querySelector("#primary8").innerHTML = ql;
         }
         if ("Rear Grip" == e || "Rear Grip" == t || "Rear Grip" == a || "Rear Grip" == o || "Rear Grip" == i) {
             Dl = xpr50RearGrip[Math.floor(Math.random() * xpr50RearGrip.length)];
-            document.querySelector("#primary9").innerHTML = Dl
+            document.querySelector("#primary9").innerHTML = Dl;
         }
     } else if ("SNIPER - Arctic .50" == nl) {
 
@@ -1204,39 +1204,39 @@ function generate() {
 
         if ("Muzzle" == e || "Muzzle" == t || "Muzzle" == a || "Muzzle" == o || "Muzzle" == i) {
             Gl = be[Math.floor(Math.random() * be.length)];
-            document.querySelector("#primary1").innerHTML = Gl
+            document.querySelector("#primary1").innerHTML = Gl;
         }
         if ("Barrel" == e || "Barrel" == t || "Barrel" == a || "Barrel" == o || "Barrel" == i) {
             Kl = qe[Math.floor(Math.random() * qe.length)];
-            document.querySelector("#primary2").innerHTML = Kl
+            document.querySelector("#primary2").innerHTML = Kl;
         }
         if ("Optic" == e || "Optic" == t || "Optic" == a || "Optic" == o || "Optic" == i) {
             Hl = De[Math.floor(Math.random() * De.length)];
-            document.querySelector("#primary3").innerHTML = Hl
+            document.querySelector("#primary3").innerHTML = Hl;
         }
         if ("Stock" == e || "Stock" == t || "Stock" == a || "Stock" == o || "Stock" == i) {
             zl = Fe[Math.floor(Math.random() * Fe.length)];
-            document.querySelector("#primary4").innerHTML = zl
+            document.querySelector("#primary4").innerHTML = zl;
         }
         if ("Perk" == e || "Perk" == t || "Perk" == a || "Perk" == o || "Perk" == i) {
             Zl = We[Math.floor(Math.random() * We.length)];
-            document.querySelector("#primary5").innerHTML = Zl
+            document.querySelector("#primary5").innerHTML = Zl;
         }
         if ("Laser" == e || "Laser" == t || "Laser" == a || "Laser" == o || "Laser" == i) {
             Nl = arctic50Laser[Math.floor(Math.random() * arctic50Laser.length)];
-            document.querySelector("#primary6").innerHTML = Nl
+            document.querySelector("#primary6").innerHTML = Nl;
         }
         if ("Underbarrel" == e || "Underbarrel" == t || "Underbarrel" == a || "Underbarrel" == o || "Underbarrel" == i) {
             bl = "UNDERBARREL - Bipod";
-            document.querySelector("#primary7").innerHTML = bl
+            document.querySelector("#primary7").innerHTML = bl;
         }
         if ("Ammunition" == e || "Ammunition" == t || "Ammunition" == a || "Ammunition" == o || "Ammunition" == i) {
             ql = Xe[Math.floor(Math.random() * Xe.length)];
-            document.querySelector("#primary8").innerHTML = ql
+            document.querySelector("#primary8").innerHTML = ql;
         }
         if ("Rear Grip" == e || "Rear Grip" == t || "Rear Grip" == a || "Rear Grip" == o || "Rear Grip" == i) {
             Dl = Ye[Math.floor(Math.random() * Ye.length)];
-            document.querySelector("#primary9").innerHTML = Dl
+            document.querySelector("#primary9").innerHTML = Dl;
         }
     } else if ("SNIPER - M21 EBR" == nl) {
         for (e = Il[Math.floor(Math.random() * Il.length)], t = Il[Math.floor(Math.random() * Il.length)]; e == t;) t = Il[Math.floor(Math.random() * Il.length)];
@@ -1246,39 +1246,39 @@ function generate() {
 
         if ("Muzzle" == e || "Muzzle" == t || "Muzzle" == a || "Muzzle" == o || "Muzzle" == i) {
             Gl = xe[Math.floor(Math.random() * xe.length)];
-            document.querySelector("#primary1").innerHTML = Gl
+            document.querySelector("#primary1").innerHTML = Gl;
         }
         if ("Barrel" == e || "Barrel" == t || "Barrel" == a || "Barrel" == o || "Barrel" == i) {
             Kl = Je[Math.floor(Math.random() * Je.length)];
-            document.querySelector("#primary2").innerHTML = Kl
+            document.querySelector("#primary2").innerHTML = Kl;
         }
         if ("Optic" == e || "Optic" == t || "Optic" == a || "Optic" == o || "Optic" == i) {
             Hl = ve[Math.floor(Math.random() * ve.length)];
-            document.querySelector("#primary3").innerHTML = Hl
+            document.querySelector("#primary3").innerHTML = Hl;
         }
         if ("Stock" == e || "Stock" == t || "Stock" == a || "Stock" == o || "Stock" == i) {
             zl = we[Math.floor(Math.random() * we.length)];
-            document.querySelector("#primary4").innerHTML = zl
+            document.querySelector("#primary4").innerHTML = zl;
         }
         if ("Perk" == e || "Perk" == t || "Perk" == a || "Perk" == o || "Perk" == i) {
             Zl = Qe[Math.floor(Math.random() * Qe.length)];
-            document.querySelector("#primary5").innerHTML = Zl
+            document.querySelector("#primary5").innerHTML = Zl;
         }
         if ("Laser" == e || "Laser" == t || "Laser" == a || "Laser" == o || "Laser" == i) {
             Nl = "LASER - OWC Laser - Tactical";
-            document.querySelector("#primary6").innerHTML = Nl
+            document.querySelector("#primary6").innerHTML = Nl;
         }
         if ("Underbarrel" == e || "Underbarrel" == t || "Underbarrel" == a || "Underbarrel" == o || "Underbarrel" == i) {
             bl = Ve[Math.floor(Math.random() * Ve.length)];
-            document.querySelector("#primary7").innerHTML = bl
+            document.querySelector("#primary7").innerHTML = bl;
         }
         if ("Ammunition" == e || "Ammunition" == t || "Ammunition" == a || "Ammunition" == o || "Ammunition" == i) {
             ql = je[Math.floor(Math.random() * je.length)];
-            document.querySelector("#primary8").innerHTML = ql
+            document.querySelector("#primary8").innerHTML = ql;
         }
         if ("Rear Grip" == e || "Rear Grip" == t || "Rear Grip" == a || "Rear Grip" == o || "Rear Grip" == i) {
             Dl = m21ebrRearGrip[Math.floor(Math.random() * m21ebrRearGrip.length)];
-            document.querySelector("#primary9").innerHTML = Dl
+            document.querySelector("#primary9").innerHTML = Dl;
         }
     } else if ("SNIPER - DL Q33" == nl) {
 
@@ -1290,47 +1290,47 @@ function generate() {
         if ("Muzzle" == e || "Muzzle" == t || "Muzzle" == a || "Muzzle" == o || "Muzzle" == i) {
 
             Gl = $e[Math.floor(Math.random() * $e.length)];
-            document.querySelector("#primary1").innerHTML = Gl
+            document.querySelector("#primary1").innerHTML = Gl;
         }
         if ("Barrel" == e || "Barrel" == t || "Barrel" == a || "Barrel" == o || "Barrel" == i) {
 
             Kl = _e[Math.floor(Math.random() * _e.length)];
-            document.querySelector("#primary2").innerHTML = Kl
+            document.querySelector("#primary2").innerHTML = Kl;
         }
         if ("Optic" == e || "Optic" == t || "Optic" == a || "Optic" == o || "Optic" == i) {
 
             Hl = rt[Math.floor(Math.random() * rt.length)];
-            document.querySelector("#primary3").innerHTML = Hl
+            document.querySelector("#primary3").innerHTML = Hl;
         }
         if ("Stock" == e || "Stock" == t || "Stock" == a || "Stock" == o || "Stock" == i) {
 
             zl = et[Math.floor(Math.random() * et.length)];
-            document.querySelector("#primary4").innerHTML = zl
+            document.querySelector("#primary4").innerHTML = zl;
         }
         if ("Perk" == e || "Perk" == t || "Perk" == a || "Perk" == o || "Perk" == i) {
 
             Zl = tt[Math.floor(Math.random() * tt.length)];
-            document.querySelector("#primary5").innerHTML = Zl
+            document.querySelector("#primary5").innerHTML = Zl;
         }
         if ("Laser" == e || "Laser" == t || "Laser" == a || "Laser" == o || "Laser" == i) {
 
             Nl = "LASER - OWC Laser - Tactical";
-            document.querySelector("#primary6").innerHTML = Nl
+            document.querySelector("#primary6").innerHTML = Nl;
         }
         if ("Underbarrel" == e || "Underbarrel" == t || "Underbarrel" == a || "Underbarrel" == o || "Underbarrel" == i) {
 
             bl = "UNDERBARREL - Bipod";
-            document.querySelector("#primary7").innerHTML = bl
+            document.querySelector("#primary7").innerHTML = bl;
         }
         if ("Ammunition" == e || "Ammunition" == t || "Ammunition" == a || "Ammunition" == o || "Ammunition" == i) {
 
             ql = at[Math.floor(Math.random() * at.length)];
-            document.querySelector("#primary8").innerHTML = ql
+            document.querySelector("#primary8").innerHTML = ql;
         }
         if ("Rear Grip" == e || "Rear Grip" == t || "Rear Grip" == a || "Rear Grip" == o || "Rear Grip" == i) {
 
             Dl = dlq33RearGrip[Math.floor(Math.random() * dlq33RearGrip.length)];
-            document.querySelector("#primary9").innerHTML = Dl
+            document.querySelector("#primary9").innerHTML = Dl;
         }
     } else if ("SNIPER - Locus" == nl) {
 
@@ -1341,90 +1341,90 @@ function generate() {
         if ("Muzzle" == e || "Muzzle" == t || "Muzzle" == a || "Muzzle" == o || "Muzzle" == i) {
 
             Gl = ot[Math.floor(Math.random() * ot.length)];
-            document.querySelector("#primary1").innerHTML = Gl
+            document.querySelector("#primary1").innerHTML = Gl;
         }
         if ("Barrel" == e || "Barrel" == t || "Barrel" == a || "Barrel" == o || "Barrel" == i) {
 
             Kl = it[Math.floor(Math.random() * it.length)];
-            document.querySelector("#primary2").innerHTML = Kl
+            document.querySelector("#primary2").innerHTML = Kl;
         }
         if ("Optic" == e || "Optic" == t || "Optic" == a || "Optic" == o || "Optic" == i) {
 
             Hl = nt[Math.floor(Math.random() * nt.length)];
-            document.querySelector("#primary3").innerHTML = Hl
+            document.querySelector("#primary3").innerHTML = Hl;
         }
         if ("Stock" == e || "Stock" == t || "Stock" == a || "Stock" == o || "Stock" == i) {
 
             zl = lt[Math.floor(Math.random() * lt.length)];
-            document.querySelector("#primary4").innerHTML = zl
+            document.querySelector("#primary4").innerHTML = zl;
         }
         if ("Perk" == e || "Perk" == t || "Perk" == a || "Perk" == o || "Perk" == i) {
 
             Zl = Mt[Math.floor(Math.random() * Mt.length)];
-            document.querySelector("#primary5").innerHTML = Zl
+            document.querySelector("#primary5").innerHTML = Zl;
         }
         if ("Laser" == e || "Laser" == t || "Laser" == a || "Laser" == o || "Laser" == i) {
 
             Nl = "LASER - OWC Laser - Tactical";
-            document.querySelector("#primary6").innerHTML = Nl
+            document.querySelector("#primary6").innerHTML = Nl;
         }
         if ("Underbarrel" == e || "Underbarrel" == t || "Underbarrel" == a || "Underbarrel" == o || "Underbarrel" == i) {
 
             bl = locusUnderbarrel[Math.floor(Math.random() * locusUnderbarrel.length)];
-            document.querySelector("#primary7").innerHTML = bl
+            document.querySelector("#primary7").innerHTML = bl;
         }
         if ("Ammunition" == e || "Ammunition" == t || "Ammunition" == a || "Ammunition" == o || "Ammunition" == i) {
 
             ql = Rt[Math.floor(Math.random() * Rt.length)];
-            document.querySelector("#primary8").innerHTML = ql
+            document.querySelector("#primary8").innerHTML = ql;
         }
         if ("Rear Grip" == e || "Rear Grip" == t || "Rear Grip" == a || "Rear Grip" == o || "Rear Grip" == i) {
 
             Dl = ct[Math.floor(Math.random() * ct.length)];
-            document.querySelector("#primary9").innerHTML = Dl
+            document.querySelector("#primary9").innerHTML = Dl;
         }
     } else if ("SNIPER - Outlaw" == nl) {
 
         if ("Muzzle" == e || "Muzzle" == t || "Muzzle" == a || "Muzzle" == o || "Muzzle" == i) {
 
             Gl = ht[Math.floor(Math.random() * ht.length)];
-            document.querySelector("#primary1").innerHTML = Gl
+            document.querySelector("#primary1").innerHTML = Gl;
         }
         if ("Barrel" == e || "Barrel" == t || "Barrel" == a || "Barrel" == o || "Barrel" == i) {
 
             Kl = mt[Math.floor(Math.random() * mt.length)];
-            document.querySelector("#primary2").innerHTML = Kl
+            document.querySelector("#primary2").innerHTML = Kl;
         }
         if ("Optic" == e || "Optic" == t || "Optic" == a || "Optic" == o || "Optic" == i) {
 
             Hl = pt[Math.floor(Math.random() * pt.length)];
-            document.querySelector("#primary3").innerHTML = Hl
+            document.querySelector("#primary3").innerHTML = Hl;
         }
         if ("Stock" == e || "Stock" == t || "Stock" == a || "Stock" == o || "Stock" == i) {
 
             zl = St[Math.floor(Math.random() * St.length)];
-            document.querySelector("#primary4").innerHTML = zl
+            document.querySelector("#primary4").innerHTML = zl;
         }
         if ("Perk" == e || "Perk" == t || "Perk" == a || "Perk" == o || "Perk" == i) {
 
             Zl = dt[Math.floor(Math.random() * dt.length)];
-            document.querySelector("#primary5").innerHTML = Zl
+            document.querySelector("#primary5").innerHTML = Zl;
         }
         if ("Laser" == e || "Laser" == t || "Laser" == a || "Laser" == o || "Laser" == i) {
             Nl = "LASER - OWC Laser - Tactical";
-            document.querySelector("#primary6").innerHTML = Nl
+            document.querySelector("#primary6").innerHTML = Nl;
         }
         if ("Underbarrel" == e || "Underbarrel" == t || "Underbarrel" == a || "Underbarrel" == o || "Underbarrel" == i) {
             bl = "UNDERBARREL - Bipod";
-            document.querySelector("#primary7").innerHTML = bl
+            document.querySelector("#primary7").innerHTML = bl;
         }
         if ("Ammunition" == e || "Ammunition" == t || "Ammunition" == a || "Ammunition" == o || "Ammunition" == i) {
             ql = Lt[Math.floor(Math.random() * Lt.length)];
-            document.querySelector("#primary8").innerHTML = ql
+            document.querySelector("#primary8").innerHTML = ql;
         }
         if ("Rear Grip" == e || "Rear Grip" == t || "Rear Grip" == a || "Rear Grip" == o || "Rear Grip" == i) {
             Dl = ut[Math.floor(Math.random() * ut.length)];
-            document.querySelector("#primary9").innerHTML = Dl
+            document.querySelector("#primary9").innerHTML = Dl;
         }
     } else if ("SNIPER - NA-45" == nl) {
 
@@ -1437,299 +1437,299 @@ function generate() {
         if ("Muzzle" == e || "Muzzle" == t || "Muzzle" == a || "Muzzle" == o || "Muzzle" == i) {
 
             Gl = Tt[Math.floor(Math.random() * Tt.length)];
-            document.querySelector("#primary1").innerHTML = Gl
+            document.querySelector("#primary1").innerHTML = Gl;
         }
         if ("Barrel" == e || "Barrel" == t || "Barrel" == a || "Barrel" == o || "Barrel" == i) {
 
             Kl = Et[Math.floor(Math.random() * Et.length)];
-            document.querySelector("#primary2").innerHTML = Kl
+            document.querySelector("#primary2").innerHTML = Kl;
         }
         if ("Optic" == e || "Optic" == t || "Optic" == a || "Optic" == o || "Optic" == i) {
             Hl = gt[Math.floor(Math.random() * gt.length)];
-            document.querySelector("#primary3").innerHTML = Hl
+            document.querySelector("#primary3").innerHTML = Hl;
         }
         if ("Stock" == e || "Stock" == t || "Stock" == a || "Stock" == o || "Stock" == i) {
             zl = Pt[Math.floor(Math.random() * Pt.length)];
-            document.querySelector("#primary4").innerHTML = zl
+            document.querySelector("#primary4").innerHTML = zl;
         }
         if ("Perk" == e || "Perk" == t || "Perk" == a || "Perk" == o || "Perk" == i) {
             Zl = At[Math.floor(Math.random() * At.length)];
-            document.querySelector("#primary5").innerHTML = Zl
+            document.querySelector("#primary5").innerHTML = Zl;
         }
         if ("Laser" == e || "Laser" == t || "Laser" == a || "Laser" == o || "Laser" == i) {
             Nl = "LASER - OWC Laser - Tactical";
-            document.querySelector("#primary6").innerHTML = Nl
+            document.querySelector("#primary6").innerHTML = Nl;
         }
         if ("Underbarrel" == e || "Underbarrel" == t || "Underbarrel" == a || "Underbarrel" == o || "Underbarrel" == i) {
             bl = Ot[Math.floor(Math.random() * Ot.length)];
-            document.querySelector("#primary7").innerHTML = bl
+            document.querySelector("#primary7").innerHTML = bl;
         }
         if ("Ammunition" == e || "Ammunition" == t || "Ammunition" == a || "Ammunition" == o || "Ammunition" == i) {
             ql = st[Math.floor(Math.random() * st.length)];
-            document.querySelector("#primary8").innerHTML = ql
+            document.querySelector("#primary8").innerHTML = ql;
         }
         if ("Rear Grip" == e || "Rear Grip" == t || "Rear Grip" == a || "Rear Grip" == o || "Rear Grip" == i) {
             Dl = na45RearGrip[Math.floor(Math.random() * na45RearGrip.length)];
-            document.querySelector("#primary9").innerHTML = Dl
+            document.querySelector("#primary9").innerHTML = Dl;
         }
     } else if ("LMG - S36" == nl) {
         if ("Muzzle" == e || "Muzzle" == t || "Muzzle" == a || "Muzzle" == o || "Muzzle" == i) {
             Gl = ft[Math.floor(Math.random() * ft.length)];
-            document.querySelector("#primary1").innerHTML = Gl
+            document.querySelector("#primary1").innerHTML = Gl;
         }
         if ("Barrel" == e || "Barrel" == t || "Barrel" == a || "Barrel" == o || "Barrel" == i) {
             Kl = Ct[Math.floor(Math.random() * Ct.length)];
-            document.querySelector("#primary2").innerHTML = Kl
+            document.querySelector("#primary2").innerHTML = Kl;
         }
         if ("Optic" == e || "Optic" == t || "Optic" == a || "Optic" == o || "Optic" == i) {
             Hl = c[Math.floor(Math.random() * c.length)];
-            document.querySelector("#primary3").innerHTML = Hl
+            document.querySelector("#primary3").innerHTML = Hl;
         }
         if ("Stock" == e || "Stock" == t || "Stock" == a || "Stock" == o || "Stock" == i) {
             zl = It[Math.floor(Math.random() * It.length)];
-            document.querySelector("#primary4").innerHTML = zl
+            document.querySelector("#primary4").innerHTML = zl;
         }
         if ("Perk" == e || "Perk" == t || "Perk" == a || "Perk" == o || "Perk" == i) {
             Zl = yt[Math.floor(Math.random() * yt.length)];
-            document.querySelector("#primary5").innerHTML = Zl
+            document.querySelector("#primary5").innerHTML = Zl;
         }
         if ("Laser" == e || "Laser" == t || "Laser" == a || "Laser" == o || "Laser" == i) {
             Nl = Ut[Math.floor(Math.random() * Ut.length)];
-            document.querySelector("#primary6").innerHTML = Nl
+            document.querySelector("#primary6").innerHTML = Nl;
         }
         if ("Underbarrel" == e || "Underbarrel" == t || "Underbarrel" == a || "Underbarrel" == o || "Underbarrel" == i) {
             bl = kt[Math.floor(Math.random() * kt.length)];
-            document.querySelector("#primary7").innerHTML = bl
+            document.querySelector("#primary7").innerHTML = bl;
         }
         if ("Ammunition" == e || "Ammunition" == t || "Ammunition" == a || "Ammunition" == o || "Ammunition" == i) {
             ql = Bt[Math.floor(Math.random() * Bt.length)];
-            document.querySelector("#primary8").innerHTML = ql
+            document.querySelector("#primary8").innerHTML = ql;
         }
         if ("Rear Grip" == e || "Rear Grip" == t || "Rear Grip" == a || "Rear Grip" == o || "Rear Grip" == i) {
             Dl = Gt[Math.floor(Math.random() * Gt.length)];
-            document.querySelector("#primary9").innerHTML = Dl
+            document.querySelector("#primary9").innerHTML = Dl;
         }
     } else if ("LMG - UL736" == nl) {
         if ("Muzzle" == e || "Muzzle" == t || "Muzzle" == a || "Muzzle" == o || "Muzzle" == i) {
             Gl = Kt[Math.floor(Math.random() * Kt.length)];
-            document.querySelector("#primary1").innerHTML = Gl
+            document.querySelector("#primary1").innerHTML = Gl;
         }
         if ("Barrel" == e || "Barrel" == t || "Barrel" == a || "Barrel" == o || "Barrel" == i) {
             Kl = Ht[Math.floor(Math.random() * Ht.length)];
-            document.querySelector("#primary2").innerHTML = Kl
+            document.querySelector("#primary2").innerHTML = Kl;
         }
         if ("Optic" == e || "Optic" == t || "Optic" == a || "Optic" == o || "Optic" == i) {
             Hl = c[Math.floor(Math.random() * c.length)];
-            document.querySelector("#primary3").innerHTML = Hl
+            document.querySelector("#primary3").innerHTML = Hl;
         }
         if ("Stock" == e || "Stock" == t || "Stock" == a || "Stock" == o || "Stock" == i) {
             zl = zt[Math.floor(Math.random() * zt.length)];
-            document.querySelector("#primary4").innerHTML = zl
+            document.querySelector("#primary4").innerHTML = zl;
         }
         if ("Perk" == e || "Perk" == t || "Perk" == a || "Perk" == o || "Perk" == i) {
             Zl = Zt[Math.floor(Math.random() * Zt.length)];
-            document.querySelector("#primary5").innerHTML = Zl
+            document.querySelector("#primary5").innerHTML = Zl;
         }
         if ("Laser" == e || "Laser" == t || "Laser" == a || "Laser" == o || "Laser" == i) {
             Nl = Nt[Math.floor(Math.random() * Nt.length)];
-            document.querySelector("#primary6").innerHTML = Nl
+            document.querySelector("#primary6").innerHTML = Nl;
         }
         if ("Underbarrel" == e || "Underbarrel" == t || "Underbarrel" == a || "Underbarrel" == o || "Underbarrel" == i) {
             bl = bt[Math.floor(Math.random() * bt.length)];
-            document.querySelector("#primary7").innerHTML = bl
+            document.querySelector("#primary7").innerHTML = bl;
         }
         if ("Ammunition" == e || "Ammunition" == t || "Ammunition" == a || "Ammunition" == o || "Ammunition" == i) {
             ql = qt[Math.floor(Math.random() * qt.length)];
-            document.querySelector("#primary8").innerHTML = ql
+            document.querySelector("#primary8").innerHTML = ql;
         }
         if ("Rear Grip" == e || "Rear Grip" == t || "Rear Grip" == a || "Rear Grip" == o || "Rear Grip" == i) {
             Dl = Dt[Math.floor(Math.random() * Dt.length)];
-            document.querySelector("#primary9").innerHTML = Dl
+            document.querySelector("#primary9").innerHTML = Dl;
         }
     } else if ("LMG - RPD" == nl) {
         if ("Muzzle" == e || "Muzzle" == t || "Muzzle" == a || "Muzzle" == o || "Muzzle" == i) {
             Gl = Ft[Math.floor(Math.random() * Ft.length)];
-            document.querySelector("#primary1").innerHTML = Gl
+            document.querySelector("#primary1").innerHTML = Gl;
         }
         if ("Barrel" == e || "Barrel" == t || "Barrel" == a || "Barrel" == o || "Barrel" == i) {
             Kl = Wt[Math.floor(Math.random() * Wt.length)];
-            document.querySelector("#primary2").innerHTML = Kl
+            document.querySelector("#primary2").innerHTML = Kl;
         }
         if ("Optic" == e || "Optic" == t || "Optic" == a || "Optic" == o || "Optic" == i) {
             Hl = c[Math.floor(Math.random() * c.length)];
-            document.querySelector("#primary3").innerHTML = Hl
+            document.querySelector("#primary3").innerHTML = Hl;
         }
         if ("Stock" == e || "Stock" == t || "Stock" == a || "Stock" == o || "Stock" == i) {
             zl = Xt[Math.floor(Math.random() * Xt.length)];
-            document.querySelector("#primary4").innerHTML = zl
+            document.querySelector("#primary4").innerHTML = zl;
         }
         if ("Perk" == e || "Perk" == t || "Perk" == a || "Perk" == o || "Perk" == i) {
             Zl = Yt[Math.floor(Math.random() * Yt.length)];
-            document.querySelector("#primary5").innerHTML = Zl
+            document.querySelector("#primary5").innerHTML = Zl;
         }
         if ("Laser" == e || "Laser" == t || "Laser" == a || "Laser" == o || "Laser" == i) {
             Nl = xt[Math.floor(Math.random() * xt.length)];
-            document.querySelector("#primary6").innerHTML = Nl
+            document.querySelector("#primary6").innerHTML = Nl;
         }
         if ("Underbarrel" == e || "Underbarrel" == t || "Underbarrel" == a || "Underbarrel" == o || "Underbarrel" == i) {
             bl = Jt[Math.floor(Math.random() * Jt.length)];
-            document.querySelector("#primary7").innerHTML = bl
+            document.querySelector("#primary7").innerHTML = bl;
         }
         if ("Ammunition" == e || "Ammunition" == t || "Ammunition" == a || "Ammunition" == o || "Ammunition" == i) {
             ql = vt[Math.floor(Math.random() * vt.length)];
-            document.querySelector("#primary8").innerHTML = ql
+            document.querySelector("#primary8").innerHTML = ql;
         }
         if ("Rear Grip" == e || "Rear Grip" == t || "Rear Grip" == a || "Rear Grip" == o || "Rear Grip" == i) {
             Dl = wt[Math.floor(Math.random() * wt.length)];
-            document.querySelector("#primary9").innerHTML = Dl
+            document.querySelector("#primary9").innerHTML = Dl;
         }
     } else if ("LMG - M4LMG" == nl) {
         if ("Muzzle" == e || "Muzzle" == t || "Muzzle" == a || "Muzzle" == o || "Muzzle" == i) {
             Gl = Qt[Math.floor(Math.random() * Qt.length)];
-            document.querySelector("#primary1").innerHTML = Gl
+            document.querySelector("#primary1").innerHTML = Gl;
         }
         if ("Barrel" == e || "Barrel" == t || "Barrel" == a || "Barrel" == o || "Barrel" == i) {
             Kl = Vt[Math.floor(Math.random() * Vt.length)];
-            document.querySelector("#primary2").innerHTML = Kl
+            document.querySelector("#primary2").innerHTML = Kl;
         }
         if ("Optic" == e || "Optic" == t || "Optic" == a || "Optic" == o || "Optic" == i) {
             Hl = c[Math.floor(Math.random() * c.length)];
-            document.querySelector("#primary3").innerHTML = Hl
+            document.querySelector("#primary3").innerHTML = Hl;
         }
         if ("Stock" == e || "Stock" == t || "Stock" == a || "Stock" == o || "Stock" == i) {
             zl = jt[Math.floor(Math.random() * jt.length)];
-            document.querySelector("#primary4").innerHTML = zl
+            document.querySelector("#primary4").innerHTML = zl;
         }
         if ("Perk" == e || "Perk" == t || "Perk" == a || "Perk" == o || "Perk" == i) {
             Zl = $t[Math.floor(Math.random() * $t.length)];
-            document.querySelector("#primary5").innerHTML = Zl
+            document.querySelector("#primary5").innerHTML = Zl;
         }
         if ("Laser" == e || "Laser" == t || "Laser" == a || "Laser" == o || "Laser" == i) {
             Nl = _t[Math.floor(Math.random() * _t.length)];
-            document.querySelector("#primary6").innerHTML = Nl
+            document.querySelector("#primary6").innerHTML = Nl;
         }
         if ("Underbarrel" == e || "Underbarrel" == t || "Underbarrel" == a || "Underbarrel" == o || "Underbarrel" == i) {
             bl = ra[Math.floor(Math.random() * ra.length)];
-            document.querySelector("#primary7").innerHTML = bl
+            document.querySelector("#primary7").innerHTML = bl;
         }
         if ("Ammunition" == e || "Ammunition" == t || "Ammunition" == a || "Ammunition" == o || "Ammunition" == i) {
             ql = ea[Math.floor(Math.random() * ea.length)];
-            document.querySelector("#primary8").innerHTML = ql
+            document.querySelector("#primary8").innerHTML = ql;
         }
         if ("Rear Grip" == e || "Rear Grip" == t || "Rear Grip" == a || "Rear Grip" == o || "Rear Grip" == i) {
             Dl = ta[Math.floor(Math.random() * ta.length)];
-            document.querySelector("#primary9").innerHTML = Dl
+            document.querySelector("#primary9").innerHTML = Dl;
         }
     } else if ("LMG - Chopper" == nl) {
         if ("Muzzle" == e || "Muzzle" == t || "Muzzle" == a || "Muzzle" == o || "Muzzle" == i) {
             Gl = aa[Math.floor(Math.random() * aa.length)];
-            document.querySelector("#primary1").innerHTML = Gl
+            document.querySelector("#primary1").innerHTML = Gl;
         }
         if ("Barrel" == e || "Barrel" == t || "Barrel" == a || "Barrel" == o || "Barrel" == i) {
             Kl = oa[Math.floor(Math.random() * oa.length)];
-            document.querySelector("#primary2").innerHTML = Kl
+            document.querySelector("#primary2").innerHTML = Kl;
         }
         if ("Optic" == e || "Optic" == t || "Optic" == a || "Optic" == o || "Optic" == i) {
             Hl = c[Math.floor(Math.random() * c.length)];
-            document.querySelector("#primary3").innerHTML = Hl
+            document.querySelector("#primary3").innerHTML = Hl;
         }
         if ("Stock" == e || "Stock" == t || "Stock" == a || "Stock" == o || "Stock" == i) {
             zl = ia[Math.floor(Math.random() * ia.length)];
-            document.querySelector("#primary4").innerHTML = zl
+            document.querySelector("#primary4").innerHTML = zl;
         }
         if ("Perk" == e || "Perk" == t || "Perk" == a || "Perk" == o || "Perk" == i) {
             Zl = na[Math.floor(Math.random() * na.length)];
-            document.querySelector("#primary5").innerHTML = Zl
+            document.querySelector("#primary5").innerHTML = Zl;
         }
         if ("Laser" == e || "Laser" == t || "Laser" == a || "Laser" == o || "Laser" == i) {
             Nl = la[Math.floor(Math.random() * la.length)];
-            document.querySelector("#primary6").innerHTML = Nl
+            document.querySelector("#primary6").innerHTML = Nl;
         }
         if ("Underbarrel" == e || "Underbarrel" == t || "Underbarrel" == a || "Underbarrel" == o || "Underbarrel" == i) {
             bl = Ma[Math.floor(Math.random() * Ma.length)];
-            document.querySelector("#primary7").innerHTML = bl
+            document.querySelector("#primary7").innerHTML = bl;
         }
         if ("Ammunition" == e || "Ammunition" == t || "Ammunition" == a || "Ammunition" == o || "Ammunition" == i) {
             ql = Ra[Math.floor(Math.random() * Ra.length)];
-            document.querySelector("#primary8").innerHTML = ql
+            document.querySelector("#primary8").innerHTML = ql;
         }
         if ("Rear Grip" == e || "Rear Grip" == t || "Rear Grip" == a || "Rear Grip" == o || "Rear Grip" == i) {
             Dl = ca[Math.floor(Math.random() * ca.length)];
-            document.querySelector("#primary9").innerHTML = Dl
+            document.querySelector("#primary9").innerHTML = Dl;
         }
     } else if ("SMG - RUS-79U" == nl) {
         if ("Muzzle" == e || "Muzzle" == t || "Muzzle" == a || "Muzzle" == o || "Muzzle" == i) {
             Gl = ha[Math.floor(Math.random() * ha.length)];
-            document.querySelector("#primary1").innerHTML = Gl
+            document.querySelector("#primary1").innerHTML = Gl;
         }
         if ("Barrel" == e || "Barrel" == t || "Barrel" == a || "Barrel" == o || "Barrel" == i) {
             Kl = ma[Math.floor(Math.random() * ma.length)];
-            document.querySelector("#primary2").innerHTML = Kl
+            document.querySelector("#primary2").innerHTML = Kl;
         }
         if ("Optic" == e || "Optic" == t || "Optic" == a || "Optic" == o || "Optic" == i) {
             Hl = pa[Math.floor(Math.random() * pa.length)];
-            document.querySelector("#primary3").innerHTML = Hl
+            document.querySelector("#primary3").innerHTML = Hl;
         }
         if ("Stock" == e || "Stock" == t || "Stock" == a || "Stock" == o || "Stock" == i) {
             zl = Sa[Math.floor(Math.random() * Sa.length)];
-            document.querySelector("#primary4").innerHTML = zl
+            document.querySelector("#primary4").innerHTML = zl;
         }
         if ("Perk" == e || "Perk" == t || "Perk" == a || "Perk" == o || "Perk" == i) {
             Zl = da[Math.floor(Math.random() * da.length)];
-            document.querySelector("#primary5").innerHTML = Zl
+            document.querySelector("#primary5").innerHTML = Zl;
         }
         if ("Laser" == e || "Laser" == t || "Laser" == a || "Laser" == o || "Laser" == i) {
             Nl = La[Math.floor(Math.random() * La.length)];
-            document.querySelector("#primary6").innerHTML = Nl
+            document.querySelector("#primary6").innerHTML = Nl;
         }
         if ("Underbarrel" == e || "Underbarrel" == t || "Underbarrel" == a || "Underbarrel" == o || "Underbarrel" == i) {
             bl = ua[Math.floor(Math.random() * ua.length)];
-            document.querySelector("#primary7").innerHTML = bl
+            document.querySelector("#primary7").innerHTML = bl;
         }
         if ("Ammunition" == e || "Ammunition" == t || "Ammunition" == a || "Ammunition" == o || "Ammunition" == i) {
             ql = Ta[Math.floor(Math.random() * Ta.length)];
-            document.querySelector("#primary8").innerHTML = ql
+            document.querySelector("#primary8").innerHTML = ql;
         }
         if ("Rear Grip" == e || "Rear Grip" == t || "Rear Grip" == a || "Rear Grip" == o || "Rear Grip" == i) {
             Dl = Ea[Math.floor(Math.random() * Ea.length)];
-            document.querySelector("#primary9").innerHTML = Dl
+            document.querySelector("#primary9").innerHTML = Dl;
         }
     } else if ("SMG - Chicom" == nl) {
         if ("Muzzle" == e || "Muzzle" == t || "Muzzle" == a || "Muzzle" == o || "Muzzle" == i) {
             Gl = ga[Math.floor(Math.random() * ga.length)];
-            document.querySelector("#primary1").innerHTML = Gl
+            document.querySelector("#primary1").innerHTML = Gl;
         }
         if ("Barrel" == e || "Barrel" == t || "Barrel" == a || "Barrel" == o || "Barrel" == i) {
             Kl = Pa[Math.floor(Math.random() * Pa.length)];
-            document.querySelector("#primary2").innerHTML = Kl
+            document.querySelector("#primary2").innerHTML = Kl;
         }
         if ("Optic" == e || "Optic" == t || "Optic" == a || "Optic" == o || "Optic" == i) {
             Hl = Aa[Math.floor(Math.random() * Aa.length)];
-            document.querySelector("#primary3").innerHTML = Hl
+            document.querySelector("#primary3").innerHTML = Hl;
         }
         if ("Stock" == e || "Stock" == t || "Stock" == a || "Stock" == o || "Stock" == i) {
             zl = Oa[Math.floor(Math.random() * Oa.length)];
-            document.querySelector("#primary4").innerHTML = zl
+            document.querySelector("#primary4").innerHTML = zl;
         }
         if ("Perk" == e || "Perk" == t || "Perk" == a || "Perk" == o || "Perk" == i) {
             Zl = sa[Math.floor(Math.random() * sa.length)];
-            document.querySelector("#primary5").innerHTML = Zl
+            document.querySelector("#primary5").innerHTML = Zl;
         }
         if ("Laser" == e || "Laser" == t || "Laser" == a || "Laser" == o || "Laser" == i) {
             Nl = fa[Math.floor(Math.random() * fa.length)];
-            document.querySelector("#primary6").innerHTML = Nl
+            document.querySelector("#primary6").innerHTML = Nl;
         }
         if ("Underbarrel" == e || "Underbarrel" == t || "Underbarrel" == a || "Underbarrel" == o || "Underbarrel" == i) {
             bl = Ca[Math.floor(Math.random() * Ca.length)];
-            document.querySelector("#primary7").innerHTML = bl
+            document.querySelector("#primary7").innerHTML = bl;
         }
         if ("Ammunition" == e || "Ammunition" == t || "Ammunition" == a || "Ammunition" == o || "Ammunition" == i) {
             ql = Ia[Math.floor(Math.random() * Ia.length)];
-            document.querySelector("#primary8").innerHTML = ql
+            document.querySelector("#primary8").innerHTML = ql;
         }
         if ("Rear Grip" == e || "Rear Grip" == t || "Rear Grip" == a || "Rear Grip" == o || "Rear Grip" == i) {
             Dl = ya[Math.floor(Math.random() * ya.length)];
-            document.querySelector("#primary9").innerHTML = Dl
+            document.querySelector("#primary9").innerHTML = Dl;
         }
     } else if ("SMG - PDW-57" == nl) {
         for (e = kl[Math.floor(Math.random() * kl.length)], t = kl[Math.floor(Math.random() * kl.length)]; e == t;) t = kl[Math.floor(Math.random() * kl.length)];
@@ -1738,713 +1738,713 @@ function generate() {
         for (i = kl[Math.floor(Math.random() * kl.length)]; i == e || i == t || i == a || i == o;) i = kl[Math.floor(Math.random() * kl.length)];
         if ("Muzzle" == e || "Muzzle" == t || "Muzzle" == a || "Muzzle" == o || "Muzzle" == i) {
             Gl = Ua[Math.floor(Math.random() * Ua.length)];
-            document.querySelector("#primary1").innerHTML = Gl
+            document.querySelector("#primary1").innerHTML = Gl;
         }
         if ("Barrel" == e || "Barrel" == t || "Barrel" == a || "Barrel" == o || "Barrel" == i) {
             Kl = ka[Math.floor(Math.random() * ka.length)];
-            document.querySelector("#primary2").innerHTML = Kl
+            document.querySelector("#primary2").innerHTML = Kl;
         }
         if ("Optic" == e || "Optic" == t || "Optic" == a || "Optic" == o || "Optic" == i) {
             Hl = Ba[Math.floor(Math.random() * Ba.length)];
-            document.querySelector("#primary3").innerHTML = Hl
+            document.querySelector("#primary3").innerHTML = Hl;
         }
         if ("Stock" == e || "Stock" == t || "Stock" == a || "Stock" == o || "Stock" == i) {
             zl = Ga[Math.floor(Math.random() * Ga.length)];
-            document.querySelector("#primary4").innerHTML = zl
+            document.querySelector("#primary4").innerHTML = zl;
         }
         if ("Perk" == e || "Perk" == t || "Perk" == a || "Perk" == o || "Perk" == i) {
             Zl = Ka[Math.floor(Math.random() * Ka.length)];
-            document.querySelector("#primary5").innerHTML = Zl
+            document.querySelector("#primary5").innerHTML = Zl;
         }
         if ("Laser" == e || "Laser" == t || "Laser" == a || "Laser" == o || "Laser" == i) {
             Nl = Ha[Math.floor(Math.random() * Ha.length)];
-            document.querySelector("#primary6").innerHTML = Nl
+            document.querySelector("#primary6").innerHTML = Nl;
         }
         if ("Underbarrel" == e || "Underbarrel" == t || "Underbarrel" == a || "Underbarrel" == o || "Underbarrel" == i) {
             bl = za[Math.floor(Math.random() * za.length)];
-            document.querySelector("#primary7").innerHTML = bl
+            document.querySelector("#primary7").innerHTML = bl;
         }
         if ("Ammunition" == e || "Ammunition" == t || "Ammunition" == a || "Ammunition" == o || "Ammunition" == i) {
             ql = pdw57Ammunition[Math.floor(Math.random() * pdw57Ammunition.length)];
-            document.querySelector("#primary8").innerHTML = ql
+            document.querySelector("#primary8").innerHTML = ql;
         }
         if ("Rear Grip" == e || "Rear Grip" == t || "Rear Grip" == a || "Rear Grip" == o || "Rear Grip" == i) {
             Dl = Za[Math.floor(Math.random() * Za.length)];
-            document.querySelector("#primary9").innerHTML = Dl
+            document.querySelector("#primary9").innerHTML = Dl;
         }
     } else if ("SMG - Razorback" == nl) {
         if ("Muzzle" == e || "Muzzle" == t || "Muzzle" == a || "Muzzle" == o || "Muzzle" == i) {
             Gl = Na[Math.floor(Math.random() * Na.length)];
-            document.querySelector("#primary1").innerHTML = Gl
+            document.querySelector("#primary1").innerHTML = Gl;
         }
         if ("Barrel" == e || "Barrel" == t || "Barrel" == a || "Barrel" == o || "Barrel" == i) {
             Kl = ba[Math.floor(Math.random() * ba.length)];
-            document.querySelector("#primary2").innerHTML = Kl
+            document.querySelector("#primary2").innerHTML = Kl;
         }
         if ("Optic" == e || "Optic" == t || "Optic" == a || "Optic" == o || "Optic" == i) {
             Hl = qa[Math.floor(Math.random() * qa.length)];
-            document.querySelector("#primary3").innerHTML = Hl
+            document.querySelector("#primary3").innerHTML = Hl;
         }
         if ("Stock" == e || "Stock" == t || "Stock" == a || "Stock" == o || "Stock" == i) {
             zl = Da[Math.floor(Math.random() * Da.length)];
-            document.querySelector("#primary4").innerHTML = zl
+            document.querySelector("#primary4").innerHTML = zl;
         }
         if ("Perk" == e || "Perk" == t || "Perk" == a || "Perk" == o || "Perk" == i) {
             Zl = Fa[Math.floor(Math.random() * Fa.length)];
-            document.querySelector("#primary5").innerHTML = Zl
+            document.querySelector("#primary5").innerHTML = Zl;
         }
         if ("Laser" == e || "Laser" == t || "Laser" == a || "Laser" == o || "Laser" == i) {
             Nl = Wa[Math.floor(Math.random() * Wa.length)];
-            document.querySelector("#primary6").innerHTML = Nl
+            document.querySelector("#primary6").innerHTML = Nl;
         }
         if ("Underbarrel" == e || "Underbarrel" == t || "Underbarrel" == a || "Underbarrel" == o || "Underbarrel" == i) {
             bl = Xa[Math.floor(Math.random() * Xa.length)];
-            document.querySelector("#primary7").innerHTML = bl
+            document.querySelector("#primary7").innerHTML = bl;
         }
         if ("Ammunition" == e || "Ammunition" == t || "Ammunition" == a || "Ammunition" == o || "Ammunition" == i) {
             ql = "AMMUNITION - Extended Mag A";
-            document.querySelector("#primary8").innerHTML = ql
+            document.querySelector("#primary8").innerHTML = ql;
         }
         if ("Rear Grip" == e || "Rear Grip" == t || "Rear Grip" == a || "Rear Grip" == o || "Rear Grip" == i) {
             Dl = Ya[Math.floor(Math.random() * Ya.length)];
-            document.querySelector("#primary9").innerHTML = Dl
+            document.querySelector("#primary9").innerHTML = Dl;
         }
     } else if ("SMG - MSMC" == nl) {
         if ("Muzzle" == e || "Muzzle" == t || "Muzzle" == a || "Muzzle" == o || "Muzzle" == i) {
             Gl = xa[Math.floor(Math.random() * xa.length)];
-            document.querySelector("#primary1").innerHTML = Gl
+            document.querySelector("#primary1").innerHTML = Gl;
         }
         if ("Barrel" == e || "Barrel" == t || "Barrel" == a || "Barrel" == o || "Barrel" == i) {
             Kl = Ja[Math.floor(Math.random() * Ja.length)];
-            document.querySelector("#primary2").innerHTML = Kl
+            document.querySelector("#primary2").innerHTML = Kl;
         }
         if ("Optic" == e || "Optic" == t || "Optic" == a || "Optic" == o || "Optic" == i) {
             Hl = va[Math.floor(Math.random() * va.length)];
-            document.querySelector("#primary3").innerHTML = Hl
+            document.querySelector("#primary3").innerHTML = Hl;
         }
         if ("Stock" == e || "Stock" == t || "Stock" == a || "Stock" == o || "Stock" == i) {
             zl = wa[Math.floor(Math.random() * wa.length)];
-            document.querySelector("#primary4").innerHTML = zl
+            document.querySelector("#primary4").innerHTML = zl;
         }
         if ("Perk" == e || "Perk" == t || "Perk" == a || "Perk" == o || "Perk" == i) {
             Zl = Qa[Math.floor(Math.random() * Qa.length)];
-            document.querySelector("#primary5").innerHTML = Zl
+            document.querySelector("#primary5").innerHTML = Zl;
         }
         if ("Laser" == e || "Laser" == t || "Laser" == a || "Laser" == o || "Laser" == i) {
             Nl = Va[Math.floor(Math.random() * Va.length)];
-            document.querySelector("#primary6").innerHTML = Nl
+            document.querySelector("#primary6").innerHTML = Nl;
         }
         if ("Underbarrel" == e || "Underbarrel" == t || "Underbarrel" == a || "Underbarrel" == o || "Underbarrel" == i) {
             bl = ja[Math.floor(Math.random() * ja.length)];
-            document.querySelector("#primary7").innerHTML = bl
+            document.querySelector("#primary7").innerHTML = bl;
         }
         if ("Ammunition" == e || "Ammunition" == t || "Ammunition" == a || "Ammunition" == o || "Ammunition" == i) {
             ql = $a[Math.floor(Math.random() * $a.length)];
-            document.querySelector("#primary8").innerHTML = ql
+            document.querySelector("#primary8").innerHTML = ql;
         }
         if ("Rear Grip" == e || "Rear Grip" == t || "Rear Grip" == a || "Rear Grip" == o || "Rear Grip" == i) {
             Dl = _a[Math.floor(Math.random() * _a.length)];
-            document.querySelector("#primary9").innerHTML = Dl
+            document.querySelector("#primary9").innerHTML = Dl;
         }
     } else if ("SMG - HG 40" == nl) {
         if ("Muzzle" == e || "Muzzle" == t || "Muzzle" == a || "Muzzle" == o || "Muzzle" == i) {
             Gl = ro[Math.floor(Math.random() * ro.length)];
-            document.querySelector("#primary1").innerHTML = Gl
+            document.querySelector("#primary1").innerHTML = Gl;
         }
         if ("Barrel" == e || "Barrel" == t || "Barrel" == a || "Barrel" == o || "Barrel" == i) {
             Kl = eo[Math.floor(Math.random() * eo.length)];
-            document.querySelector("#primary2").innerHTML = Kl
+            document.querySelector("#primary2").innerHTML = Kl;
         }
         if ("Optic" == e || "Optic" == t || "Optic" == a || "Optic" == o || "Optic" == i) {
             Hl = to[Math.floor(Math.random() * to.length)];
-            document.querySelector("#primary3").innerHTML = Hl
+            document.querySelector("#primary3").innerHTML = Hl;
         }
         if ("Stock" == e || "Stock" == t || "Stock" == a || "Stock" == o || "Stock" == i) {
             zl = ao[Math.floor(Math.random() * ao.length)];
-            document.querySelector("#primary4").innerHTML = zl
+            document.querySelector("#primary4").innerHTML = zl;
         }
         if ("Perk" == e || "Perk" == t || "Perk" == a || "Perk" == o || "Perk" == i) {
             Zl = oo[Math.floor(Math.random() * oo.length)];
-            document.querySelector("#primary5").innerHTML = Zl
+            document.querySelector("#primary5").innerHTML = Zl;
         }
         if ("Laser" == e || "Laser" == t || "Laser" == a || "Laser" == o || "Laser" == i) {
             Nl = io[Math.floor(Math.random() * io.length)];
-            document.querySelector("#primary6").innerHTML = Nl
+            document.querySelector("#primary6").innerHTML = Nl;
         }
         if ("Underbarrel" == e || "Underbarrel" == t || "Underbarrel" == a || "Underbarrel" == o || "Underbarrel" == i) {
             bl = no[Math.floor(Math.random() * no.length)];
-            document.querySelector("#primary7").innerHTML = bl
+            document.querySelector("#primary7").innerHTML = bl;
         }
         if ("Ammunition" == e || "Ammunition" == t || "Ammunition" == a || "Ammunition" == o || "Ammunition" == i) {
             ql = lo[Math.floor(Math.random() * lo.length)];
-            document.querySelector("#primary8").innerHTML = ql
+            document.querySelector("#primary8").innerHTML = ql;
         }
         if ("Rear Grip" == e || "Rear Grip" == t || "Rear Grip" == a || "Rear Grip" == o || "Rear Grip" == i) {
             Dl = Mo[Math.floor(Math.random() * Mo.length)];
-            document.querySelector("#primary9").innerHTML = Dl
+            document.querySelector("#primary9").innerHTML = Dl;
         }
     } else if ("SMG - Pharo" == nl) {
         if ("Muzzle" == e || "Muzzle" == t || "Muzzle" == a || "Muzzle" == o || "Muzzle" == i) {
             Gl = Ro[Math.floor(Math.random() * Ro.length)];
-            document.querySelector("#primary1").innerHTML = Gl
+            document.querySelector("#primary1").innerHTML = Gl;
         }
         if ("Barrel" == e || "Barrel" == t || "Barrel" == a || "Barrel" == o || "Barrel" == i) {
             Kl = co[Math.floor(Math.random() * co.length)];
-            document.querySelector("#primary2").innerHTML = Kl
+            document.querySelector("#primary2").innerHTML = Kl;
         }
         if ("Optic" == e || "Optic" == t || "Optic" == a || "Optic" == o || "Optic" == i) {
             Hl = ho[Math.floor(Math.random() * ho.length)];
-            document.querySelector("#primary3").innerHTML = Hl
+            document.querySelector("#primary3").innerHTML = Hl;
         }
         if ("Stock" == e || "Stock" == t || "Stock" == a || "Stock" == o || "Stock" == i) {
             zl = mo[Math.floor(Math.random() * mo.length)];
-            document.querySelector("#primary4").innerHTML = zl
+            document.querySelector("#primary4").innerHTML = zl;
         }
         if ("Perk" == e || "Perk" == t || "Perk" == a || "Perk" == o || "Perk" == i) {
             Zl = po[Math.floor(Math.random() * po.length)];
-            document.querySelector("#primary5").innerHTML = Zl
+            document.querySelector("#primary5").innerHTML = Zl;
         }
         if ("Laser" == e || "Laser" == t || "Laser" == a || "Laser" == o || "Laser" == i) {
             Nl = So[Math.floor(Math.random() * So.length)];
-            document.querySelector("#primary6").innerHTML = Nl
+            document.querySelector("#primary6").innerHTML = Nl;
         }
         if ("Underbarrel" == e || "Underbarrel" == t || "Underbarrel" == a || "Underbarrel" == o || "Underbarrel" == i) {
             bl = Lo[Math.floor(Math.random() * Lo.length)];
-            document.querySelector("#primary7").innerHTML = bl
+            document.querySelector("#primary7").innerHTML = bl;
         }
         if ("Ammunition" == e || "Ammunition" == t || "Ammunition" == a || "Ammunition" == o || "Ammunition" == i) {
             ql = uo[Math.floor(Math.random() * uo.length)];
-            document.querySelector("#primary8").innerHTML = ql
+            document.querySelector("#primary8").innerHTML = ql;
         }
         if ("Rear Grip" == e || "Rear Grip" == t || "Rear Grip" == a || "Rear Grip" == o || "Rear Grip" == i) {
             Dl = To[Math.floor(Math.random() * To.length)];
-            document.querySelector("#primary9").innerHTML = Dl
+            document.querySelector("#primary9").innerHTML = Dl;
         }
     } else if ("SMG - GKS" == nl) {
         if ("Muzzle" == e || "Muzzle" == t || "Muzzle" == a || "Muzzle" == o || "Muzzle" == i) {
             Gl = Eo[Math.floor(Math.random() * Eo.length)];
-            document.querySelector("#primary1").innerHTML = Gl
+            document.querySelector("#primary1").innerHTML = Gl;
         }
         if ("Barrel" == e || "Barrel" == t || "Barrel" == a || "Barrel" == o || "Barrel" == i) {
             Kl = go[Math.floor(Math.random() * go.length)];
-            document.querySelector("#primary2").innerHTML = Kl
+            document.querySelector("#primary2").innerHTML = Kl;
         }
         if ("Optic" == e || "Optic" == t || "Optic" == a || "Optic" == o || "Optic" == i) {
             Hl = Po[Math.floor(Math.random() * Po.length)];
-            document.querySelector("#primary3").innerHTML = Hl
+            document.querySelector("#primary3").innerHTML = Hl;
         }
         if ("Stock" == e || "Stock" == t || "Stock" == a || "Stock" == o || "Stock" == i) {
             zl = Ao[Math.floor(Math.random() * Ao.length)];
-            document.querySelector("#primary4").innerHTML = zl
+            document.querySelector("#primary4").innerHTML = zl;
         }
         if ("Perk" == e || "Perk" == t || "Perk" == a || "Perk" == o || "Perk" == i) {
             Zl = Oo[Math.floor(Math.random() * Oo.length)];
-            document.querySelector("#primary5").innerHTML = Zl
+            document.querySelector("#primary5").innerHTML = Zl;
         }
         if ("Laser" == e || "Laser" == t || "Laser" == a || "Laser" == o || "Laser" == i) {
             Nl = so[Math.floor(Math.random() * so.length)];
-            document.querySelector("#primary6").innerHTML = Nl
+            document.querySelector("#primary6").innerHTML = Nl;
         }
         if ("Underbarrel" == e || "Underbarrel" == t || "Underbarrel" == a || "Underbarrel" == o || "Underbarrel" == i) {
             bl = fo[Math.floor(Math.random() * fo.length)];
-            document.querySelector("#primary7").innerHTML = bl
+            document.querySelector("#primary7").innerHTML = bl;
         }
         if ("Ammunition" == e || "Ammunition" == t || "Ammunition" == a || "Ammunition" == o || "Ammunition" == i) {
             ql = Co[Math.floor(Math.random() * Co.length)];
-            document.querySelector("#primary8").innerHTML = ql
+            document.querySelector("#primary8").innerHTML = ql;
         }
         if ("Rear Grip" == e || "Rear Grip" == t || "Rear Grip" == a || "Rear Grip" == o || "Rear Grip" == i) {
             Dl = Io[Math.floor(Math.random() * Io.length)];
-            document.querySelector("#primary9").innerHTML = Dl
+            document.querySelector("#primary9").innerHTML = Dl;
         }
     } else if ("SMG - Cordite" == nl) {
         if ("Muzzle" == e || "Muzzle" == t || "Muzzle" == a || "Muzzle" == o || "Muzzle" == i) {
             Gl = yo[Math.floor(Math.random() * yo.length)];
-            document.querySelector("#primary1").innerHTML = Gl
+            document.querySelector("#primary1").innerHTML = Gl;
         }
         if ("Barrel" == e || "Barrel" == t || "Barrel" == a || "Barrel" == o || "Barrel" == i) {
             Kl = Uo[Math.floor(Math.random() * Uo.length)];
-            document.querySelector("#primary2").innerHTML = Kl
+            document.querySelector("#primary2").innerHTML = Kl;
         }
         if ("Optic" == e || "Optic" == t || "Optic" == a || "Optic" == o || "Optic" == i) {
             Hl = ko[Math.floor(Math.random() * ko.length)];
-            document.querySelector("#primary3").innerHTML = Hl
+            document.querySelector("#primary3").innerHTML = Hl;
         }
         if ("Stock" == e || "Stock" == t || "Stock" == a || "Stock" == o || "Stock" == i) {
             zl = Bo[Math.floor(Math.random() * Bo.length)];
-            document.querySelector("#primary4").innerHTML = zl
+            document.querySelector("#primary4").innerHTML = zl;
         }
         if ("Perk" == e || "Perk" == t || "Perk" == a || "Perk" == o || "Perk" == i) {
             Zl = Go[Math.floor(Math.random() * Go.length)];
-            document.querySelector("#primary5").innerHTML = Zl
+            document.querySelector("#primary5").innerHTML = Zl;
         }
         if ("Laser" == e || "Laser" == t || "Laser" == a || "Laser" == o || "Laser" == i) {
             Nl = Ko[Math.floor(Math.random() * Ko.length)];
-            document.querySelector("#primary6").innerHTML = Nl
+            document.querySelector("#primary6").innerHTML = Nl;
         }
         if ("Underbarrel" == e || "Underbarrel" == t || "Underbarrel" == a || "Underbarrel" == o || "Underbarrel" == i) {
             bl = Ho[Math.floor(Math.random() * Ho.length)];
-            document.querySelector("#primary7").innerHTML = bl
+            document.querySelector("#primary7").innerHTML = bl;
         }
         if ("Ammunition" == e || "Ammunition" == t || "Ammunition" == a || "Ammunition" == o || "Ammunition" == i) {
             ql = zo[Math.floor(Math.random() * zo.length)];
-            document.querySelector("#primary8").innerHTML = ql
+            document.querySelector("#primary8").innerHTML = ql;
         }
         if ("Rear Grip" == e || "Rear Grip" == t || "Rear Grip" == a || "Rear Grip" == o || "Rear Grip" == i) {
             Dl = Zo[Math.floor(Math.random() * Zo.length)];
-            document.querySelector("#primary9").innerHTML = Dl
+            document.querySelector("#primary9").innerHTML = Dl;
         }
     } else if ("SMG - QQ9" == nl) {
         if ("Muzzle" == e || "Muzzle" == t || "Muzzle" == a || "Muzzle" == o || "Muzzle" == i) {
             Gl = No[Math.floor(Math.random() * No.length)];
-            document.querySelector("#primary1").innerHTML = Gl
+            document.querySelector("#primary1").innerHTML = Gl;
         }
         if ("Barrel" == e || "Barrel" == t || "Barrel" == a || "Barrel" == o || "Barrel" == i) {
             Kl = bo[Math.floor(Math.random() * bo.length)];
-            document.querySelector("#primary2").innerHTML = Kl
+            document.querySelector("#primary2").innerHTML = Kl;
         }
         if ("Optic" == e || "Optic" == t || "Optic" == a || "Optic" == o || "Optic" == i) {
             Hl = qo[Math.floor(Math.random() * qo.length)];
-            document.querySelector("#primary3").innerHTML = Hl
+            document.querySelector("#primary3").innerHTML = Hl;
         }
         if ("Stock" == e || "Stock" == t || "Stock" == a || "Stock" == o || "Stock" == i) {
             zl = Do[Math.floor(Math.random() * Do.length)];
-            document.querySelector("#primary4").innerHTML = zl
+            document.querySelector("#primary4").innerHTML = zl;
         }
         if ("Perk" == e || "Perk" == t || "Perk" == a || "Perk" == o || "Perk" == i) {
             Zl = Fo[Math.floor(Math.random() * Fo.length)];
-            document.querySelector("#primary5").innerHTML = Zl
+            document.querySelector("#primary5").innerHTML = Zl;
         }
         if ("Laser" == e || "Laser" == t || "Laser" == a || "Laser" == o || "Laser" == i) {
             Nl = Wo[Math.floor(Math.random() * Wo.length)];
-            document.querySelector("#primary6").innerHTML = Nl
+            document.querySelector("#primary6").innerHTML = Nl;
         }
         if ("Underbarrel" == e || "Underbarrel" == t || "Underbarrel" == a || "Underbarrel" == o || "Underbarrel" == i) {
             bl = Xo[Math.floor(Math.random() * Xo.length)];
-            document.querySelector("#primary7").innerHTML = bl
+            document.querySelector("#primary7").innerHTML = bl;
         }
         if ("Ammunition" == e || "Ammunition" == t || "Ammunition" == a || "Ammunition" == o || "Ammunition" == i) {
             ql = Yo[Math.floor(Math.random() * Yo.length)];
-            document.querySelector("#primary8").innerHTML = ql
+            document.querySelector("#primary8").innerHTML = ql;
         }
         if ("Rear Grip" == e || "Rear Grip" == t || "Rear Grip" == a || "Rear Grip" == o || "Rear Grip" == i) {
             Dl = xo[Math.floor(Math.random() * xo.length)];
-            document.querySelector("#primary9").innerHTML = Dl
+            document.querySelector("#primary9").innerHTML = Dl;
         }
     } else if ("SMG - Fennec" == nl) {
         if ("Muzzle" == e || "Muzzle" == t || "Muzzle" == a || "Muzzle" == o || "Muzzle" == i) {
             Gl = Jo[Math.floor(Math.random() * Jo.length)];
-            document.querySelector("#primary1").innerHTML = Gl
+            document.querySelector("#primary1").innerHTML = Gl;
         }
         if ("Barrel" == e || "Barrel" == t || "Barrel" == a || "Barrel" == o || "Barrel" == i) {
             Kl = vo[Math.floor(Math.random() * vo.length)];
-            document.querySelector("#primary2").innerHTML = Kl
+            document.querySelector("#primary2").innerHTML = Kl;
         }
         if ("Optic" == e || "Optic" == t || "Optic" == a || "Optic" == o || "Optic" == i) {
             Hl = wo[Math.floor(Math.random() * wo.length)];
-            document.querySelector("#primary3").innerHTML = Hl
+            document.querySelector("#primary3").innerHTML = Hl;
         }
         if ("Stock" == e || "Stock" == t || "Stock" == a || "Stock" == o || "Stock" == i) {
             zl = Qo[Math.floor(Math.random() * Qo.length)];
-            document.querySelector("#primary4").innerHTML = zl
+            document.querySelector("#primary4").innerHTML = zl;
         }
         if ("Perk" == e || "Perk" == t || "Perk" == a || "Perk" == o || "Perk" == i) {
             Zl = Vo[Math.floor(Math.random() * Vo.length)];
-            document.querySelector("#primary5").innerHTML = Zl
+            document.querySelector("#primary5").innerHTML = Zl;
         }
         if ("Laser" == e || "Laser" == t || "Laser" == a || "Laser" == o || "Laser" == i) {
             Nl = jo[Math.floor(Math.random() * jo.length)];
-            document.querySelector("#primary6").innerHTML = Nl
+            document.querySelector("#primary6").innerHTML = Nl;
         }
         if ("Underbarrel" == e || "Underbarrel" == t || "Underbarrel" == a || "Underbarrel" == o || "Underbarrel" == i) {
             bl = $o[Math.floor(Math.random() * $o.length)];
-            document.querySelector("#primary7").innerHTML = bl
+            document.querySelector("#primary7").innerHTML = bl;
         }
         if ("Ammunition" == e || "Ammunition" == t || "Ammunition" == a || "Ammunition" == o || "Ammunition" == i) {
             ql = _o[Math.floor(Math.random() * _o.length)];
-            document.querySelector("#primary8").innerHTML = ql
+            document.querySelector("#primary8").innerHTML = ql;
         }
         if ("Rear Grip" == e || "Rear Grip" == t || "Rear Grip" == a || "Rear Grip" == o || "Rear Grip" == i) {
             Dl = ri[Math.floor(Math.random() * ri.length)];
-            document.querySelector("#primary9").innerHTML = Dl
+            document.querySelector("#primary9").innerHTML = Dl;
         }
     } else if ("SMG - AGR 556" == nl) {
         if ("Muzzle" == e || "Muzzle" == t || "Muzzle" == a || "Muzzle" == o || "Muzzle" == i) {
             Gl = ei[Math.floor(Math.random() * ei.length)];
-            document.querySelector("#primary1").innerHTML = Gl
+            document.querySelector("#primary1").innerHTML = Gl;
         }
         if ("Barrel" == e || "Barrel" == t || "Barrel" == a || "Barrel" == o || "Barrel" == i) {
             Kl = ti[Math.floor(Math.random() * ti.length)];
-            document.querySelector("#primary2").innerHTML = Kl
+            document.querySelector("#primary2").innerHTML = Kl;
         }
         if ("Optic" == e || "Optic" == t || "Optic" == a || "Optic" == o || "Optic" == i) {
             Hl = ai[Math.floor(Math.random() * ai.length)];
-            document.querySelector("#primary3").innerHTML = Hl
+            document.querySelector("#primary3").innerHTML = Hl;
         }
         if ("Stock" == e || "Stock" == t || "Stock" == a || "Stock" == o || "Stock" == i) {
             zl = oi[Math.floor(Math.random() * oi.length)];
-            document.querySelector("#primary4").innerHTML = zl
+            document.querySelector("#primary4").innerHTML = zl;
         }
         if ("Perk" == e || "Perk" == t || "Perk" == a || "Perk" == o || "Perk" == i) {
             Zl = ii[Math.floor(Math.random() * ii.length)];
-            document.querySelector("#primary5").innerHTML = Zl
+            document.querySelector("#primary5").innerHTML = Zl;
         }
         if ("Laser" == e || "Laser" == t || "Laser" == a || "Laser" == o || "Laser" == i) {
             Nl = ni[Math.floor(Math.random() * ni.length)];
-            document.querySelector("#primary6").innerHTML = Nl
+            document.querySelector("#primary6").innerHTML = Nl;
         }
         if ("Underbarrel" == e || "Underbarrel" == t || "Underbarrel" == a || "Underbarrel" == o || "Underbarrel" == i) {
             bl = li[Math.floor(Math.random() * li.length)];
-            document.querySelector("#primary7").innerHTML = bl
+            document.querySelector("#primary7").innerHTML = bl;
         }
         if ("Ammunition" == e || "Ammunition" == t || "Ammunition" == a || "Ammunition" == o || "Ammunition" == i) {
             ql = Mi[Math.floor(Math.random() * Mi.length)];
-            document.querySelector("#primary8").innerHTML = ql
+            document.querySelector("#primary8").innerHTML = ql;
         }
         if ("Rear Grip" == e || "Rear Grip" == t || "Rear Grip" == a || "Rear Grip" == o || "Rear Grip" == i) {
             Dl = Ri[Math.floor(Math.random() * Ri.length)];
-            document.querySelector("#primary9").innerHTML = Dl
+            document.querySelector("#primary9").innerHTML = Dl;
         }
     } else if ("SMG - QXR" == nl) {
         if ("Muzzle" == e || "Muzzle" == t || "Muzzle" == a || "Muzzle" == o || "Muzzle" == i) {
             Gl = ci[Math.floor(Math.random() * ci.length)];
-            document.querySelector("#primary1").innerHTML = Gl
+            document.querySelector("#primary1").innerHTML = Gl;
         }
         if ("Barrel" == e || "Barrel" == t || "Barrel" == a || "Barrel" == o || "Barrel" == i) {
             Kl = hi[Math.floor(Math.random() * hi.length)];
-            document.querySelector("#primary2").innerHTML = Kl
+            document.querySelector("#primary2").innerHTML = Kl;
         }
         if ("Optic" == e || "Optic" == t || "Optic" == a || "Optic" == o || "Optic" == i) {
             Hl = mi[Math.floor(Math.random() * mi.length)];
-            document.querySelector("#primary3").innerHTML = Hl
+            document.querySelector("#primary3").innerHTML = Hl;
         }
         if ("Stock" == e || "Stock" == t || "Stock" == a || "Stock" == o || "Stock" == i) {
             zl = pi[Math.floor(Math.random() * pi.length)];
-            document.querySelector("#primary4").innerHTML = zl
+            document.querySelector("#primary4").innerHTML = zl;
         }
         if ("Perk" == e || "Perk" == t || "Perk" == a || "Perk" == o || "Perk" == i) {
             Zl = Si[Math.floor(Math.random() * Si.length)];
-            document.querySelector("#primary5").innerHTML = Zl
+            document.querySelector("#primary5").innerHTML = Zl;
         }
         if ("Laser" == e || "Laser" == t || "Laser" == a || "Laser" == o || "Laser" == i) {
             Nl = di[Math.floor(Math.random() * di.length)];
-            document.querySelector("#primary6").innerHTML = Nl
+            document.querySelector("#primary6").innerHTML = Nl;
         }
         if ("Underbarrel" == e || "Underbarrel" == t || "Underbarrel" == a || "Underbarrel" == o || "Underbarrel" == i) {
             bl = Li[Math.floor(Math.random() * Li.length)];
-            document.querySelector("#primary7").innerHTML = bl
+            document.querySelector("#primary7").innerHTML = bl;
         }
         if ("Ammunition" == e || "Ammunition" == t || "Ammunition" == a || "Ammunition" == o || "Ammunition" == i) {
             ql = ui[Math.floor(Math.random() * ui.length)];
-            document.querySelector("#primary8").innerHTML = ql
+            document.querySelector("#primary8").innerHTML = ql;
         }
         if ("Rear Grip" == e || "Rear Grip" == t || "Rear Grip" == a || "Rear Grip" == o || "Rear Grip" == i) {
             Dl = Ti[Math.floor(Math.random() * Ti.length)];
-            document.querySelector("#primary9").innerHTML = Dl
+            document.querySelector("#primary9").innerHTML = Dl;
         }
     } else if ("SHOTGUN - HS2126" == nl) {
         if ("Muzzle" == e || "Muzzle" == t || "Muzzle" == a || "Muzzle" == o || "Muzzle" == i) {
             Gl = Ei[Math.floor(Math.random() * Ei.length)];
-            document.querySelector("#primary1").innerHTML = Gl
+            document.querySelector("#primary1").innerHTML = Gl;
         }
         if ("Barrel" == e || "Barrel" == t || "Barrel" == a || "Barrel" == o || "Barrel" == i) {
             Kl = gi[Math.floor(Math.random() * gi.length)];
-            document.querySelector("#primary2").innerHTML = Kl
+            document.querySelector("#primary2").innerHTML = Kl;
         }
         if ("Optic" == e || "Optic" == t || "Optic" == a || "Optic" == o || "Optic" == i) {
             Hl = Pi[Math.floor(Math.random() * Pi.length)];
-            document.querySelector("#primary3").innerHTML = Hl
+            document.querySelector("#primary3").innerHTML = Hl;
         }
         if ("Stock" == e || "Stock" == t || "Stock" == a || "Stock" == o || "Stock" == i) {
             zl = Ai[Math.floor(Math.random() * Ai.length)];
-            document.querySelector("#primary4").innerHTML = zl
+            document.querySelector("#primary4").innerHTML = zl;
         }
         if ("Perk" == e || "Perk" == t || "Perk" == a || "Perk" == o || "Perk" == i) {
             Zl = Oi[Math.floor(Math.random() * Oi.length)];
-            document.querySelector("#primary5").innerHTML = Zl
+            document.querySelector("#primary5").innerHTML = Zl;
         }
         if ("Laser" == e || "Laser" == t || "Laser" == a || "Laser" == o || "Laser" == i) {
             Nl = si[Math.floor(Math.random() * si.length)];
-            document.querySelector("#primary6").innerHTML = Nl
+            document.querySelector("#primary6").innerHTML = Nl;
         }
         if ("Underbarrel" == e || "Underbarrel" == t || "Underbarrel" == a || "Underbarrel" == o || "Underbarrel" == i) {
             bl = fi[Math.floor(Math.random() * fi.length)];
-            document.querySelector("#primary7").innerHTML = bl
+            document.querySelector("#primary7").innerHTML = bl;
         }
         if ("Ammunition" == e || "Ammunition" == t || "Ammunition" == a || "Ammunition" == o || "Ammunition" == i) {
             ql = Ci[Math.floor(Math.random() * Ci.length)];
-            document.querySelector("#primary8").innerHTML = ql
+            document.querySelector("#primary8").innerHTML = ql;
         }
         if ("Rear Grip" == e || "Rear Grip" == t || "Rear Grip" == a || "Rear Grip" == o || "Rear Grip" == i) {
             Dl = Ii[Math.floor(Math.random() * Ii.length)];
-            document.querySelector("#primary9").innerHTML = Dl
+            document.querySelector("#primary9").innerHTML = Dl;
         }
     } else if ("SHOTGUN - BY15" == nl) {
         if ("Muzzle" == e || "Muzzle" == t || "Muzzle" == a || "Muzzle" == o || "Muzzle" == i) {
             Gl = yi[Math.floor(Math.random() * yi.length)];
-            document.querySelector("#primary1").innerHTML = Gl
+            document.querySelector("#primary1").innerHTML = Gl;
         }
         if ("Barrel" == e || "Barrel" == t || "Barrel" == a || "Barrel" == o || "Barrel" == i) {
             Kl = Ui[Math.floor(Math.random() * Ui.length)];
-            document.querySelector("#primary2").innerHTML = Kl
+            document.querySelector("#primary2").innerHTML = Kl;
         }
         if ("Optic" == e || "Optic" == t || "Optic" == a || "Optic" == o || "Optic" == i) {
             Hl = ki[Math.floor(Math.random() * ki.length)];
-            document.querySelector("#primary3").innerHTML = Hl
+            document.querySelector("#primary3").innerHTML = Hl;
         }
         if ("Stock" == e || "Stock" == t || "Stock" == a || "Stock" == o || "Stock" == i) {
             zl = Bi[Math.floor(Math.random() * Bi.length)];
-            document.querySelector("#primary4").innerHTML = zl
+            document.querySelector("#primary4").innerHTML = zl;
         }
         if ("Perk" == e || "Perk" == t || "Perk" == a || "Perk" == o || "Perk" == i) {
             Zl = Gi[Math.floor(Math.random() * Gi.length)];
-            document.querySelector("#primary5").innerHTML = Zl
+            document.querySelector("#primary5").innerHTML = Zl;
         }
         if ("Laser" == e || "Laser" == t || "Laser" == a || "Laser" == o || "Laser" == i) {
             Nl = Ki[Math.floor(Math.random() * Ki.length)];
-            document.querySelector("#primary6").innerHTML = Nl
+            document.querySelector("#primary6").innerHTML = Nl;
         }
         if ("Underbarrel" == e || "Underbarrel" == t || "Underbarrel" == a || "Underbarrel" == o || "Underbarrel" == i) {
             bl = Hi[Math.floor(Math.random() * Hi.length)];
-            document.querySelector("#primary7").innerHTML = bl
+            document.querySelector("#primary7").innerHTML = bl;
         }
         if ("Ammunition" == e || "Ammunition" == t || "Ammunition" == a || "Ammunition" == o || "Ammunition" == i) {
             ql = zi[Math.floor(Math.random() * zi.length)];
-            document.querySelector("#primary8").innerHTML = ql
+            document.querySelector("#primary8").innerHTML = ql;
         }
         if ("Rear Grip" == e || "Rear Grip" == t || "Rear Grip" == a || "Rear Grip" == o || "Rear Grip" == i) {
             Dl = Zi[Math.floor(Math.random() * Zi.length)];
-            document.querySelector("#primary9").innerHTML = Dl
+            document.querySelector("#primary9").innerHTML = Dl;
         }
     } else if ("SHOTGUN - HSO405" == nl) {
         if ("Muzzle" == e || "Muzzle" == t || "Muzzle" == a || "Muzzle" == o || "Muzzle" == i) {
             Gl = Ni[Math.floor(Math.random() * Ni.length)];
-            document.querySelector("#primary1").innerHTML = Gl
+            document.querySelector("#primary1").innerHTML = Gl;
         }
         if ("Barrel" == e || "Barrel" == t || "Barrel" == a || "Barrel" == o || "Barrel" == i) {
             Kl = bi[Math.floor(Math.random() * bi.length)];
-            document.querySelector("#primary2").innerHTML = Kl
+            document.querySelector("#primary2").innerHTML = Kl;
         }
         if ("Optic" == e || "Optic" == t || "Optic" == a || "Optic" == o || "Optic" == i) {
             Hl = qi[Math.floor(Math.random() * qi.length)];
-            document.querySelector("#primary3").innerHTML = Hl
+            document.querySelector("#primary3").innerHTML = Hl;
         }
         if ("Stock" == e || "Stock" == t || "Stock" == a || "Stock" == o || "Stock" == i) {
             zl = Di[Math.floor(Math.random() * Di.length)];
-            document.querySelector("#primary4").innerHTML = zl
+            document.querySelector("#primary4").innerHTML = zl;
         }
         if ("Perk" == e || "Perk" == t || "Perk" == a || "Perk" == o || "Perk" == i) {
             Zl = Fi[Math.floor(Math.random() * Fi.length)];
-            document.querySelector("#primary5").innerHTML = Zl
+            document.querySelector("#primary5").innerHTML = Zl;
         }
         if ("Laser" == e || "Laser" == t || "Laser" == a || "Laser" == o || "Laser" == i) {
             Nl = Wi[Math.floor(Math.random() * Wi.length)];
-            document.querySelector("#primary6").innerHTML = Nl
+            document.querySelector("#primary6").innerHTML = Nl;
         }
         if ("Underbarrel" == e || "Underbarrel" == t || "Underbarrel" == a || "Underbarrel" == o || "Underbarrel" == i) {
             bl = Xi[Math.floor(Math.random() * Xi.length)];
-            document.querySelector("#primary7").innerHTML = bl
+            document.querySelector("#primary7").innerHTML = bl;
         }
         if ("Ammunition" == e || "Ammunition" == t || "Ammunition" == a || "Ammunition" == o || "Ammunition" == i) {
             ql = Yi[Math.floor(Math.random() * Yi.length)];
-            document.querySelector("#primary8").innerHTML = ql
+            document.querySelector("#primary8").innerHTML = ql;
         }
         if ("Rear Grip" == e || "Rear Grip" == t || "Rear Grip" == a || "Rear Grip" == o || "Rear Grip" == i) {
             Dl = xi[Math.floor(Math.random() * xi.length)];
-            document.querySelector("#primary9").innerHTML = Dl
+            document.querySelector("#primary9").innerHTML = Dl;
         }
     } else if ("SHOTGUN - Striker" == nl) {
         if ("Muzzle" == e || "Muzzle" == t || "Muzzle" == a || "Muzzle" == o || "Muzzle" == i) {
             Gl = Ji[Math.floor(Math.random() * Ji.length)];
-            document.querySelector("#primary1").innerHTML = Gl
+            document.querySelector("#primary1").innerHTML = Gl;
         }
         if ("Barrel" == e || "Barrel" == t || "Barrel" == a || "Barrel" == o || "Barrel" == i) {
             Kl = vi[Math.floor(Math.random() * vi.length)];
-            document.querySelector("#primary2").innerHTML = Kl
+            document.querySelector("#primary2").innerHTML = Kl;
         }
         if ("Optic" == e || "Optic" == t || "Optic" == a || "Optic" == o || "Optic" == i) {
             Hl = wi[Math.floor(Math.random() * wi.length)];
-            document.querySelector("#primary3").innerHTML = Hl
+            document.querySelector("#primary3").innerHTML = Hl;
         }
         if ("Stock" == e || "Stock" == t || "Stock" == a || "Stock" == o || "Stock" == i) {
             zl = Qi[Math.floor(Math.random() * Qi.length)];
-            document.querySelector("#primary4").innerHTML = zl
+            document.querySelector("#primary4").innerHTML = zl;
         }
         if ("Perk" == e || "Perk" == t || "Perk" == a || "Perk" == o || "Perk" == i) {
             Zl = Vi[Math.floor(Math.random() * Vi.length)];
-            document.querySelector("#primary5").innerHTML = Zl
+            document.querySelector("#primary5").innerHTML = Zl;
         }
         if ("Laser" == e || "Laser" == t || "Laser" == a || "Laser" == o || "Laser" == i) {
             Nl = ji[Math.floor(Math.random() * ji.length)];
-            document.querySelector("#primary6").innerHTML = Nl
+            document.querySelector("#primary6").innerHTML = Nl;
         }
         if ("Underbarrel" == e || "Underbarrel" == t || "Underbarrel" == a || "Underbarrel" == o || "Underbarrel" == i) {
             bl = $i[Math.floor(Math.random() * $i.length)];
-            document.querySelector("#primary7").innerHTML = bl
+            document.querySelector("#primary7").innerHTML = bl;
         }
         if ("Ammunition" == e || "Ammunition" == t || "Ammunition" == a || "Ammunition" == o || "Ammunition" == i) {
             ql = _i[Math.floor(Math.random() * _i.length)];
-            document.querySelector("#primary8").innerHTML = ql
+            document.querySelector("#primary8").innerHTML = ql;
         }
         if ("Rear Grip" == e || "Rear Grip" == t || "Rear Grip" == a || "Rear Grip" == o || "Rear Grip" == i) {
             Dl = rn[Math.floor(Math.random() * rn.length)];
-            document.querySelector("#primary9").innerHTML = Dl
+            document.querySelector("#primary9").innerHTML = Dl;
         }
     } else if ("SHOTGUN - KRM 262" == nl) {
         if ("Muzzle" == e || "Muzzle" == t || "Muzzle" == a || "Muzzle" == o || "Muzzle" == i) {
             Gl = en[Math.floor(Math.random() * en.length)];
-            document.querySelector("#primary1").innerHTML = Gl
+            document.querySelector("#primary1").innerHTML = Gl;
         }
         if ("Barrel" == e || "Barrel" == t || "Barrel" == a || "Barrel" == o || "Barrel" == i) {
             Kl = tn[Math.floor(Math.random() * tn.length)];
-            document.querySelector("#primary2").innerHTML = Kl
+            document.querySelector("#primary2").innerHTML = Kl;
         }
         if ("Optic" == e || "Optic" == t || "Optic" == a || "Optic" == o || "Optic" == i) {
             Hl = an[Math.floor(Math.random() * an.length)];
-            document.querySelector("#primary3").innerHTML = Hl
+            document.querySelector("#primary3").innerHTML = Hl;
         }
         if ("Stock" == e || "Stock" == t || "Stock" == a || "Stock" == o || "Stock" == i) {
             zl = on[Math.floor(Math.random() * on.length)];
-            document.querySelector("#primary4").innerHTML = zl
+            document.querySelector("#primary4").innerHTML = zl;
         }
         if ("Perk" == e || "Perk" == t || "Perk" == a || "Perk" == o || "Perk" == i) {
             Zl = nn[Math.floor(Math.random() * nn.length)];
-            document.querySelector("#primary5").innerHTML = Zl
+            document.querySelector("#primary5").innerHTML = Zl;
         }
         if ("Laser" == e || "Laser" == t || "Laser" == a || "Laser" == o || "Laser" == i) {
             Nl = ln[Math.floor(Math.random() * ln.length)];
-            document.querySelector("#primary6").innerHTML = Nl
+            document.querySelector("#primary6").innerHTML = Nl;
         }
         if ("Underbarrel" == e || "Underbarrel" == t || "Underbarrel" == a || "Underbarrel" == o || "Underbarrel" == i) {
             bl = Mn[Math.floor(Math.random() * Mn.length)];
-            document.querySelector("#primary7").innerHTML = bl
+            document.querySelector("#primary7").innerHTML = bl;
         }
         if ("Ammunition" == e || "Ammunition" == t || "Ammunition" == a || "Ammunition" == o || "Ammunition" == i) {
             ql = Rn[Math.floor(Math.random() * Rn.length)];
-            document.querySelector("#primary8").innerHTML = ql
+            document.querySelector("#primary8").innerHTML = ql;
         }
         if ("Rear Grip" == e || "Rear Grip" == t || "Rear Grip" == a || "Rear Grip" == o || "Rear Grip" == i) {
             Dl = cn[Math.floor(Math.random() * cn.length)];
-            document.querySelector("#primary9").innerHTML = Dl
+            document.querySelector("#primary9").innerHTML = Dl;
         }
     } else if ("SHOTGUN - Echo" == nl) {
         if ("Muzzle" == e || "Muzzle" == t || "Muzzle" == a || "Muzzle" == o || "Muzzle" == i) {
             Gl = hn[Math.floor(Math.random() * hn.length)];
-            document.querySelector("#primary1").innerHTML = Gl
+            document.querySelector("#primary1").innerHTML = Gl;
         }
         if ("Barrel" == e || "Barrel" == t || "Barrel" == a || "Barrel" == o || "Barrel" == i) {
             Kl = mn[Math.floor(Math.random() * mn.length)];
-            document.querySelector("#primary2").innerHTML = Kl
+            document.querySelector("#primary2").innerHTML = Kl;
         }
         if ("Optic" == e || "Optic" == t || "Optic" == a || "Optic" == o || "Optic" == i) {
             Hl = pn[Math.floor(Math.random() * pn.length)];
-            document.querySelector("#primary3").innerHTML = Hl
+            document.querySelector("#primary3").innerHTML = Hl;
         }
         if ("Stock" == e || "Stock" == t || "Stock" == a || "Stock" == o || "Stock" == i) {
             zl = Sn[Math.floor(Math.random() * Sn.length)];
-            document.querySelector("#primary4").innerHTML = zl
+            document.querySelector("#primary4").innerHTML = zl;
         }
         if ("Perk" == e || "Perk" == t || "Perk" == a || "Perk" == o || "Perk" == i) {
             Zl = dn[Math.floor(Math.random() * dn.length)];
-            document.querySelector("#primary5").innerHTML = Zl
+            document.querySelector("#primary5").innerHTML = Zl;
         }
         if ("Laser" == e || "Laser" == t || "Laser" == a || "Laser" == o || "Laser" == i) {
             Nl = Ln[Math.floor(Math.random() * Ln.length)];
-            document.querySelector("#primary6").innerHTML = Nl
+            document.querySelector("#primary6").innerHTML = Nl;
         }
         if ("Underbarrel" == e || "Underbarrel" == t || "Underbarrel" == a || "Underbarrel" == o || "Underbarrel" == i) {
             bl = un[Math.floor(Math.random() * un.length)];
-            document.querySelector("#primary7").innerHTML = bl
+            document.querySelector("#primary7").innerHTML = bl;
         }
         if ("Ammunition" == e || "Ammunition" == t || "Ammunition" == a || "Ammunition" == o || "Ammunition" == i) {
             ql = Tn[Math.floor(Math.random() * Tn.length)];
-            document.querySelector("#primary8").innerHTML = ql
+            document.querySelector("#primary8").innerHTML = ql;
         }
         if ("Rear Grip" == e || "Rear Grip" == t || "Rear Grip" == a || "Rear Grip" == o || "Rear Grip" == i) {
             Dl = En[Math.floor(Math.random() * En.length)];
-            document.querySelector("#primary9").innerHTML = Dl
+            document.querySelector("#primary9").innerHTML = Dl;
         }
     } else if ("MARKSMAN - Kilo Bolt-Action" == nl) {
         if ("Muzzle" == e || "Muzzle" == t || "Muzzle" == a || "Muzzle" == o || "Muzzle" == i) {
             Gl = gn[Math.floor(Math.random() * gn.length)];
-            document.querySelector("#primary1").innerHTML = Gl
+            document.querySelector("#primary1").innerHTML = Gl;
         }
         if ("Barrel" == e || "Barrel" == t || "Barrel" == a || "Barrel" == o || "Barrel" == i) {
             Kl = Pn[Math.floor(Math.random() * Pn.length)];
-            document.querySelector("#primary2").innerHTML = Kl
+            document.querySelector("#primary2").innerHTML = Kl;
         }
         if ("Optic" == e || "Optic" == t || "Optic" == a || "Optic" == o || "Optic" == i) {
             Hl = An[Math.floor(Math.random() * An.length)];
-            document.querySelector("#primary3").innerHTML = Hl
+            document.querySelector("#primary3").innerHTML = Hl;
         }
         if ("Stock" == e || "Stock" == t || "Stock" == a || "Stock" == o || "Stock" == i) {
             zl = On[Math.floor(Math.random() * On.length)];
-            document.querySelector("#primary4").innerHTML = zl
+            document.querySelector("#primary4").innerHTML = zl;
         }
         if ("Perk" == e || "Perk" == t || "Perk" == a || "Perk" == o || "Perk" == i) {
             Zl = sn[Math.floor(Math.random() * sn.length)];
-            document.querySelector("#primary5").innerHTML = Zl
+            document.querySelector("#primary5").innerHTML = Zl;
         }
         if ("Laser" == e || "Laser" == t || "Laser" == a || "Laser" == o || "Laser" == i) {
             Nl = "LASER - OWC Laser - Tactical";
-            document.querySelector("#primary6").innerHTML = Nl
+            document.querySelector("#primary6").innerHTML = Nl;
         }
         if ("Underbarrel" == e || "Underbarrel" == t || "Underbarrel" == a || "Underbarrel" == o || "Underbarrel" == i) {
             bl = "UNDERBARREL - Bipod";
-            document.querySelector("#primary7").innerHTML = bl
+            document.querySelector("#primary7").innerHTML = bl;
         }
         if ("Ammunition" == e || "Ammunition" == t || "Ammunition" == a || "Ammunition" == o || "Ammunition" == i) {
             ql = fn[Math.floor(Math.random() * fn.length)];
-            document.querySelector("#primary8").innerHTML = ql
+            document.querySelector("#primary8").innerHTML = ql;
         }
         if ("Rear Grip" == e || "Rear Grip" == t || "Rear Grip" == a || "Rear Grip" == o || "Rear Grip" == i) {
             Dl = Cn[Math.floor(Math.random() * Cn.length)];
-            document.querySelector("#primary9").innerHTML = Dl
+            document.querySelector("#primary9").innerHTML = Dl;
         }
     } else if ("MARKSMAN - SKS" == nl) {
         if ("Muzzle" == e || "Muzzle" == t || "Muzzle" == a || "Muzzle" == o || "Muzzle" == i) {
             Gl = In[Math.floor(Math.random() * In.length)];
-            document.querySelector("#primary1").innerHTML = Gl
+            document.querySelector("#primary1").innerHTML = Gl;
         }
         if ("Barrel" == e || "Barrel" == t || "Barrel" == a || "Barrel" == o || "Barrel" == i) {
 
             Kl = yn[Math.floor(Math.random() * yn.length)];
-            document.querySelector("#primary2").innerHTML = Kl
+            document.querySelector("#primary2").innerHTML = Kl;
         }
         if ("Optic" == e || "Optic" == t || "Optic" == a || "Optic" == o || "Optic" == i) {
 
             Hl = Un[Math.floor(Math.random() * Un.length)];
-            document.querySelector("#primary3").innerHTML = Hl
+            document.querySelector("#primary3").innerHTML = Hl;
         }
         if ("Stock" == e || "Stock" == t || "Stock" == a || "Stock" == o || "Stock" == i) {
 
             zl = kn[Math.floor(Math.random() * kn.length)];
-            document.querySelector("#primary4").innerHTML = zl
+            document.querySelector("#primary4").innerHTML = zl;
         }
         if ("Perk" == e || "Perk" == t || "Perk" == a || "Perk" == o || "Perk" == i) {
 
             Zl = Bn[Math.floor(Math.random() * Bn.length)];
-            document.querySelector("#primary5").innerHTML = Zl
+            document.querySelector("#primary5").innerHTML = Zl;
         }
         if ("Laser" == e || "Laser" == t || "Laser" == a || "Laser" == o || "Laser" == i) {
 
             Nl = "LASER - OWC Laser - Tactical";
-            document.querySelector("#primary6").innerHTML = Nl
+            document.querySelector("#primary6").innerHTML = Nl;
         }
         if ("Underbarrel" == e || "Underbarrel" == t || "Underbarrel" == a || "Underbarrel" == o || "Underbarrel" == i) {
 
             bl = Gn[Math.floor(Math.random() * Gn.length)];
-            document.querySelector("#primary7").innerHTML = bl
+            document.querySelector("#primary7").innerHTML = bl;
         }
         if ("Ammunition" == e || "Ammunition" == t || "Ammunition" == a || "Ammunition" == o || "Ammunition" == i) {
 
             ql = Kn[Math.floor(Math.random() * Kn.length)];
-            document.querySelector("#primary8").innerHTML = ql
+            document.querySelector("#primary8").innerHTML = ql;
         }
         if ("Rear Grip" == e || "Rear Grip" == t || "Rear Grip" == a || "Rear Grip" == o || "Rear Grip" == i) {
 
             Dl = Hn[Math.floor(Math.random() * Hn.length)];
-            document.querySelector("#primary9").innerHTML = Dl
+            document.querySelector("#primary9").innerHTML = Dl;
         }
     }
 
@@ -2460,114 +2460,114 @@ function generate() {
 
 
             var Fl = zn[Math.floor(Math.random() * zn.length)];
-            document.querySelector("#secondary1").innerHTML = Fl
+            document.querySelector("#secondary1").innerHTML = Fl;
         }
         if ("Barrel" == r || "Barrel" == n || "Barrel" == l || "Barrel" == M || "Barrel" == R) {
 
 
             var Wl = Zn[Math.floor(Math.random() * Zn.length)];
-            document.querySelector("#secondary2").innerHTML = Wl
+            document.querySelector("#secondary2").innerHTML = Wl;
         }
         if ("Optic" == r || "Optic" == n || "Optic" == l || "Optic" == M || "Optic" == R) {
 
             var Xl = Nn[Math.floor(Math.random() * Nn.length)];
-            document.querySelector("#secondary3").innerHTML = Xl
+            document.querySelector("#secondary3").innerHTML = Xl;
         }
         if ("Perk" == r || "Perk" == n || "Perk" == l || "Perk" == M || "Perk" == R) {
 
             var Yl = bn[Math.floor(Math.random() * bn.length)];
-            document.querySelector("#secondary4").innerHTML = Yl
+            document.querySelector("#secondary4").innerHTML = Yl;
         }
         if ("Laser" == r || "Laser" == n || "Laser" == l || "Laser" == M || "Laser" == R) {
             var xl = qn[Math.floor(Math.random() * qn.length)];
-            document.querySelector("#secondary5").innerHTML = xl
+            document.querySelector("#secondary5").innerHTML = xl;
         }
         if ("Underbarrel" == r || "Underbarrel" == n || "Underbarrel" == l || "Underbarrel" == M || "Underbarrel" == R) {
             var Jl = Dn[Math.floor(Math.random() * Dn.length)];
-            document.querySelector("#secondary6").innerHTML = Jl
+            document.querySelector("#secondary6").innerHTML = Jl;
         }
         if ("Ammunition" == r || "Ammunition" == n || "Ammunition" == l || "Ammunition" == M || "Ammunition" == R) {
             var vl = Fn[Math.floor(Math.random() * Fn.length)];
-            document.querySelector("#secondary7").innerHTML = vl
+            document.querySelector("#secondary7").innerHTML = vl;
         }
         if ("Rear Grip" == r || "Rear Grip" == n || "Rear Grip" == l || "Rear Grip" == M || "Rear Grip" == R) {
 
             var wl = Wn[Math.floor(Math.random() * Wn.length)];
-            document.querySelector("#secondary8").innerHTML = wl
+            document.querySelector("#secondary8").innerHTML = wl;
         }
     } else if ("PISTOL - MW11" == Ml) {
         if ("Muzzle" == r || "Muzzle" == n || "Muzzle" == l || "Muzzle" == M || "Muzzle" == R) {
             Fl = Xn[Math.floor(Math.random() * Xn.length)];
-            document.querySelector("#secondary1").innerHTML = Fl
+            document.querySelector("#secondary1").innerHTML = Fl;
         }
         if ("Barrel" == r || "Barrel" == n || "Barrel" == l || "Barrel" == M || "Barrel" == R) {
             Wl = Yn[Math.floor(Math.random() * Yn.length)];
-            document.querySelector("#secondary2").innerHTML = Wl
+            document.querySelector("#secondary2").innerHTML = Wl;
         }
         if ("Optic" == r || "Optic" == n || "Optic" == l || "Optic" == M || "Optic" == R) {
             Xl = xn[Math.floor(Math.random() * xn.length)];
-            document.querySelector("#secondary3").innerHTML = Xl
+            document.querySelector("#secondary3").innerHTML = Xl;
         }
         if ("Perk" == r || "Perk" == n || "Perk" == l || "Perk" == M || "Perk" == R) {
             Yl = Jn[Math.floor(Math.random() * Jn.length)];
-            document.querySelector("#secondary4").innerHTML = Yl
+            document.querySelector("#secondary4").innerHTML = Yl;
         }
         if ("Laser" == r || "Laser" == n || "Laser" == l || "Laser" == M || "Laser" == R) {
             xl = vn[Math.floor(Math.random() * vn.length)];
-            document.querySelector("#secondary5").innerHTML = xl
+            document.querySelector("#secondary5").innerHTML = xl;
         }
         if ("Underbarrel" == r || "Underbarrel" == n || "Underbarrel" == l || "Underbarrel" == M || "Underbarrel" == R) {
             Jl = wn[Math.floor(Math.random() * wn.length)];
-            document.querySelector("#secondary6").innerHTML = Jl
+            document.querySelector("#secondary6").innerHTML = Jl;
         }
         if ("Ammunition" == r || "Ammunition" == n || "Ammunition" == l || "Ammunition" == M || "Ammunition" == R) {
             vl = Qn[Math.floor(Math.random() * Qn.length)];
-            document.querySelector("#secondary7").innerHTML = vl
+            document.querySelector("#secondary7").innerHTML = vl;
         }
         if ("Rear Grip" == r || "Rear Grip" == n || "Rear Grip" == l || "Rear Grip" == M || "Rear Grip" == R) {
             wl = Vn[Math.floor(Math.random() * Vn.length)];
-            document.querySelector("#secondary8").innerHTML = wl
+            document.querySelector("#secondary8").innerHTML = wl;
         }
     } else if ("PISTOL - .50 GS" == Ml) {
 
         if ("Muzzle" == r || "Muzzle" == n || "Muzzle" == l || "Muzzle" == M || "Muzzle" == R) {
             Fl = jn[Math.floor(Math.random() * jn.length)];
-            document.querySelector("#secondary1").innerHTML = Fl
+            document.querySelector("#secondary1").innerHTML = Fl;
         }
         if ("Barrel" == r || "Barrel" == n || "Barrel" == l || "Barrel" == M || "Barrel" == R) {
             Wl = $n[Math.floor(Math.random() * $n.length)];
-            document.querySelector("#secondary2").innerHTML = Wl
+            document.querySelector("#secondary2").innerHTML = Wl;
         }
         if ("Optic" == r || "Optic" == n || "Optic" == l || "Optic" == M || "Optic" == R) {
             Xl = _n[Math.floor(Math.random() * _n.length)];
-            document.querySelector("#secondary3").innerHTML = Xl
+            document.querySelector("#secondary3").innerHTML = Xl;
         }
         if ("Perk" == r || "Perk" == n || "Perk" == l || "Perk" == M || "Perk" == R) {
             Yl = rl[Math.floor(Math.random() * rl.length)];
-            document.querySelector("#secondary4").innerHTML = Yl
+            document.querySelector("#secondary4").innerHTML = Yl;
         }
         if ("Laser" == r || "Laser" == n || "Laser" == l || "Laser" == M || "Laser" == R) {
             xl = el[Math.floor(Math.random() * el.length)];
-            document.querySelector("#secondary5").innerHTML = xl
+            document.querySelector("#secondary5").innerHTML = xl;
         }
         if ("Underbarrel" == r || "Underbarrel" == n || "Underbarrel" == l || "Underbarrel" == M || "Underbarrel" == R) {
             Jl = tl[Math.floor(Math.random() * tl.length)];
-            document.querySelector("#secondary6").innerHTML = Jl
+            document.querySelector("#secondary6").innerHTML = Jl;
         }
         if ("Ammunition" == r || "Ammunition" == n || "Ammunition" == l || "Ammunition" == M || "Ammunition" == R) {
             vl = al[Math.floor(Math.random() * al.length)];
-            document.querySelector("#secondary7").innerHTML = vl
+            document.querySelector("#secondary7").innerHTML = vl;
         }
         if ("Rear Grip" == r || "Rear Grip" == n || "Rear Grip" == l || "Rear Grip" == M || "Rear Grip" == R) {
             wl = ol[Math.floor(Math.random() * ol.length)];
-            document.querySelector("#secondary8").innerHTML = wl
+            document.querySelector("#secondary8").innerHTML = wl;
         }
     }
 
     document.getElementById("outputs").style.opacity = 1;
 
     // on outputs show, disable scroll on all elements except the scrollable outputs div
-    var targetElement = document.getElementById("outputs")
+    var targetElement = document.getElementById("outputs");
     bodyScrollLock.disableBodyScroll(targetElement);
 
     document.getElementById("outputs").scroll({

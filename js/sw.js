@@ -21,7 +21,7 @@
                     '/css/styles.css',
                     '/css/font-awesome.min.css',
                     '/assets/favicon.ico',
-                    '/assets/cod_background.jpeg',
+                    '/assets/cod_background.avif',
                     '/',
                     '/index.html'
                 ]);

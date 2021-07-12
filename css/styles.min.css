@@ -1,1 +1,235 @@
-*{margin:0;padding:0}body,html{background-color:#000;font-family:sans-serif;height:100%;max-height:100%;-webkit-text-stroke:.5px #000}.progressier-widget-links{display:none!important}.progressier-widget-icon{bottom:20px!important}.background-container{background-attachment:fixed;background-color:#000;background-image:url(../assets/cod_background.jpeg);background-position:center center;background-repeat:no-repeat;background-size:cover;height:100%;max-height:100%;position:absolute;text-align:center;width:100%;-moz-background-size:cover;-o-background-size:cover;-webkit-background-size:cover}h2{color:#fff;text-decoration:none}h4{color:#1e90ff}p,span{color:coral}u{text-decoration:none}.middle{width:90%;margin:0 auto}@media only screen and (min-width:786px){.middle{width:40%;max-width:40%;margin:0 auto}}.top{color:#fff;display:inline-block;font-size:1.7em;font-weight:600;padding-top:3%;text-align:center}.header{color:#fff;font-size:1em;font-weight:600;margin-left:auto;margin-right:auto;padding-bottom:3%;padding-top:3%;text-align:center;width:90%}.button1{background:#4682b4;border:0;border-radius:3px;box-shadow:0 15px 30px rgba(0,0,0,.1);color:#000;cursor:pointer;display:block;font-size:.75em;font-weight:600;height:38px;letter-spacing:1px;line-height:38px;margin-left:auto;margin-right:auto;overflow:hidden;text-transform:uppercase;transition:all .3s ease;width:150px;-moz-appearance:none;-webkit-appearance:none}.button1:hover{opacity:.8}.copyright{color:#fff;font-size:.7em;margin-top:-3%;padding-top:5%}.copyrightLine2{color:#fff;font-size:.7em;margin-top:0;padding-top:0}.attributionLink{color:inherit;text-decoration:none}.outputs{background:initial;background-color:rgb(47,79,79,.95);border-radius:20px;line-height:2;margin-left:auto;margin-right:auto;opacity:0;overflow:auto!important;max-height:55vh!important;scroll-behavior:smooth;text-align:center;transition:all 1s ease-in-out;-moz-transition:all 1s ease-in-out;-ms-transition:all 1s ease-in-out;-o-transition:all 1s ease-in-out;-webkit-transition:all 1s ease-in-out;-webkit-overflow-scrolling:touch!important}@media only screen and (min-width:1281px){.outputs{background:initial;background-color:rgb(47,79,79,.95);border-radius:20px;line-height:2;margin-left:auto;margin-right:auto;opacity:0;overflow:auto!important;max-height:60vh!important;scroll-behavior:smooth;text-align:center;transition:all 1s ease-in-out;-moz-transition:all 1s ease-in-out;-ms-transition:all 1s ease-in-out;-o-transition:all 1s ease-in-out;-webkit-transition:all 1s ease-in-out;-webkit-overflow-scrolling:touch!important}}.outputs>:last-child{margin-bottom:3em}.sticky{position:-webkit-sticky;position:sticky;top:5%;right:3%;float:right;border-radius:25px;width:25px;height:25px;background-color:#4682b4;padding:5px;font-size:20px}.copytoclipboard{background-color:inherit;border:none;text-align:center;vertical-align:super;text-transform:uppercase;font-size:1em;font-weight:600;letter-spacing:1px}.copyIcon{vertical-align:bottom}.gradientback{bottom:35px;height:60px;position:absolute;width:100%;background:linear-gradient(to bottom,rgba(0,0,0,0) 0,#000 100%);background:-moz-linear-gradient(top,rgba(0,0,0,0) 0,#000 100%);background:-ms-linear-gradient(top,rgba(0,0,0,0) 0,#000 100%);background:-o-linear-gradient(top,rgba(0,0,0,0) 0,#000 100%);background:-webkit-gradient(linear,left top,left bottom,color-stop(0,rgba(0,0,0,0)),color-stop(100%,#000));background:-webkit-linear-gradient(top,rgba(0,0,0,0) 0,#000 100%)}.footer{background-color:#000;bottom:0;color:#fff;left:0;position:fixed;text-align:center;width:100%}
+* {
+    margin: 0;
+    padding: 0
+}
+
+body,
+html {
+    background-color: #000;
+    font-family: sans-serif;
+    height: 100%;
+    max-height: 100%;
+    -webkit-text-stroke: .5px #000
+}
+
+.progressier-widget-links {
+    display: none !important;
+    rel="noreferrer;
+}
+
+.progressier-widget-icon {
+    bottom: 20px !important
+}
+
+.background-container {
+    background-attachment: fixed;
+    background-color: #000;
+    background-image: url(../assets/cod_background.avif);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    max-height: 100%;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -webkit-background-size: cover
+}
+
+h2 {
+    color: #fff;
+    text-decoration: none
+}
+
+h4 {
+    color: #1e90ff
+}
+
+p,
+span {
+    color: coral
+}
+
+u {
+    text-decoration: none
+}
+
+.middle {
+    width: 90%;
+    margin: 0 auto
+}
+
+@media only screen and (min-width:786px) {
+    .middle {
+        width: 40%;
+        max-width: 40%;
+        margin: 0 auto
+    }
+}
+
+.top {
+    color: #fff;
+    display: inline-block;
+    font-size: 1.7em;
+    font-weight: 600;
+    padding-top: 3%;
+    text-align: center
+}
+
+.header {
+    color: #fff;
+    font-size: 1em;
+    font-weight: 600;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 3%;
+    padding-top: 3%;
+    text-align: center;
+    width: 90%
+}
+
+.button1 {
+    background: #4682b4;
+    border: 0;
+    border-radius: 3px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, .1);
+    color: #000;
+    cursor: pointer;
+    display: block;
+    font-size: .75em;
+    font-weight: 600;
+    height: 38px;
+    letter-spacing: 1px;
+    line-height: 38px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+    text-transform: uppercase;
+    transition: all .3s ease;
+    width: 150px;
+    -moz-appearance: none;
+    -webkit-appearance: none
+}
+
+.button1:hover {
+    opacity: .8
+}
+
+.copyright {
+    color: #fff;
+    font-size: .7em;
+    margin-top: -3%;
+    padding-top: 5%
+}
+
+.copyrightLine2 {
+    color: #fff;
+    font-size: .7em;
+    margin-top: 0;
+    padding-top: 0
+}
+
+.attributionLink {
+    color: inherit;
+    text-decoration: none
+}
+
+.outputs {
+    background: initial;
+    background-color: rgb(47, 79, 79, .95);
+    border-radius: 20px;
+    line-height: 2;
+    margin-left: auto;
+    margin-right: auto;
+    opacity: 0;
+    overflow: auto !important;
+    max-height: 55vh !important;
+    scroll-behavior: smooth;
+    text-align: center;
+    transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -ms-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    -webkit-transition: all 1s ease-in-out;
+    -webkit-overflow-scrolling: touch !important
+}
+
+@media only screen and (min-width:1281px) {
+    .outputs {
+        background: initial;
+        background-color: rgb(47, 79, 79, .95);
+        border-radius: 20px;
+        line-height: 2;
+        margin-left: auto;
+        margin-right: auto;
+        opacity: 0;
+        overflow: auto !important;
+        max-height: 60vh !important;
+        scroll-behavior: smooth;
+        text-align: center;
+        transition: all 1s ease-in-out;
+        -moz-transition: all 1s ease-in-out;
+        -ms-transition: all 1s ease-in-out;
+        -o-transition: all 1s ease-in-out;
+        -webkit-transition: all 1s ease-in-out;
+        -webkit-overflow-scrolling: touch !important
+    }
+}
+
+.outputs>:last-child {
+    margin-bottom: 3em
+}
+
+.sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 5%;
+    right: 3%;
+    float: right;
+    border-radius: 25px;
+    width: 25px;
+    height: 25px;
+    background-color: #4682b4;
+    padding: 5px;
+    font-size: 20px
+}
+
+.copytoclipboard {
+    background-color: inherit;
+    border: none;
+    text-align: center;
+    vertical-align: super;
+    text-transform: uppercase;
+    font-size: 1em;
+    font-weight: 600;
+    letter-spacing: 1px
+}
+
+.copyIcon {
+    vertical-align: bottom
+}
+
+.gradientback {
+    bottom: 35px;
+    height: 60px;
+    position: absolute;
+    width: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0, #000 100%);
+    background: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 0, #000 100%);
+    background: -ms-linear-gradient(top, rgba(0, 0, 0, 0) 0, #000 100%);
+    background: -o-linear-gradient(top, rgba(0, 0, 0, 0) 0, #000 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0, rgba(0, 0, 0, 0)), color-stop(100%, #000));
+    background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0, #000 100%)
+}
+
+.footer {
+    background-color: #000;
+    bottom: 0;
+    color: #fff;
+    left: 0;
+    position: fixed;
+    text-align: center;
+    width: 100%
+}

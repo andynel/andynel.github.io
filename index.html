@@ -1,30 +1,27 @@
 <html lang="en-US">
-	<head>
-		<meta charset="UTF-8" />
-		<title>Call of Duty: Mobile Class Generator</title>
-		<meta name="description" content="Generate a random COD Class">
-		<meta name="theme-color" content="#000000"/>
-		<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, minimal-ui" />
-		<meta name="apple-mobile-web-app-capable" content="yes" /> 
-	    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
-	    <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
-	    <link rel="shortcut icon" type="image/ico" href="assets/favicon.ico" />
-		<link rel="stylesheet" href="css/styles.min.css" />
-		<!-- <link rel="preload" href="css/myfontawesome.css" as="style" onload="this.onload=null;this.rel='stylesheet'"> -->
-		<link rel="preload" href="css/myfontawesome.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-		<noscript><link rel="stylesheet" href="css/myfontawesome.css"></noscript>
 
-		<!-- <link rel="preload" href="css/font-awesome.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'"> -->
-		<!-- <noscript><link rel="stylesheet" href="css/font-awesome.min.css"></noscript> -->
-		<script src="js/jquery.min.js"></script>
-		<script src="https://progressier.com/client/script.js?id=DWpuflK3c0bzHo79bi8Z" defer></script> 
-		<!-- <script src="js/progressierscript.js" defer></script> -->
-		<script src="js/smoothscroll.js" defer></script>
-		<script src="js/sweetalert.js" defer></script>
-		<script src="js/bodylock.js"></script>
-		<script defer src="js/all.js"></script>
-		<script>
-			$(document).ready(function () {   
+<head>
+    <meta charset="UTF-8" />
+    <title>Call of Duty: Mobile Class Generator</title>
+    <meta name="description" content="Generate a random COD Class">
+    <meta name="theme-color" content="#000000" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, minimal-ui" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+    <link rel="shortcut icon" type="image/ico" href="assets/favicon.ico" />
+    <link rel="stylesheet" href="css/styles.min.css" />
+    <link rel="preload" href="css/myfontawesome.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="css/myfontawesome.css"></noscript>
+    
+    <script src="https://progressier.com/client/script.js?id=DWpuflK3c0bzHo79bi8Z" defer></script>
+    <script src="js/smoothscroll.js" defer></script>
+    <script src="js/sweetalert.js" defer></script>
+    
+    <script defer src="js/all.js"></script>
+    <script>
+        $(document).ready(function () {   
 				$.ajax({
 	    			url: "https://api.countapi.xyz/update/andynel.github.io/72b1a2d5-a613-47f0-bd47-1f01c4453740?amount=1",
 	    			method: 'GET',
@@ -40,116 +37,119 @@
 		</script>
 	</head>
 
-	<body>
-		<div id="background-container" class="background-container">
-			<span class="top" id="top">
-				Call of Duty: Mobile Random Loadout Generator
-			</span>
-			<br /><br />
-			<span class="header" id="header">
-				<b>Press "Generate Class" button below to generate a random class loadout.</b>
-			</span>
-			<br /><br />
-			<input type="button" id="button1" class="button1" value="Generate Class" onclick="timeout();" />
-			<br />
-			<div class="middle">
-				<div class="outputs" id="outputs">
-					<div class="sticky" onclick="copyToClipboard()"><button class="copytoclipboard copy-button copyText" aria-label="fas fa-copy" data-clipboard-action="copy" data-clipboard-target="#copyText"><i class="fas fa-copy"></i></button></div>
-					<h2><u>Primary Weapon:</u></h2>
-					<h3>
-						<span id="primary"></span>
-					</h3>
-					<h4><u>Attachments:</u> <br />
-						<span id="primary1"></span>
-					</h4>
-					<h4>
-						<span id="primary2"></span>
-					</h4>
-					<h4>
-						<span id="primary3"></span>
-					</h4>
-					<h4>
-						<span id="primary4"></span>
-					</h4>
-					<h4>
-						<span id="primary5"></span>
-					</h4>
-					<h4>
-						<span id="primary6"></span>
-					</h4>
-					<h4>
-						<span id="primary7"></span>
-					</h4>
-					<h4>
-						<span id="primary8"></span>
-					</h4>
-					<h4>
-						<span id="primary9"></span>
-					</h4>
-					<h2><u>Secondary Weapon:</u></h2>
-					<h3>
-						<span id="secondary"></span>
-					</h3>
-					<h4><u>Attachments:</u> <br />
-						<span id="secondary1"></span>
-					</h4>
-					<h4>
-						<span id="secondary2"></span>
-					</h4>
-					<h4>
-						<span id="secondary3"></span>
-					</h4>
-					<h4>
-						<span id="secondary4"></span>
-					</h4>
-					<h4>
-						<span id="secondary5"></span>
-					</h4>
-					<h4>
-						<span id="secondary6"></span>
-					</h4>
-					<h4>
-						<span id="secondary7"></span>
-					</h4>
-					<h4>
-						<span id="secondary8"></span>
-					</h4>
-					<h2><u>Battle Royale Class:</u></h2>
-					<h3>
-						<span id="brclass"></span>
-					</h3>
-					<h2><u>Lethal Equipment:</u></h2>
-					<h3>
-						<span id="lethal"></span>
-					</h3>
-					<h2><u>Tactical Equipment:</u></h2>
-					<h3>
-						<span id="tactical"></span>
-					</h3>
-					<h2><u>Operator Skill:</u></h2>
-					<h3>
-						<span id="operatorSkill"></span>
-					</h3>
-					<h2><u>Perk Slot #1 (Red):</u></h2>
-					<h3>
-						<span id="perk1"></span>
-					</h3>
-					<h2><u>Perk Slot #2 (Green):</u></h2>
-					<h3>
-						<span id="perk2"></span>
-					</h3>
-					<h2><u>Perk Slot #3 (Blue):</u></h2>
-					<h3>
-						<span id="perk3"></span>
-					</h3>
-				</div>		<!-- end outputs div -->
-			</div>		<!-- end middle div -->
-		</div>		<!-- end background-container div -->
-		<div id="footer" class="footer">
-			<span class="copyright" id="copyright">Copyright &copy; G30 2021  & Customized by PreviousCoast0</span>
-			<br />
-			<span class="copyrightLine2" id="copyrightLine2"><a class="attributionLink" id="attributionLink" href="http://codmrandom.com" target="_blank" rel="noreferrer">Original Site</a> by @DaMagicPlays</span>
-		</div>
-		<script src="js/cod_loadout.js" defer></script>
-	</body>
+<body>
+    <div id="background-container" class="background-container">
+        <span class="top" id="top">
+            Call of Duty: Mobile Random Loadout Generator
+        </span>
+        <br /><br />
+        <span class="header" id="header">
+            <b>Press "Generate Class" button below to generate a random class loadout.</b>
+        </span>
+        <br /><br />
+        <input type="button" id="button1" class="button1" value="Generate Class" onclick="timeout();" />
+        <br />
+        <div class="middle">
+            <div class="outputs" id="outputs">
+                <div class="sticky" onclick="copyToClipboard()"><button class="copytoclipboard copy-button copyText" aria-label="fas fa-copy" data-clipboard-action="copy" data-clipboard-target="#copyText"><i class="fas fa-copy"></i></button></div>
+                <h2><u>Primary Weapon:</u></h2>
+                <h3>
+                    <span id="primary"></span>
+                </h3>
+                <h4><u>Attachments:</u> <br />
+                    <span id="primary1"></span>
+                </h4>
+                <h4>
+                    <span id="primary2"></span>
+                </h4>
+                <h4>
+                    <span id="primary3"></span>
+                </h4>
+                <h4>
+                    <span id="primary4"></span>
+                </h4>
+                <h4>
+                    <span id="primary5"></span>
+                </h4>
+                <h4>
+                    <span id="primary6"></span>
+                </h4>
+                <h4>
+                    <span id="primary7"></span>
+                </h4>
+                <h4>
+                    <span id="primary8"></span>
+                </h4>
+                <h4>
+                    <span id="primary9"></span>
+                </h4>
+                <h2><u>Secondary Weapon:</u></h2>
+                <h3>
+                    <span id="secondary"></span>
+                </h3>
+                <h4><u>Attachments:</u> <br />
+                    <span id="secondary1"></span>
+                </h4>
+                <h4>
+                    <span id="secondary2"></span>
+                </h4>
+                <h4>
+                    <span id="secondary3"></span>
+                </h4>
+                <h4>
+                    <span id="secondary4"></span>
+                </h4>
+                <h4>
+                    <span id="secondary5"></span>
+                </h4>
+                <h4>
+                    <span id="secondary6"></span>
+                </h4>
+                <h4>
+                    <span id="secondary7"></span>
+                </h4>
+                <h4>
+                    <span id="secondary8"></span>
+                </h4>
+                <h2><u>Battle Royale Class:</u></h2>
+                <h3>
+                    <span id="brclass"></span>
+                </h3>
+                <h2><u>Lethal Equipment:</u></h2>
+                <h3>
+                    <span id="lethal"></span>
+                </h3>
+                <h2><u>Tactical Equipment:</u></h2>
+                <h3>
+                    <span id="tactical"></span>
+                </h3>
+                <h2><u>Operator Skill:</u></h2>
+                <h3>
+                    <span id="operatorSkill"></span>
+                </h3>
+                <h2><u>Perk Slot #1 (Red):</u></h2>
+                <h3>
+                    <span id="perk1"></span>
+                </h3>
+                <h2><u>Perk Slot #2 (Green):</u></h2>
+                <h3>
+                    <span id="perk2"></span>
+                </h3>
+                <h2><u>Perk Slot #3 (Blue):</u></h2>
+                <h3>
+                    <span id="perk3"></span>
+                </h3>
+            </div> <!-- end outputs div -->
+        </div> <!-- end middle div -->
+    </div> <!-- end background-container div -->
+    <div id="footer" class="footer">
+        <span class="copyright" id="copyright">Copyright &copy; G30 2021 & Customized by PreviousCoast0</span>
+        <br />
+        <span class="copyrightLine2" id="copyrightLine2"><a class="attributionLink" id="attributionLink" href="http://codmrandom.com" target="_blank" rel="noreferrer">Original Site</a> by @DaMagicPlays</span>
+    </div>
+    <script src="js/cod_loadout.js" defer></script>
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/bodylock.js" defer></script>
+</body>
+
 </html>

@@ -24,7 +24,8 @@ html {
 .background-container {
     background-attachment: fixed;
     background-color: #000;
-    background-image: url(../assets/cod_background.avif);
+    background-image: image-set(url(../assets/cod_background.avif), url(../assets/cod_background.jpeg));
+    /*background-image: url(../assets/cod_background.avif);*/
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;

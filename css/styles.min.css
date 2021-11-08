@@ -207,7 +207,7 @@ u {
     font-size: 1em;
     font-weight: 600;
     letter-spacing: 1px;
-    color: black;
+    color: black !important;
 }
 
 .copyIcon {

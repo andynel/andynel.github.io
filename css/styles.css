@@ -194,7 +194,7 @@ u {
 }
 
 .copytoclipboard {
-	background-color: lightgrey;
+	background-color: inherit;
 	border: none;
 	text-align: center;
 	vertical-align: super;

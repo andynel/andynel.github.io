@@ -48,7 +48,10 @@
 
 <script async src="https://cdn.splitbee.io/sb.js"></script>
 	<!-- <script async defer data-website-id="5a94f5bc-c397-4c31-96de-93b1324b2f73" src="https://raw.githubusercontent.com/andynel/andynel.github.io/main/umami.js"></script> -->
-	</head>
+
+<script src="https://www.google.com/recaptcha/api.js?render= 6LeWaZ0fAAAAAPIDCQgFv2HSBYZEQYJnNMoOM7Ci"></script>
+
+</head>
 
 <body>
     <div id="background-container" class="background-container">
@@ -165,6 +168,18 @@
     <script src="js/bodylock.js" defer></script>
 	<!-- Begin ShinyStat Code -->
 <script type="text/javascript" src="//codice.shinystat.com/cgi-bin/getcod.cgi?USER=SS-20173083-1e67e"></script>
+
+   <script>
+      function onClick(e) {
+        e.preventDefault();
+        grecaptcha.ready(function() {
+          grecaptcha.execute('6LeWaZ0fAAAAAPIDCQgFv2HSBYZEQYJnNMoOM7Ci', {action: 'submit'}).then(function(token) {
+              // Add your logic to submit to your backend server here.
+          });
+        });
+      }
+  </script>
+
 <noscript>
 <a href="https://www.shinystat.com/" target="_top" alt="Site stats" style="width: 100%;height: auto;" aria-label="Twitter">
 <img src="//www.shinystat.com/cgi-bin/shinystat.cgi?USER=SS-20173083-1e67e" alt="Site stats" style="border:0px; width: 100%;height: auto;" aria-label="Twitter"/></a>

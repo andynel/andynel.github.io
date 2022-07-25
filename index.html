@@ -173,22 +173,22 @@
     <script src="js/jq.min.js" defer></script>
     <script src="js/bodylock.js" defer></script>
 <script type="text/javascript" defer>
- console.log("start");
-        $(document).ready(function () {
-            	$.ajax({
-                  		url: "https://api.countapi.xyz/update/andynel.github.io/72b1a2d5-a613-47f0-bd47-1f01c4453740?amount=1",
-              			method: 'GET',
-            			success: function(data) {
-                    // console.log('success from countapi');
-                    console.log(`Current Page View Count: ${data.value}`);
-                },
-                error: function(err) {
-                    console.error(err);
-                }
-            });
-console.log("end");
-            });
+$(document).ready(function () {
+  $.ajax({
+    url: "https://api.countapi.xyz/update/andynel.github.io/72b1a2d5-a613-47f0-bd47-1f01c4453740?amount=1",
+    method: "GET",
+    success: function (data) {
+      // console.log('success from countapi');
+      console.log(`Current Page View Count: ${data.value}`);
+    },
+    error: function (err) {
+      console.error(err);
+    },
+  });
+  console.log("end");
+});
 console.log("die");
+
 		</script>
 	<!-- Begin ShinyStat Code -->
 <script type="text/javascript" src="//codice.shinystat.com/cgi-bin/getcod.cgi?USER=SS-20173083-1e67e"></script>

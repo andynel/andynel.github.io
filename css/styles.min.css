@@ -108,6 +108,7 @@ u {
     margin-left: auto;
     margin-right: auto;
     overflow: hidden;
+    touch-action: manipulation;
     text-transform: uppercase;
     transition: all .3s ease;
     width: 150px;

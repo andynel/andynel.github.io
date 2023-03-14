@@ -9,12 +9,15 @@ function copyToClipboard() {
     ty = cleaned.replace(/\n\s*\n/g, '\n');
     tr = ty.trim()
     tw = tr.replace(/\t/g,"")
+    pppp = tw.replace(/:[/\s]{16}\n/g,": ")
+    drd = pppp.replace(/\n[/\s]{16}/g,"\n")
+    console.log(drd)
 
     // create pseudo element to paste sanitized text and copy to device clipboard, then delete pseudo elem
     el = document.createElement('textarea');
     el.setAttribute("id", "copyText");
-    el.value = tw;
-    el.innerText = tw;
+    el.value = drd;
+    el.innerText = drd;
     document.body.appendChild(el);
     el.select();
     document.execCommand('copy');

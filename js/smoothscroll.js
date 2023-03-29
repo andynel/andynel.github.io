@@ -1,4 +1,6 @@
-! function() {
+document.addEventListener('DOMContentLoaded', function(){
+    // jQuery-dependent stuff
+    ! function() {
     function o() {
         var o = window,
             t = document;
@@ -96,3 +98,5 @@
         polyfill: o
     } : o()
 }();
+});
+

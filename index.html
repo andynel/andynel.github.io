@@ -21,7 +21,9 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-F11SBSHZMW"></script>
     <script>
-console.log("gtag: start");
+	    document.addEventListener('DOMContentLoaded', function(){
+    // jQuery-dependent stuff
+		    console.log("gtag: start");
 
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
@@ -29,8 +31,7 @@ console.log("gtag: start");
         gtag('config', 'G-F11SBSHZMW');
 
 console.log("gtag: end");
-
-
+});
     </script>
 
 <script defer src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
@@ -38,9 +39,9 @@ console.log("gtag: end");
     	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=G-4CTWSGSZSX"></script>
 	<script>
-  		
-
-console.log("global gtag: start");
+  		document.addEventListener('DOMContentLoaded', function(){
+    // jQuery-dependent stuff
+			console.log("global gtag: start");
 
 
 window.dataLayer = window.dataLayer || [];
@@ -50,8 +51,8 @@ window.dataLayer = window.dataLayer || [];
   		gtag('config', 'G-4CTWSGSZSX');
 
 console.log("global gtag: end");
-
-
+			
+});
 	</script>
     <link rel="apple-touch-icon" href="assets/apple-touch-icon.avif" />
     <link rel="shortcut icon" type="image/ico" href="assets/favicon.ico" />
@@ -182,7 +183,9 @@ console.log("global gtag: end");
     <div id="footer" class="footer">
         <span class="copyright" id="copyright">
             Copyright &copy; G30 
-            <script>document.write(new Date().getFullYear())</script>
+            <script>document.addEventListener('DOMContentLoaded', function(){
+    document.write(new Date().getFullYear())
+});</script>
              & Customized by PreviousCoast0
         </span>
         <br />

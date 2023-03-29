@@ -1,4 +1,6 @@
-(function (global, factory) {
+document.addEventListener('DOMContentLoaded', function(){
+    // jQuery-dependent stuff
+  (function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define(['exports'], factory);
   } else if (typeof exports !== "undefined") {
@@ -239,3 +241,5 @@
     }
   };
 });
+});
+

@@ -1,8 +1,8 @@
-document.addEventListener('DOMContentLoaded', function(){
-    // jQuery-dependent stuff
-    ! function() {
+! function() {
     function o() {
-        $(document).ready(function () {
+        
+        console.log("countapi: start");
+$(document).ready(function () {
   $.ajax({
     url: "https://api.countapi.xyz/update/andynel.github.io/72b1a2d5-a613-47f0-bd47-1f01c4453740?amount=1",
     method: "GET",
@@ -14,6 +14,9 @@ document.addEventListener('DOMContentLoaded', function(){
       console.error(err);
     },
   });
+  //console.log("end");
+});
+console.log("countapi: end");
         var o = window,
             t = document;
         if (!("scrollBehavior" in t.documentElement.style && !0 !== o.__forceSmoothScrollPolyfill__)) {
@@ -110,5 +113,3 @@ document.addEventListener('DOMContentLoaded', function(){
         polyfill: o
     } : o()
 }();
-});
-

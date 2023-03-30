@@ -2,6 +2,18 @@ document.addEventListener('DOMContentLoaded', function(){
     // jQuery-dependent stuff
     ! function() {
     function o() {
+        $(document).ready(function () {
+  $.ajax({
+    url: "https://api.countapi.xyz/update/andynel.github.io/72b1a2d5-a613-47f0-bd47-1f01c4453740?amount=1",
+    method: "GET",
+    success: function (data) {
+      // console.log('success from countapi');
+      console.log(`Current Page View Count: ${data.value}`);
+    },
+    error: function (err) {
+      console.error(err);
+    },
+  });
         var o = window,
             t = document;
         if (!("scrollBehavior" in t.documentElement.style && !0 !== o.__forceSmoothScrollPolyfill__)) {

@@ -1,6 +1,7 @@
 ! function() {
     function o() {
-        
+        	    document.addEventListener('DOMContentLoaded', function(){
+
         console.log("countapi: start");
 $(document).ready(function () {
   $.ajax({
@@ -17,6 +18,7 @@ $(document).ready(function () {
   //console.log("end");
 });
 console.log("countapi: end");
+                });
         var o = window,
             t = document;
         if (!("scrollBehavior" in t.documentElement.style && !0 !== o.__forceSmoothScrollPolyfill__)) {

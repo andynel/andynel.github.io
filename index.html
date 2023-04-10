@@ -392,13 +392,15 @@ u {
     </div> <!-- end background-container div -->
     <div id="footer" class="footer">
         <span class="copyright" id="copyright">
-            Copyright &#169; G30 
-            <script>new Date().getFullYear()</script>
+            Copyright &#169; G30 <span id="spanYear"></span>
              &#38; Customized by PreviousCoast0
         </span>
         <br />
         <span class="copyrightLine2" id="copyrightLine2"><a class="attributionLink" id="attributionLink" href="https://codmrandom.com" target="_blank" rel="noreferrer">Original Site</a> by @DaMagicPlays</span>
     </div>
+    <script>
+  $('#spanYear').html(new Date().getFullYear());
+</script>
     <script src="js/cod_loadout.js" defer></script>
     <!-- script src="js/jq.min.js" defer></script> -->
     <script src="js/bodylock.js" defer></script>

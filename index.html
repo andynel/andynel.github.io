@@ -4,15 +4,14 @@
 <head>
     <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline' 'unsafe-eval' www.google-analytics.com www.googletagmanager.com firebasestorage.googleapis.com progressier.com cdn.splitbee.io codice.shinystat.com ajax.googleapis.com">
     <meta http-equiv="Cache-Control" content="max-age=86400, must-revalidate">
-        <!--
+    <!--
     <meta http-equiv="expires" content="600"/>
     <meta http-equiv="cache-control" content="no-cache"/>
     -->
     <meta charset="UTF-8" />
     <title>Call of Duty: Mobile Class Generator</title>
     <link rel="canonical" href="https://andynel.github.io//" />
-	<link rel="manifest" href="https://raw.githubusercontent.com/andynel/cdn-andy/main/uploads/manifest.json">
-
+    <link rel="manifest" href="https://raw.githubusercontent.com/andynel/cdn-andy/main/uploads/manifest.json">
     <meta name="author" content="Andy Nel">
     <meta name="version" content="1.2.0">
     <meta name="description" content="Generate a random COD Mobile Class with custom guns, attachments, equipment, perks and skills">
@@ -27,268 +26,259 @@
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black" />
     <!-- Global site tag (gtag.js) - Google Analytics -->
+    <!-- 
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-F11SBSHZMW"></script>
     <script>
-	    document.addEventListener('DOMContentLoaded', function(){
-    // jQuery-dependent stuff
-//		    console.log("gtag: start");
-
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-F11SBSHZMW');
-
-//console.log("gtag: end");
-});
+	document.addEventListener('DOMContentLoaded', function(){
+            // jQuery-dependent stuff
+            //console.log("gtag: start");
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-F11SBSHZMW');
+            //console.log("gtag: end");
+        });
     </script>
-
-<script script-src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-
-    	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=G-4CTWSGSZSX"></script>
-	<script>
-  		document.addEventListener('DOMContentLoaded', function(){
-    // jQuery-dependent stuff
-			//console.log("global gtag: start");
-
-
-window.dataLayer = window.dataLayer || [];
-  		function gtag(){dataLayer.push(arguments);}
-  			gtag('js', new Date());
-
-  		gtag('config', 'G-4CTWSGSZSX');
-
-//console.log("global gtag: end");
-			
-});
-	</script>
+    -->
+    <script script-src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <!--
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4CTWSGSZSX"></script>
+    <script>
+  	document.addEventListener('DOMContentLoaded', function(){
+            // jQuery-dependent stuff
+	    //console.log("global gtag: start");
+            window.dataLayer = window.dataLayer || [];
+  	    function gtag(){dataLayer.push(arguments);}
+  	    gtag('js', new Date());
+  	    gtag('config', 'G-4CTWSGSZSX');
+            //console.log("global gtag: end");		
+        });
+    </script>
+    -->
     <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
     <link rel="shortcut icon" type="image/ico" href="assets/favicon.ico" />
     <link rel="stylesheet" href="css/styles.min.css" />
     <link rel="preload" href="css/myfontawesome.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript>
-        <link rel="stylesheet" href="css/myfontawesome.css"></noscript>
-    
+    <noscript><link rel="stylesheet" href="css/myfontawesome.css"></noscript>
     <script script-src="https://progressier.com/client/script.js?id=DWpuflK3c0bzHo79bi8Z" defer></script>
     <script src="js/smoothscroll.js" defer></script>
     <script src="js/sweetalert.js" defer></script>
-    
     <script defer src="js/all.js"></script>
-    
+    <script async script-src="https://cdn.splitbee.io/sb.js"></script>
+    <!-- <script async defer data-website-id="5a94f5bc-c397-4c31-96de-93b1324b2f73" src="https://raw.githubusercontent.com/andynel/andynel.github.io/main/umami.js"></script> -->
+    <!-- <script src="https://www.google.com/recaptcha/api.js?render= 6LeWaZ0fAAAAAPIDCQgFv2HSBYZEQYJnNMoOM7Ci"></script> -->
+    <meta name="google-site-verification" content="Cj1Bx6sioHUItjt4jzrD8_pMPB1bnse2e624EitnrOQ" />
+    <style>
+	* {
+            margin: 0;
+            padding: 0
+        }
 
-<script async script-src="https://cdn.splitbee.io/sb.js"></script>
-	<!-- <script async defer data-website-id="5a94f5bc-c397-4c31-96de-93b1324b2f73" src="https://raw.githubusercontent.com/andynel/andynel.github.io/main/umami.js"></script> -->
+        body, html {
+            background-color: #000;
+            font-family: sans-serif;
+            height: 100%;
+            max-height: 100%;
+            -webkit-text-stroke: .5px #000
+        }
 
-<!-- <script src="https://www.google.com/recaptcha/api.js?render= 6LeWaZ0fAAAAAPIDCQgFv2HSBYZEQYJnNMoOM7Ci"></script> -->
-<meta name="google-site-verification" content="Cj1Bx6sioHUItjt4jzrD8_pMPB1bnse2e624EitnrOQ" />
-	<style>
-		* {
-    margin: 0;
-    padding: 0
-}
+        .background-container {
+            background-attachment: fixed;
+            background-color: #000;
+            background-image: url('../assets/cod_background.avif');
+            /* background-image: image-set(url(../assets/cod_background.avif), url(../assets/cod_background.jpeg)); */
+            /* background-image: url(../assets/cod_background.avif); */
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 100%;
+            max-height: 100%;
+            position: absolute;
+            text-align: center;
+            width: 100%;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            -webkit-background-size: cover
+        }
 
-body, html {
-    background-color: #000;
-    font-family: sans-serif;
-    height: 100%;
-    max-height: 100%;
-    -webkit-text-stroke: .5px #000
-}
-.background-container {
-    background-attachment: fixed;
-    background-color: #000;
-    background-image: url('../assets/cod_background.avif');
-    /*     background-image: image-set(url(../assets/cod_background.avif), url(../assets/cod_background.jpeg)); */
-    /*background-image: url(../assets/cod_background.avif);*/
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100%;
-    max-height: 100%;
-    position: absolute;
-    text-align: center;
-    width: 100%;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    -webkit-background-size: cover
-}
+	h2 {
+	    color: #fff;
+	    text-decoration: none
+	}
 
-h2 {
-    color: #fff;
-    text-decoration: none
-}
+	h4 {
+	    color: #1e90ff
+	}
+	
+	p, span {
+	    color: coral
+	}
+	
+	u {
+	    text-decoration: none
+	}
 
-h4 {
-    color: #1e90ff
-}
+	.middle {
+	    width: 90%;
+	    margin: 0 auto
+	}
 
-p, span {
-    color: coral
-}
+	@media only screen and (min-width: 786px) {
+	    .middle {
+	        width: 40%;
+	        max-width: 40%;
+	        margin: 0 auto
+	    }
+	}
 
-u {
-    text-decoration: none
-}
+	.top {
+	    color: #fff;
+	    display: inline-block;
+	    font-size: 1.7em;
+	    font-weight: 600;
+	    padding-top: 3%;
+	    text-align: center
+	}
 
-.middle {
-    width: 90%;
-    margin: 0 auto
-}
+	.header {
+	    color: #fff;
+	    font-size: 1em;
+	    font-weight: 600;
+	    margin-left: auto;
+	    margin-right: auto;
+	    padding-bottom: 3%;
+	    padding-top: 3%;
+	    text-align: center;
+	    width: 90%
+	}
+	
+	.button1 {
+	    background: #4682b4;
+	    border: 0;
+	    border-radius: 3px;
+	    box-shadow: 0 15px 30px rgba(0, 0, 0, .1);
+	    color: #000;
+	    cursor: pointer;
+	    display: block;
+	    font-size: .75em;
+	    font-weight: 600;
+	    height: 38px;
+	    letter-spacing: 1px;
+	    line-height: 38px;
+	    margin-left: auto;
+	    margin-right: auto;
+	    overflow: hidden;
+	    touch-action: manipulation;
+	    text-transform: uppercase;
+	    transition: all .3s ease;
+	    width: 150px;
+	    -moz-appearance: none;
+	    -webkit-appearance: none
+	}
+	    
+	.copyright {
+	    color: #fff;
+	    font-size: .7em;
+	    margin-top: -3%;
+	    padding-top: 5%
+	}
+	
+	.copyrightLine2 {
+	    color: #fff;
+	    font-size: .7em;
+	    margin-top: 0;
+	    padding-top: 0
+	}
 
-@media only screen and (min-width: 786px) {
-    .middle {
-        width: 40%;
-        max-width: 40%;
-        margin: 0 auto
-    }
-}
+	.attributionLink {
+	    color: inherit;
+	    text-decoration: none
+	}
+	
+	.outputs {
+	    background: initial;
+	    background-color: rgb(47, 79, 79, .95);
+	    border-radius: 20px;
+	    line-height: 2;
+	    margin-left: auto;
+	    margin-right: auto;
+	    opacity: 0;
+	    overflow: auto !important;
+	    max-height: 55vh !important;
+	    scroll-behavior: smooth;
+	    text-align: center;
+	    transition: all 1s ease-in-out;
+	    -moz-transition: all 1s ease-in-out;
+	    -ms-transition: all 1s ease-in-out;
+	    -o-transition: all 1s ease-in-out;
+	    -webkit-transition: all 1s ease-in-out;
+	    -webkit-overflow-scrolling: touch !important
+	}
 
-.top {
-    color: #fff;
-    display: inline-block;
-    font-size: 1.7em;
-    font-weight: 600;
-    padding-top: 3%;
-    text-align: center
-}
-
-.header {
-    color: #fff;
-    font-size: 1em;
-    font-weight: 600;
-    margin-left: auto;
-    margin-right: auto;
-    padding-bottom: 3%;
-    padding-top: 3%;
-    text-align: center;
-    width: 90%
-}
-
-.button1 {
-    background: #4682b4;
-    border: 0;
-    border-radius: 3px;
-    box-shadow: 0 15px 30px rgba(0, 0, 0, .1);
-    color: #000;
-    cursor: pointer;
-    display: block;
-    font-size: .75em;
-    font-weight: 600;
-    height: 38px;
-    letter-spacing: 1px;
-    line-height: 38px;
-    margin-left: auto;
-    margin-right: auto;
-    overflow: hidden;
-    touch-action: manipulation;
-    text-transform: uppercase;
-    transition: all .3s ease;
-    width: 150px;
-    -moz-appearance: none;
-    -webkit-appearance: none
-}
-.copyright {
-    color: #fff;
-    font-size: .7em;
-    margin-top: -3%;
-    padding-top: 5%
-}
-
-.copyrightLine2 {
-    color: #fff;
-    font-size: .7em;
-    margin-top: 0;
-    padding-top: 0
-}
-
-.attributionLink {
-    color: inherit;
-    text-decoration: none
-}
-
-.outputs {
-    background: initial;
-    background-color: rgb(47, 79, 79, .95);
-    border-radius: 20px;
-    line-height: 2;
-    margin-left: auto;
-    margin-right: auto;
-    opacity: 0;
-    overflow: auto !important;
-    max-height: 55vh !important;
-    scroll-behavior: smooth;
-    text-align: center;
-    transition: all 1s ease-in-out;
-    -moz-transition: all 1s ease-in-out;
-    -ms-transition: all 1s ease-in-out;
-    -o-transition: all 1s ease-in-out;
-    -webkit-transition: all 1s ease-in-out;
-    -webkit-overflow-scrolling: touch !important
-}
-
-@media only screen and (min-width: 1281px) {
-    .outputs {
-        background: initial;
-        background-color: rgb(47, 79, 79, .95);
-        border-radius: 20px;
-        line-height: 2;
-        margin-left: auto;
-        margin-right: auto;
-        opacity: 0;
-        overflow: auto !important;
-        max-height: 60vh !important;
-        scroll-behavior: smooth;
-        text-align: center;
-        transition: all 1s ease-in-out;
-        -moz-transition: all 1s ease-in-out;
-        -ms-transition: all 1s ease-in-out;
-        -o-transition: all 1s ease-in-out;
-        -webkit-transition: all 1s ease-in-out;
-        -webkit-overflow-scrolling: touch !important
-    }
-}
-
-.outputs>:last-child {
-    margin-bottom: 3em
-}
-
-.sticky {
-    position: -webkit-sticky;
-    position: sticky;
-    top: 5%;
-    right: 3%;
-    float: right;
-    border-radius: 25px;
-    width: 25px;
-    height: 25px;
-    background-color: #4682b4;
-    padding: 5px;
-    font-size: 20px
-}
-
-.copytoclipboard {
-    background-color: inherit;
-    border: none;
-    text-align: center;
-    vertical-align: super;
-    text-transform: uppercase;
-    font-size: 1em;
-    font-weight: 600;
-    letter-spacing: 1px;
-    color: black !important;
-}
-
-.footer {
-    background-color: #000;
-    bottom: 0;
-    color: #fff;
-    left: 0;
-    position: fixed;
-    text-align: center;
-    width: 100%;
-	min-height: 37px;
-}
-	</style>
+	@media only screen and (min-width: 1281px) {
+	    .outputs {
+	        background: initial;
+	        background-color: rgb(47, 79, 79, .95);
+	        border-radius: 20px;
+	        line-height: 2;
+	        margin-left: auto;
+	        margin-right: auto;
+	        opacity: 0;
+	        overflow: auto !important;
+	        max-height: 60vh !important;
+	        scroll-behavior: smooth;
+	        text-align: center;
+	        transition: all 1s ease-in-out;
+	        -moz-transition: all 1s ease-in-out;
+	        -ms-transition: all 1s ease-in-out;
+	        -o-transition: all 1s ease-in-out;
+	        -webkit-transition: all 1s ease-in-out;
+	        -webkit-overflow-scrolling: touch !important
+	    }
+	}
+	
+	.outputs>:last-child {
+	    margin-bottom: 3em
+	}
+	
+	.sticky {
+	    position: -webkit-sticky;
+	    position: sticky;
+	    top: 5%;
+	    right: 3%;
+	    float: right;
+	    border-radius: 25px;
+	    width: 25px;
+	    height: 25px;
+	    background-color: #4682b4;
+	    padding: 5px;
+	    font-size: 20px
+	}
+	
+	.copytoclipboard {
+	    background-color: inherit;
+	    border: none;
+	    text-align: center;
+	    vertical-align: super;
+	    text-transform: uppercase;
+	    font-size: 1em;
+	    font-weight: 600;
+	    letter-spacing: 1px;
+	    color: black !important;
+	}
+	
+	.footer {
+	    background-color: #000;
+	    bottom: 0;
+	    color: #fff;
+	    left: 0;
+	    position: fixed;
+	    text-align: center;
+	    width: 100%;
+		min-height: 37px;
+	}
+    </style>
 </head>
 
 <body>
@@ -405,58 +395,57 @@ u {
         <span class="copyrightLine2" id="copyrightLine2"><a class="attributionLink" id="attributionLink" href="https://codmrandom.com" target="_blank" rel="noreferrer">Original Site</a> by @DaMagicPlays</span>
     </div>
     <script>
-document.querySelector("#spanYear").innerHTML=new Date().getFullYear()
-</script>
+	document.querySelector("#spanYear").innerHTML=new Date().getFullYear()
+    </script>
     <script src="js/cod_loadout.js" defer></script>
     <!-- script src="js/jq.min.js" defer></script> -->
     <script src="js/bodylock.js" defer></script>
-<script type="text/javascript" defer>
-//document.addEventListener('DOMContentLoaded', function(){
-    // jQuery-dependent stuff
-  //  console.log("countapi: start");
+    <script type="text/javascript" defer>
+        // document.addEventListener('DOMContentLoaded', function(){
+            // jQuery-dependent stuff
+            // console.log("countapi: start");
 
-/*$(document).ready(function () {
-  $.ajax({
-    url: "https://api.countapi.xyz/update/andynel.github.io/72b1a2d5-a613-47f0-bd47-1f01c4453740?amount=1",
-    method: "GET",
-    success: function (data) {
-      // console.log('success from countapi');
-      console.log(`Current Page View Count: ${data.value}`);
-    },
-    error: function (err) {
-      console.error(err);
-    },
-  });
-  //console.log("end");
-});
+            /* 
+		$(document).ready(function () {
+	            $.ajax({
+	                url: "https://api.countapi.xyz/update/andynel.github.io/72b1a2d5-a613-47f0-bd47-1f01c4453740?amount=1",
+	                method: "GET",
+	                success: function (data) {
+	                    // console.log('success from countapi');
+	                    console.log(`Current Page View Count: ${data.value}`);
+	                },
+	                error: function (err) {
+	                    console.error(err);
+	                },
+	            });
+	            //console.log("end");
+	        });
 
-console.log("countapi: end");
+        	console.log("countapi: end");
 	
-});*/
-		</script>
-	<!-- Begin ShinyStat Code -->
-<script type="text/javascript" script-src="https://codice.shinystat.com/cgi-bin/getcod.cgi?USER=SS-20173083-1e67e"></script>
-
-   <script>
-     // function onClick(e) {
-     //   e.preventDefault();
-     //   grecaptcha.ready(function() {
-     //     grecaptcha.execute('6LeWaZ0fAAAAAPIDCQgFv2HSBYZEQYJnNMoOM7Ci', {action: 'submit'}).then(function(token) {
-     //         // Add your logic to submit to your backend server here.
-     //     });
-     //   });
-     // }
-     // window.onload= onClick();
-  </script>
-
-<!-- alt="Site stats" -->
-
-<noscript>
-<a href="https://www.shinystat.com/" target="_top" style="width: 100%;height: auto;" aria-label="Twitter">
-<img src="https://www.shinystat.com/cgi-bin/shinystat.cgi?USER=SS-20173083-1e67e" alt="Site stats" style="border:0px; width: 100%;height: auto;" aria-label="Twitter"/>
-</a>
-</noscript>
-<!-- End ShinyStat Code -->
+	});
+ 	*/
+    </script>
+    <!-- Begin ShinyStat Code -->
+    <script type="text/javascript" script-src="https://codice.shinystat.com/cgi-bin/getcod.cgi?USER=SS-20173083-1e67e"></script>
+    <script>
+        // function onClick(e) {
+        //     e.preventDefault();
+        //     grecaptcha.ready(function() {
+        //         grecaptcha.execute('6LeWaZ0fAAAAAPIDCQgFv2HSBYZEQYJnNMoOM7Ci', {action: 'submit'}).then(function(token) {
+        //             // Add your logic to submit to your backend server here.
+        //         });
+        //     });
+        // }
+        // window.onload= onClick();
+    </script>
+    <!-- alt="Site stats" -->
+    <noscript>
+        <a href="https://www.shinystat.com/" target="_top" style="width: 100%;height: auto;" aria-label="Twitter">
+            <img src="https://www.shinystat.com/cgi-bin/shinystat.cgi?USER=SS-20173083-1e67e" alt="Site stats" style="border:0px; width: 100%;height: auto;" aria-label="Twitter"/>
+        </a>
+    </noscript>
+    <!-- End ShinyStat Code -->
 </body>
 
 </html>

@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function(){
+//document.addEventListener('DOMContentLoaded', function(){
     // jQuery-dependent stuff
   (function (global, factory) {
   if (typeof define === "function" && define.amd) {
@@ -241,5 +241,5 @@ document.addEventListener('DOMContentLoaded', function(){
     }
   };
 });
-});
+//});
 
